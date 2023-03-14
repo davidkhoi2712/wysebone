@@ -1,0 +1,33 @@
+{% load i18n settings utils %}
+<div class="Sidebar">
+    <div class="Sidebar-header">
+        <div class="Sidebar-top">
+            <a class="logo" href="{% url 'index' %}"><span class="min-logo">W</span><span class="full-logo">ysebone</span></a>
+        </div>
+        <hr class="sidebar-divider">
+    </div>
+    <ul class="Sidebar-content">
+        {% if perms.wysebone.view_company_info %}<li><a href="{% url 'company.info' %}" class="{% if company_active %}active{% endif %}" title="{% trans "Company information" %}"><i class="fa fa-file-text" aria-hidden="true"></i><span>{% trans "Company information" %}</span></a></li>{% endif %}
+        {% if perms.wysebone.view_authority %}<li><a href="{% url 'index.authority' %}" class="{% if authority_active %}active{% endif %}" title="{% trans "Permissions" %}"><i class="fa fa-lock" aria-hidden="true"></i><span>{% trans "Permissions" %}</span></a></li>{% endif %}
+        {% if perms.auth.view_group %}<li><a href="{% url 'index.group' %}" class="{% if group_active %}active{% endif %}" title="{% trans "groups" %}"><i class="fa fa-users" aria-hidden="true"></i><span>{% trans "groups" %}</span></a></li>{% endif %}
+        {% if perms.wysebone.view_user %}<li><a href="{% url 'index.user' %}" class="{% if user_active %}active{% endif %}" title="{% trans "Users" %}"><i class="fa fa-user" aria-hidden="true"></i><span>{% trans "Users" %}</span></a></li>{% endif %}
+        {% if perms.wysebone.view_tableinfo %}<li><a href="{% url 'index.table' %}" class="{% if table_active %}active{% endif %}" title="{% trans "table" %}"><i class="fa fa-table" aria-hidden="true"></i><span>{% trans "table" %}</span></a></li>{% endif %}
+        {% if perms.wysebone.view_app %}
+            <li><a href="{% url 'index.app' %}" class="{% if app_active %}active{% endif %}" title="{% trans "Applications" %}"><i class="fa fa-desktop" aria-hidden="true"></i><span>{% trans "Applications" %}</span></a></li>
+        {% elif perms.wysebone.use_app %}
+            {% getAppMenus as appMenus %}
+            <li><a href="#app_menus_pages" {% if appMenus.count > 0 %}data-toggle="collapse" aria-expanded="true"{% endif %}><i class="fa fa-desktop" aria-hidden="true"></i><span>{% trans "Applications" %}</span></a>
+            {% if appMenus.count > 0 %}
+                <ul class="collapse show" id="app_menus_pages">
+                {% for app in appMenus %}
+                    <li><a href="{% url 'view.app' app.code %}" class="{% if app_current == app.code %}active{% endif %}" data-toggle="tooltip" data-placement="right" title="{{ app.name }}">{{ app.name }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            </li>
+        {% endif %}
+        {% if perms.wysebone.view_list_table %}<li><a href="{% url 'index.list_table' %}" class="{% if list_active %}active{% endif %}" data-toggle="tooltip" data-placement="right" title="{% trans "List Table" %}"><i class="fa fa-columns" aria-hidden="true"></i><span>{% trans "List Table" %}</span></a></li>{% endif %}
+        {% if perms.wysebone.view_locale %}<li><a href="{% url 'index' %}" class="{% if locale_active %}active{% endif %}" data-toggle="tooltip" data-placement="right" title="{% trans "Localization" %}"><i class="fa fa-globe" aria-hidden="true"></i><span>{% trans "Localization" %}</span></a></li>{% endif %}
+    </ul>
+    <div class="version">Ver. {% version_number %}</div>
+</div>

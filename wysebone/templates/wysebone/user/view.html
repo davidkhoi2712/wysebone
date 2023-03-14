@@ -1,0 +1,77 @@
+{% extends 'wysebone/base.html' %}
+{% load i18n static common %}
+<!-- Add title -->
+{% block title %}{% trans "Profile" %}{% endblock %}
+
+<!-- Add content -->
+{% block content %}
+<div class="card mb-3">
+	<div class="card-header">
+		<h3>{% trans "Profile" %} </h3>
+	</div>
+	<div class="card-body">
+		<div class="row pt-4">
+			<div class="col-12 col-sm-3  text-center">
+				<figure class="figure">
+					<img src="{{ user.get_avatar_url }}" class="figure-img img-fluid rounded-circle" alt="" width="200" id="avatar">
+				</figure>
+			</div>
+			<div class="col-12 col-sm-9">
+					<div class="form-group row mb-1">
+						<label class="col-5 col-sm-5 col-md-4 col-lg-3 col-form-label font-weight-bold">{% trans 'Display Name' %}</label>
+						<div class="col-7 col-sm-7 col-md-8 col-lg-9">
+							<p class="m-0 py-1">{{ user.get_full_name }}</p>
+						</div>
+					</div>
+					<div class="form-group row mb-1">
+						<label for="email" class="col-5 col-sm-5 col-md-4 col-lg-3 col-form-label font-weight-bold">{% trans 'Email Address' %}</label>
+						<div class="col-7 col-sm-7 col-md-8 col-lg-9">
+							<p class="m-0 py-1">{{ user.email }}</p>
+						</div>
+					</div>
+					<div class="form-group row mb-1">
+						<label for="phone" class="col-5 col-sm-5 col-md-4 col-lg-3 col-form-label font-weight-bold">{% trans 'Phone' %}</label>
+						<div class="col-7 col-sm-7 col-md-8 col-lg-9">
+							<p class="m-0 py-1">{{ user.phone|default:_('None') }}</p>
+						</div>
+					</div>
+
+					<div class="form-group row mb-1">
+						<label for="birthday" class="col-5 col-sm-5 col-md-4 col-lg-3 col-form-label font-weight-bold">{% trans 'Birthday' %}</label>
+						<div class="col-7 col-sm-7 col-md-8 col-lg-9">
+							<p class="m-0 py-1">{{ user.birthday|date:"SHORT_DATE_FORMAT"|default:_('None') }}</p>
+						</div>
+					</div>
+					<div class="form-group row mb-1">
+						<label for="hire_date" class="col-5 col-sm-5 col-md-4 col-lg-3 col-form-label font-weight-bold">{% trans 'Hire Date' %}</label>
+						<div class="col-7 col-sm-7 col-md-8 col-lg-9">
+							<p class="m-0 py-1">{{ user.hire_date|date:"SHORT_DATE_FORMAT"|default:_('None') }}</p>
+						</div>
+					</div>
+					<div class="form-group row mb-1">
+						<label for="language" class="col-5 col-sm-5 col-md-4 col-lg-3 col-form-label font-weight-bold">{% trans "Language" %}</label>
+						<div class="col-7 col-sm-7 col-md-8 col-lg-9">
+							{% get_available_languages as LANGUAGES %}
+							{% for lang in LANGUAGES %}
+								{% if lang.0 == user.language %} {{ lang.1 }} {% endif %}
+							{% endfor %}
+						</div>
+					</div>
+
+					<div class="form-group row mb-1">
+						<label for="inputName" class="col-5 col-sm-5 col-md-4 col-lg-3 col-form-label font-weight-bold">{% trans 'Time Zone' %}</label>
+						<div class="col-7 col-sm-7 col-md-8 col-lg-9">
+							<p class="m-0 py-1">{{ user.time_zone_name }}</p>
+						</div>
+					</div>
+					<div class="form-group row mb-1">
+						<label for="hire_date" class="col-5 col-sm-5 col-md-4 col-lg-3 col-form-label font-weight-bold">{% trans 'Employee ID' %}</label>
+						<div class="col-7 col-sm-7 col-md-8 col-lg-9">
+							<p class="m-0 py-1">{{ user.user_id }}</p>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock  %}

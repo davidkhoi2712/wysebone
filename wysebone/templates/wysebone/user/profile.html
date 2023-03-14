@@ -1,0 +1,210 @@
+{% extends 'wysebone/base.html' %}
+{% load i18n static common %}
+<!-- Add title -->
+{% block title %}{% trans "My Profile" %}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<link href="{% static 'vendor/select2/css/select2.min.css' %}" rel="stylesheet" />
+<link href="{% static 'vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+<link href="{% static 'vendor/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css' %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'vendor/cropperjs/cropper.min.css' %}">
+<style>
+	.modal-profile-crop .modal-dialog,
+	.modal-profile-crop .modal-no-backdrop {
+		width: 380px;
+	}
+
+	.cropper-view-box,
+	.cropper-face {
+		border-radius: 50%;
+	}
+</style>
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+{% set class_col 9 %}
+{% set class_col_1 3 %}
+{% if LANGUAGE_CODE == 'en' %}
+	{% set class_col 10 %}
+	{% set class_col_1 2 %}
+{% endif %}
+<div class="card mb-3">
+	<div class="card-header">
+		<h3>{% trans "My Profile" %} </h3>
+	</div>
+	<div class="card-body">
+		<div class="row pt-4">
+			<div class="col-12 col-sm-12 col-md-3 text-center pb-3">
+				<figure class="figure">
+					<img src="{{ user.get_avatar_url }}" class="figure-img img-fluid rounded-circle" alt="" width="200" id="avatar">
+					<hr />
+					<figcaption class="figure-caption text-center">
+						<label class="label d-block">
+							<span class="btn btn-sm btn-outline-dark" href="#" role="button">{% trans "Change avatar" %}</span>
+							<input type="file" class="sr-only" id="input" accept="image/*">
+						</label>
+						<button type="button" class="btn btn-sm btn-outline-danger" {% if not user.get_avatar %} style="display:none;" {% endif %} id="remove_avatar" onclick="confirm('{% trans "Avatar will be removed." %} {% trans "Are you sure?" %}') ? clearImage(this) : false">{% trans "Remove avatar" %}</button>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-12 col-sm-12 col-md-9">
+				<form method="POST" class="needs-validation" novalidate>
+					{% csrf_token %}
+					<input type="hidden" class="sr-only" id="avatar_img" name="avatar">
+					<div class="form-group row">
+						<label class="col-sm-{{ class_col_1 }} col-form-label">{% trans 'Display Name' %} <b class="text-danger">*</b></label>
+						<div class="col-sm-{{ class_col }}">
+							<div class="row">
+								<div class="col">
+									{{ form.first_name }}
+									<div class="invalid-feedback">
+										{% if form.first_name.errors %}
+											{{ form.first_name.errors}}
+										{% else %}
+											{% trans 'This field is required.' %}
+										{% endif %}
+									</div>
+								</div>
+								<div class="col">
+									{{ form.last_name }}
+									<div class="invalid-feedback">
+										{% if form.last_name.errors %}
+											{{ form.last_name.errors}}
+										{% else %}
+											{% trans 'This field is required.' %}
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="email" class="col-sm-{{ class_col_1 }} col-form-label">{% trans 'Email Address' %} <b class="text-danger">*</b></label>
+						<div class="col-sm-{{ class_col }}">
+							{{ form.email }}
+							<div class="invalid-feedback">
+								{% if form.email.errors %}
+									{{ form.email.errors}}
+								{% endif %}
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="phone" class="col-sm-{{ class_col_1 }} col-form-label">{% trans 'Phone' %}</label>
+						<div class="col-sm-{{ class_col }}">
+							{{ form.phone }}
+							<div class="invalid-feedback">
+								{% if form.phone.errors %}
+									{{ form.phone.errors}}
+								{% endif %}
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="birthday" class="col-sm-{{ class_col_1 }} col-form-label">{% trans 'Birthday' %}</label>
+						<div class="col-sm-{{ class_col }}">
+							{{ form.birthday }}
+							<div class="invalid-feedback">
+								{{ form.birthday.errors}}
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="hire_date" class="col-sm-{{ class_col_1 }} col-form-label">{% trans 'Hire Date' %}</label>
+						<div class="col-sm-{{ class_col }}">
+							<p class="m-0 py-1">{{ user.hire_date|date:"SHORT_DATE_FORMAT"|default:_('None') }}</p>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="language" class="col-sm-{{ class_col_1 }} col-form-label">{% trans "Language" %}</label>
+						<div class="col-sm-{{ class_col }}">
+							{% get_available_languages as LANGUAGES %}
+							<select class="form-control" id="language" name="language">
+								{% for lang in LANGUAGES %}
+								<option value="{{ lang.0 }}" {% if lang.0 == user.language %} selected {% endif %}>
+									{{ lang.1 }}
+								</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="inputName" class="col-sm-{{ class_col_1 }} col-form-label">{% trans 'Time Zone' %}</label>
+						<div class="col-sm-{{ class_col }}">
+							<select id="User_time_zone" class="form-control{% if form.time_zone.errors %} is-invalid{% endif %}" name="time_zone" data-val="{{ form.time_zone.value }}"></select>
+							<div class="invalid-feedback">
+								{% if form.time_zone.errors %}
+									{{ form.time_zone.errors}}
+								{% endif %}
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="hire_date" class="col-sm-{{ class_col_1 }} col-form-label">{% trans 'Employee ID' %}</label>
+						<div class="col-sm-{{ class_col }}">
+							<p class="m-0 py-1">{{ user.user_id|default:'' }}</p>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="offset-sm-{{ class_col_1 }} col-sm-{{ class_col }}">
+							<button type="submit" class="btn btn-primary">{% trans 'Update profile' %}</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal modal-profile-crop fade" id="modal-profile-crop" tabindex="-1" role="dialog"
+			aria-labelledby="modalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalLabel">{% trans "Position and size your new avatar" %}</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="img-container" style="height: 300px;margin: 0 auto;">
+							<img id="image" src="" class="invisible">
+						</div>
+						<div class="crop-controls text-center p-2">
+							<div class="btn-group">
+								<button class="btn btn-primary btn-sm" data-method="zoom"
+									data-option="0.1">
+									<span class="fa fa-search-plus"></span>
+								</button>
+								<button class="btn btn-primary btn-sm" data-method="zoom"
+									data-option="-0.1">
+									<span class="fa fa-search-minus"></span>
+								</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary"
+								id="crop">{% trans "Set new profile avatar" %}</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock  %}
+
+<!-- Add js -->
+{% block js %}
+<script defer src="{% static 'vendor/cropperjs/cropper.min.js' %}"></script>
+<script defer src="{% static 'vendor/moment/moment.min.js' %}"></script>
+<script defer src="{% static 'vendor/moment/moment-with-locales.min.js' %}"></script>
+<script defer src="{% static 'vendor/moment/moment-timezone-with-data.min.js' %}"></script>
+
+<script defer type="text/javascript" src="{% static 'vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script defer src="{% static 'vendor/select2/js/select2.min.js' %}"></script>
+<script defer src="{% static 'vendor/select2/js/i18n/' %}{{ LANGUAGE_CODE }}.js"></script>
+<script defer src="{% static 'js/profile.js' %}"></script>
+{% endblock  %}

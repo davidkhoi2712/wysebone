@@ -1,0 +1,96 @@
+{% load i18n %}
+<div class="modal fade" id="chooseIconModal" tabindex="-1" role="dialog" aria-labelledby="chooseIconModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chooseIconModalTitle">{% trans "Choose an icon" %}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p><b>{% trans "Choose color" %}</b></p>
+                <div class="colors list-choose clearfix">
+                    <ul>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1 active" style="background-color: #b97a56" data-color="#b97a56"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #18bfff" data-color="#18bfff"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #20d9d2" data-color="#20d9d2"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #ff08c2" data-color="#ff08c2"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #f82b60" data-color="#f82b60"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #f7653b" data-color="#f7653b"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #fcb400" data-color="#fcb400"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #fff200" data-color="#fff200"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #20c933" data-color="#20c933"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #8b46ff" data-color="#8b46ff"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #666666" data-color="#666666"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" style="background-color: #b83dba" data-color="#b83dba"><i class="fa fa-check" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <hr>
+                <p><b>{% trans "Choose an icon" %}</b></p>
+                <div class="icons list-choose clearfix">
+                    <ul>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1 active" data-icon="fa fa-list-alt"><i class="fa fa-list-alt" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-address-book"><i class="fa fa-address-book" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-address-card"><i class="fa fa-address-card" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-bath"><i class="fa fa-bath" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-envelope-open"><i class="fa fa-envelope-open" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-users"><i class="fa fa-users" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-user"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-archive"><i class="fa fa-archive" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-area-chart"><i class="fa fa-area-chart" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-bar-chart"><i class="fa fa-bar-chart" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-car"><i class="fa fa-car" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-truck"><i class="fa fa-truck" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-balance-scale"><i class="fa fa-balance-scale" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-university"><i class="fa fa-university" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-battery-three-quarters"><i class="fa fa-battery-three-quarters" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-bed"><i class="fa fa-bed" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-beer"><i class="fa fa-beer" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-bell"><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-bicycle"><i class="fa fa-bicycle" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-blind"><i class="fa fa-blind" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-book"><i class="fa fa-book" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-bookmark"><i class="fa fa-bookmark" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-briefcase"><i class="fa fa-briefcase" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-building"><i class="fa fa-building" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-bullhorn"><i class="fa fa-bullhorn" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-calendar-plus-o"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-camera"><i class="fa fa-camera" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-clock-o"><i class="fa fa-clock-o" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-cloud"><i class="fa fa-cloud" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-coffee"><i class="fa fa-coffee" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-cogs"><i class="fa fa-cogs" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-comments"><i class="fa fa-comments" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-credit-card"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-cube"><i class="fa fa-cube" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-cutlery"><i class="fa fa-cutlery" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-tachometer"><i class="fa fa-tachometer" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-database"><i class="fa fa-database" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-desktop"><i class="fa fa-desktop" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-diamond"><i class="fa fa-diamond" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-eye"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-fax"><i class="fa fa-fax" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-gift"><i class="fa fa-gift" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-picture-o"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-money"><i class="fa fa-money" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-usd"><i class="fa fa-usd" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-shopping-basket"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-sitemap"><i class="fa fa-sitemap" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-tasks"><i class="fa fa-tasks" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-heart"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-phone"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-globe"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-lock"><i class="fa fa-lock" aria-hidden="true"></i></a></li>
+                        <li><a href="javascript:void(0)" class="rounded d-block mb-1" data-icon="fa fa-map-marker"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">{% trans "Cancel" %}</button>
+                <button type="button" id="choose_icon_choose" class="btn btn-primary">{% trans "Choose" %}</button>
+            </div>
+        </div>
+    </div>
+</div>

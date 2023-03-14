@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-01 08:29+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+
+#: .\static\js\department.js:105 .\static\js\groups\index.js:13
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#: .\static\js\department.js:106 .\static\js\groups\index.js:14
+msgid "Email"
+msgstr ""
+
+#: .\static\js\department.js:107 .\static\js\groups\index.js:15
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#: .\static\js\department.js:108 .\static\js\groups\index.js:16
+msgid "Status"
+msgstr "Trạng thái"
+
+#: .\static\js\department.js:109 .\static\js\groups\index.js:17
+msgid "Active"
+msgstr "Hoạt động"
+
+#: .\static\js\department.js:109 .\static\js\groups\index.js:17
+msgid "Inactive"
+msgstr "Không hoạt động"
+
+#: .\static\js\department.js:110 .\static\js\groups\index.js:18
+msgid "Action"
+msgstr "Hoạt động"
+
+#: .\static\js\department.js:110 .\static\js\groups\index.js:18
+msgid "Change user"
+msgstr "Thay đổi người dùng"
+
+msgid "Role"
+msgstr "Vai trò"
+
+#: .\static\js\department.js:111 .\static\js\groups\index.js:19
+msgid "Delete user"
+msgstr "Xóa người dùng"
+
+#: .\static\js\profile.js:101
+#, javascript-format
+msgid "The file format of \"%s\" is not supported."
+msgstr "Định dạng tệp của \"%s\" không được hỗ trợ."
+
+#: .\static\js\profile.js:106 .\static\js\user.js:66
+msgid "The maximum file size is 3MB. Please try again."
+msgstr "Kích thước tệp tối đa là 3MB. Vui lòng thử lại."
+
+#: .\static\js\app\view_app.js:54
+msgid "Delete"
+msgstr "Xóa"
+
+#: .\static\js\app\view_app.js:61
+msgid "%s will be saved by moving to another tab?"
+msgstr "%s sẽ được lưu bằng cách chuyển sang tab khác?"
+
+msgid "Are you sure you want to delete this field?"
+msgstr "Bạn có chắc chắn muốn xóa trường này?"
+
+msgid "An error occurred while processing. Please try again later."
+msgstr "Đã xảy ra lỗi trong khi xử lý. Vui lòng thử lại sau."
+
+msgid "Number of characters is not valid."
+msgstr "Số lượng ký tự không hợp lệ."
+
+msgid "Number of Characters (Note: Use integer)"
+msgstr "Số lượng ký tự (Lưu ý: Sử dụng số nguyên)"
+
+msgid "Save"
+msgstr "Lưu"
+
+msgid "Number of lines"
+msgstr "Số dòng"
+
+msgid "This field must be an positive integer."
+msgstr "Trường này phải là một số nguyên dương."
+
+msgid "Value is 1"
+msgstr "Giá trị là 1"
+
+msgid "A single line text field accepts a single line of text for each cell. You can put any text value you want into each cell."
+msgstr "Trường văn bản một dòng chấp nhận một dòng văn bản cho mỗi ô. Bạn có thể đặt bất kỳ giá trị văn bản nào bạn muốn vào mỗi ô."
+
+msgid "Value is greater than 1"
+msgstr "Giá trị lớn hơn 1"
+
+msgid "A long text field is great when you need to keep notes or multiple lines of text in each record."
+msgstr "Trường văn bản dài là tuyệt vời khi bạn cần giữ ghi chú hoặc nhiều dòng văn bản trong mỗi bản ghi."
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "This field is required."
+msgstr "Trường này là bắt buộc."
+
+msgid "Default value"
+msgstr "Giá trị mặc định"
+
+msgid "Hide field name"
+msgstr "Ẩn tên trường"
+
+msgid "Required field"
+msgstr "Trường bắt buộc"
+
+msgid "Minimum"
+msgstr "Tối thiểu"
+
+msgid "Maximum"
+msgstr "Tối đa"
+
+msgid "Text"
+msgstr "Văn bản"
+
+msgid "Label"
+msgstr "Nhãn"
+
+msgid "Checkbox"
+msgstr "Checkbox"
+
+msgid "Sample"
+msgstr "Sample"
+
+msgid "Layout"
+msgstr "Bố cục"
+
+msgid "Horizontal"
+msgstr "Chiều ngang"
+
+msgid "Vertical"
+msgstr "Chiều dọc"
+
+msgid "Options"
+msgstr "Tùy chọn"
+
+msgid "Numeric"
+msgstr "Số"
+
+msgid "Use thousands separators"
+msgstr "Sử dụng dấu phân cách theo hàng ngàn"
+
+msgid "Limits of Value (Note: Use integer)"
+msgstr "Giới hạn của giá trị (Lưu ý: Sử dụng số nguyên)"
+
+msgid "This field must be a number."
+msgstr "Trường này phải là một số."
+
+msgid "Number of Decimal Places to display"
+msgstr "Số lượng vị trí thập phân để hiển thị"
+
+msgid "Unit of measure"
+msgstr "Đơn vị"
+
+msgid "Prefix (e.g. $100)"
+msgstr "Tiền tố (ví dụ: $ 100)"
+
+msgid "Suffix (e.g. 0.5 inches)"
+msgstr "Hậu tố (ví dụ 0,5 inch)"
+
+msgid "Selection"
+msgstr "Thả xuống"
+
+msgid "Date"
+msgstr "Ngày"
+
+msgid "%s Settings"
+msgstr "Cài đặt %s"
+
+msgid "Settings"
+msgstr "Cài đặt"
+
+msgid "Form"
+msgstr "Màn hình nhập liệu"
+
+msgid "Views"
+msgstr "Màn hình hiển thị"
+
+msgid "Authority"
+msgstr "Quyền"
+
+msgid "Search"
+msgstr "Tìm kiếm"
+
+msgid "Clear selection"
+msgstr "Xóa lựa chọn"
+
+msgid "You can also insert a new record anywhere by pressing Shift-Enter"
+msgstr "Bạn cũng có thể chèn một dòng mới ở bất cứ đâu bằng cách nhấn Shift-Enter"
+
+msgid "Drag to adjust the number of frozen columns"
+msgstr "Kéo để điều chỉnh số lượng cột được cố định"
+
+#, python-format
+msgid "Ensure this value is less than or equal to %s."
+msgstr "Đảm bảo giá trị này là nhỏ hơn hoặc bằng với %s ."
+
+#, python-format
+msgid "Ensure this value is greater than or equal to %s."
+msgstr "Đảm bảo giá trị này lớn hơn hoặc bằng với %s ."
+
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)s characters (it has "
+"%(show_value)s)."
+msgstr ""
+"Giá trị này phải có ít nhất %(limit_value)s kí tự (hiện có %(show_value)s)"
+
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)s characters (it has "
+"%(show_value)s)."
+msgstr ""
+"Giá trị này chỉ có tối đa %(limit_value)s kí tự (hiện có %(show_value)s)"
+
+msgid "Only numbers are allowed."
+msgstr "Phải là một con số"
+
+msgid "Please select"
+msgstr "Vui lòng chọn"
+
+msgid "UPDATE"
+msgstr "CẬP NHẬT"
+
+msgid "VIEW"
+msgstr "XEM"
+
+msgid "HIDDEN"
+msgstr "ẨN"
+
+msgid "Authority Name"
+msgstr "Tên quyền"
+
+msgid "Authority Group"
+msgstr "Nhóm quyền"
+
+msgid "Authority User"
+msgstr "Quyền người dùng"
+
+msgid "Item name"
+msgstr "Tên mục"
+
+msgid "The %s field is required."
+msgstr "Trường %s là bắt buộc."
+
+msgid "Please set the event for the \"%s\" button."
+msgstr "Vui lòng đặt sự kiện cho nút \"%s\"."
+
+msgid "Button"
+msgstr "Nút"
+
+msgid "Text color"
+msgstr "Màu sắc của văn bản"
+
+msgid "Background color"
+msgstr "Màu nền"
+
+msgid "Attribute"
+msgstr "Thuộc tính"
+
+msgid "Trying to reconnect... please check your internet connection"
+msgstr "Đang cố gắng kết nối lại ... vui lòng kiểm tra kết nối internet của bạn"
+
+msgid "Reconnected"
+msgstr "Đã kết nối lại"
+
+msgid "Please set table link for this item."
+msgstr "Vui lòng cài đặt liên kết bảng cho mục này."
+
+msgid "Preview"
+msgstr "Xem trước"
+
+msgid "Auto number"
+msgstr "Số tự động"
+
+msgid "Application name"
+msgstr "Tên ứng dụng"
+
+msgid "List Table name"
+msgstr "Tên danh sách bảng"
+
+msgid "Please set table link for %s."
+msgstr "Vui lòng cài đặt liên kết bảng cho %s."
+
+msgid "There is no data to show."
+msgstr "Không có dữ liệu để hiển thị"
+
+msgid "Application"
+msgstr "Ứng dụng"
+
+msgid "List Table"
+msgstr "Danh sách bảng"
+
+msgid "Group"
+msgstr "Nhóm"
+
+msgid "User"
+msgstr "Người dùng"
+
+msgid "Please set up at least a authority for the %s."
+msgstr "Vui lòng thiết lập ít nhất một quyền cho %s."
+
+msgid "Please set up at least a %s or a %s for authority."
+msgstr "Vui lòng thiết lập ít nhất một %s hoặc một %s để thiết lập quyền."
+
+msgid "Please set up items for %s to set up authority."
+msgstr "Vui lòng thiết lập các mục cho %s để thiết lập quyền."
+
+msgid "Are you sure you want to delete the \"%s\" table from this application?"
+msgstr "Bạn có chắc bạn muốn xóa table \"%s\" khỏi ứng dụng này không?"
+
+msgid "List Object"
+msgstr "Danh sách đối tượng"
+
+msgid "Initial Event"
+msgstr "Sự kiện ban đầu"
+
+msgid "Update Event"
+msgstr "Sự kiện cập nhật"
+
+msgid "Target object"
+msgstr "Đối tượng mục tiêu"
+
+msgid "Action event"
+msgstr "Hành động"
+
+msgid "Condition"
+msgstr "Điều kiện"
+
+msgid "Field Code"
+msgstr "Mã trường"
+
+msgid "Each field in a Wysebone app has a Field Code, that is unique within the App. These field codes are necessary when creating, retrieving, and updating data via API."
+msgstr "Mỗi trường trong ứng dụng Wysebone có mã trường duy nhất trong ứng dụng. Các mã trường này là bắt buộc khi tạo, truy xuất và cập nhật dữ liệu qua API."
+
+msgid "Lookup"
+msgstr "Tra cứu"
+
+msgid "Display"
+msgstr "Hiển thị"
+
+msgid "Value"
+msgstr "Giá trị"
+
+msgid "Saving"
+msgstr "Đang lưu"
+
+msgid "All changes saved"
+msgstr "Đã lưu tất cả thay đổi"
+
+msgid "Click Event"
+msgstr "Sự kiện click"
+
+msgid "Iframe"
+msgstr ""

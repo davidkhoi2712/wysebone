@@ -1,0 +1,88 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{{ the_title }}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<link href="{% static 'styles/groups.css' %}" rel="stylesheet">
+<link href="{% static 'styles/table.css' %}" rel="stylesheet">
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+<div class="card mb-3">
+    <div class="card-header">
+        <h1 class="text-capitalize float-left">{{ the_title }}</h1>
+        <a href="{% url 'add.group' %}" class="btn btn-primary btn-sm float-right"><i class="fa fa-plus" aria-hidden="true"></i> {% blocktrans with name=_('groups') %}Add {{ name }}{% endblocktrans %}</a>
+    </div>
+    <form role="form" method="GET" class="card-body form-row form-inline">
+        <div class="col-auto my-1">
+            <input type="text" name="name" class="form-control" id="inlineFormInputName" placeholder="{% trans "Group name" %}" value="{{group_name}}">
+        </div>
+        <div class="col-auto my-1">
+            <button type="submit" id="inlineFormSubmit" class="btn btn-primary">{% trans "Search" %}</button>
+        </div>
+    </form>
+    <input type="hidden" name="object_target" id="object_target" value="{{object_target}}">
+    <div class="card-body index-group">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="groups-slider rounded">
+                    <ul class="list-group list-group-flush">
+                        {% if objects|length > 0 %}
+                            {% for group in objects %}
+                            <li href="javascript:void(0)" class="list-group-item list-group-item-secondary"><a href="javascript:void(0)" data-uuid="{{ group.uuid }}"><i class="fa fa-users" aria-hidden="true"></i>{{ group.name }}</a>
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle text-secondary" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-cog"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-right">
+                                        {% if perms.auth.change_group %}<a class="dropdown-item" href="{% url 'change.group' group.uuid %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>{% trans "Edit" %}</a>{% endif %}
+                                        {% if perms.auth.delete_group %}<a class="dropdown-item" href="{% url 'delete.group' group.uuid %}"><i class="fa fa-trash-o" aria-hidden="true"></i>{% trans "Delete" %}</a>{% endif %}
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        {% else %}
+                            <li class="list-group-item list-group-item-secondary">
+                                {% trans "There is no data to show." %}
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8 d-none" id="display-users">
+                <div class="mb-3 d-table">
+                    <h4 class="float-left mr-4">{% trans "Users" %}</h4>
+                </div>
+                <div class="table-container">
+                    <div class="alert alert-secondary mt-3" role="alert" id="alert_empty_users">
+                        {% trans "There is no data to show." %}
+                    </div>
+                    <table class="table table-striped d-none" id="user-list">
+                        <thead>
+                            <tr>
+                                <th title="{% trans "Display Name" %}">{% trans "Display Name" %}</th>
+                                <th title="{% trans "Email" %}">{% trans "Email" %}</th>
+                                <th title="{% trans "Role" %}">{% trans "Role" %}</th>
+                                <th title="{% trans "Status" %}" class="text-center">{% trans "Status" %}</th>
+                                <th title="{% trans "Action" %}" class="text-right">{% trans "Action" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}
+
+<!-- Add js -->
+{% block js %}
+<script src="{% static 'js/groups/index.js' %}"></script>
+<script src="{% static 'js/list.js' %}"></script>  
+{% endblock  %}

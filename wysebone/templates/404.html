@@ -1,0 +1,23 @@
+<!Doctype html>
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% trans "404 Page Not Found" %}</title>
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{% static 'vendor/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'styles/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="jumbotron">
+            <div class="text-center"><i class="fa fa-5x fa-frown-o" style="color:#d9534f;"></i></div>
+            <h1 class="text-center">{% trans "404 Page Not Found" %}<p> </p><p><small class="text-center"> {% trans "Your requested page, Not Found." %}</small></p></h1>
+            <p class="text-center"><a class="btn btn-primary" href="{% url 'index' %}"><i class="fa fa-home"></i> {% trans "Back to Wysebone" %}</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

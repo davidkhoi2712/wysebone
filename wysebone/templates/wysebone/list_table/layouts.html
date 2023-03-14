@@ -1,0 +1,65 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+{% load humanize %}
+
+<!-- Add title -->
+{% block title %}{{ the_title }}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<link href="{% static 'styles/apps.css' %}" rel="stylesheet" />
+{% block css %}{% endblock %}
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+<form role="form" action="" method="post" name="app_settings" id="app_settings" novalidate>
+{% csrf_token %}
+<div class="header-apps">
+    <a href="javascript:void(0)" class="rounded app-icon-lg float-left" id="choose_icon" data-icon="{{ app.icon }}" data-color="{{ app.color }}" data-toggle="modal" data-target="#chooseIconModal"></a>
+    <div class="float-left ml-1">
+        <input type="text" class="app-header-input form-control" id="app_name" name="app_name" aria-describedby="sub_appname" placeholder="{% trans "Enter list table name" %}" value="{{ app.name }}" required>
+        {% if app is not None %}
+        <small id="sub_appname" class="form-text text-muted" style="margin-left: 0.85rem">
+        {% blocktrans with time_ago=app.updated_at|timesince %}Last edited {{ time_ago }} ago.{% endblocktrans %}
+        </small>
+        {% endif %}
+        <input type="hidden" name="app_icon" id="app_icon" value="{{ app.icon }}">
+        <input type="hidden" name="app_color" id="app_color" value="{{ app.color }}">
+    </div>
+    <div class="float-right mt-2">
+        <a href="{% url 'index.list_table' %}" class="btn text-uppercase btn-lg btn-outline-secondary">{% trans "Cancel" %}</a>
+        <button type="submit" class="btn text-uppercase btn-lg btn-primary">{% trans "Save" %}</button>
+    </div>
+</div>
+<div class="app-main">
+    <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link {% block views_a %}{% endblock %}" href="{% if app is None %}{% url 'add.list_table' %}{% else %}{% url 'change.views.list_table' app.code %}{% endif %}" role="tab" title="{% trans "Views" %}">{% trans "View screen" %}</a>
+        </li>
+        {% if app is not None %}
+        <li class="nav-item">
+            <a class="nav-link {% block authority_a %}{% endblock %}" href="{% url 'change.authority.list_table' app.code %}" role="tab" title="{% trans "Authority" %}">{% trans "Authority" %}</a>
+        </li>
+        {% endif %}
+    </ul>
+    <div class="main-inner p-3 border-right border-bottom border-left">
+        <div class="tab-content">
+            <div class="tab-pane fade show active" role="tabpanel">
+                {% block tab_content %}{% endblock tab_content %}
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" value="{{ app.code }}" id="app_id">
+{% if app is None %}<input type="hidden" value="1" id="is_new_app">{% endif %}
+</form>
+{% include "wysebone/list_table/choose_icon.html" %}
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/apps/choose_icon.js' %}"></script>
+<script src="{% static 'js/apps/settings.js' %}"></script>
+{% block script %}{% endblock script %}
+{% endblock js %}

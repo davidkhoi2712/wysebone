@@ -1,0 +1,75 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n %}
+
+<!-- Add title -->
+{% block title %}{% trans "Companies" %}{% endblock %}
+
+<!-- Load static -->
+{% load staticfiles %}
+
+<!-- Add css -->
+{% block style %}
+<link href="{% static 'styles/table.css' %}" rel="stylesheet">
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+<div class="card mb-5">
+    <div class="card-header">
+        <h1 class="text-capitalize float-left">{% trans "Companies" %}</h1>
+        <a href="{% url 'add.company' %}" class="btn btn-primary btn-sm float-right"><i class="fa fa-plus" aria-hidden="true"></i> {{ add_user_title }}</a>
+    </div>
+    <div class="card-body index-group">
+        <div class="table-container">
+            {% if users|length > 0 %}
+            <table class="table table-striped" id="user-list">
+                <thead>
+                    <tr>
+                        <th title="{% trans "Display Name" %}">{% trans "Display Name" %}</th>
+                        <th title="{% trans "Email" %}">{% trans "Email" %}</th>
+                        <th title="{% trans "Role" %}">{% trans "Role" %}</th>
+                        <th title="{% trans "Status" %}" class="text-center">{% trans "Status" %}</th>
+                        <th title="{% trans "Action" %}" class="text-right">{% trans "Action" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td label="{% trans "Display Name" %}">
+                        {% if perms.wysebone.view_user %}
+                            <a title="{% trans "Change" %}" href="{% url 'view.user' user.user_id %}">{{ user.get_full_name }}</a>
+                        {% else %}
+                            {{ user.get_full_name }}
+                        {% endif %}
+                        </td>
+                        <td label="{% trans "Email" %}">{{ user.email }}</td>
+                        <td label="{% trans "Role" %}">{{ user.role_name }}</td>
+                        <td label="{% trans "Status" %}" class="text-center">
+                            {% if user.is_active %}
+                            <span class="badge badge-primary badge-pill">{% trans "Active" %}</span>
+                            {% else %}
+                            <span class="badge badge-danger badge-pill">{% trans "Inactive" %}</span>
+                            {% endif %}
+                        </td>
+                        <td label="{% trans "Action" %}" class="text-right">
+                            {% if perms.wysebone.change_user %}
+                            <a title="{% trans "Change" %}" href="{% url 'change.user' user.user_id %}?next=/user/"><i class="fa fa-edit"></i> {% trans "Change" %}</a>
+                            {% endif %}
+                            {% if perms.wysebone.delete_user %}
+                            <a class="text-danger ml-1" title="{% trans "Delete" %}" href="{% url 'delete.user' user.user_id %}?next=/user/"><i class="fa fa-trash"></i> {% trans "Delete" %}</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="alert alert-secondary mt-3" role="alert" id="alert_empty_users">
+                {% trans "There is no data to show." %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock  %}

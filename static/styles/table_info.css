@@ -1,0 +1,19 @@
+.item-edit {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    position: relative;
+}
+
+.item-edit .del{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 15px;
+}
+
+.button-collapse:hover, .button-expanse:hover{
+    text-decoration: none;
+}

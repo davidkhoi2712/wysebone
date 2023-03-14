@@ -1,0 +1,375 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-01 08:29+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\static\js\department.js:105 .\static\js\groups\index.js:13
+msgid "Display Name"
+msgstr "表示名"
+
+#: .\static\js\department.js:106 .\static\js\groups\index.js:14
+msgid "Email address"
+msgstr "メールアドレス"
+
+#: .\static\js\department.js:107 .\static\js\groups\index.js:15
+msgid "Phone"
+msgstr "電話番号"
+
+#: .\static\js\department.js:108 .\static\js\groups\index.js:16
+msgid "Status"
+msgstr "使用状態"
+
+#: .\static\js\department.js:109 .\static\js\groups\index.js:17
+msgid "Active"
+msgstr "使用中"
+
+#: .\static\js\department.js:109 .\static\js\groups\index.js:17
+msgid "Inactive"
+msgstr "停止中"
+
+#: .\static\js\department.js:110 .\static\js\groups\index.js:18
+msgid "Action"
+msgstr "応用"
+
+#: .\static\js\department.js:110 .\static\js\groups\index.js:18
+msgid "Change user"
+msgstr "ユーザーを変更"
+
+msgid "Role"
+msgstr "役割"
+
+#: .\static\js\department.js:111 .\static\js\groups\index.js:19
+msgid "Delete user"
+msgstr "ユーザーの削除"
+
+#: .\static\js\profile.js:101
+#, javascript-format
+msgid "The file format of \"%s\" is not supported."
+msgstr "「%s」はアップロードが許可されていない形式のファイルです。"
+
+#: .\static\js\profile.js:106 .\static\js\user.js:66
+msgid "The maximum file size is 3MB. Please try again."
+msgstr "最大ファイルサイズは3MBです。 もう一回やってみてください。"
+
+#: .\static\js\app\view_app.js:54
+msgid "Delete"
+msgstr "削除"
+
+#: .\static\js\app\view_app.js:61
+msgid "%s will be saved by moving to another tab?"
+msgstr "%sを保存してタブを移動しますか？"
+
+msgid "Are you sure you want to delete this field?"
+msgstr "このフィールドを削除してもよろしいですか？"
+
+msgid "An error occurred while processing. Please try again later."
+msgstr "処理中にエラーが発生しました。 後でもう一度やり直してください。"
+
+msgid "Number of characters is not valid."
+msgstr "文字数が無効です。"
+
+msgid "Number of Characters (Note: Use integer)"
+msgstr "文字数 (整数で指定)"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Number of lines"
+msgstr "行数"
+
+msgid "This field must be an positive integer."
+msgstr "このフィールドは正の整数でなければなりません。"
+
+msgid "Value is 1"
+msgstr "値は1"
+
+msgid "A single line text field accepts a single line of text for each cell. You can put any text value you want into each cell."
+msgstr "単一行テキストフィールドは各セルに1行のテキストを受け入れます。各セルにテキスト値を入力できます。"
+
+msgid "Value is greater than 1"
+msgstr "値が1より大きい"
+
+msgid "A long text field is great when you need to keep notes or multiple lines of text in each record."
+msgstr "複数行のテキストフィールドは各レコードにメモや複数行のテキストの入力を利用されます。"
+
+msgid "Name"
+msgstr "名"
+
+msgid "This field is required."
+msgstr "この項目は必須です。"
+
+msgid "Default value"
+msgstr "デフォルト値"
+
+msgid "Hide field name"
+msgstr "フィールド名を表示しない"
+
+msgid "Required field"
+msgstr "必須項目にする"
+
+msgid "Minimum"
+msgstr "最小"
+
+msgid "Maximum"
+msgstr "最大"
+
+msgid "Text"
+msgstr "テキスト"
+
+msgid "Label"
+msgstr "ラベル"
+
+msgid "Checkbox"
+msgstr "チェックボックス"
+
+msgid "Sample"
+msgstr "サンプル"
+
+msgid "Layout"
+msgstr "並び"
+
+msgid "Horizontal"
+msgstr "横"
+
+msgid "Vertical"
+msgstr "縦"
+
+msgid "Options"
+msgstr "項目と順番"
+
+msgid "Numeric"
+msgstr "数値"
+
+msgid "Use thousands separators"
+msgstr "桁区切りを表示する"
+
+msgid "Limits of Value (Note: Use integer)"
+msgstr "値の制限 (整数で指定)"
+
+msgid "This field must be a number."
+msgstr "このフィールドは数字でなければなりません。"
+
+msgid "Number of Decimal Places to display"
+msgstr "小数点以下の表示桁数"
+
+msgid "Unit of measure"
+msgstr "単位記号"
+
+msgid "Prefix (e.g. $100)"
+msgstr "前に付ける (例：¥100)"
+
+msgid "Suffix (e.g. 0.5 inches)"
+msgstr "後ろに付ける (例：100km)"
+
+msgid "Selection"
+msgstr "ドロップダウン"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "%s Settings"
+msgstr "%s設定"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Form"
+msgstr "フォーム"
+
+msgid "Views"
+msgstr "一覧"
+
+msgid "Authority"
+msgstr "権限"
+
+msgid "Search"
+msgstr "検索"
+
+msgid "Clear selection"
+msgstr "選択を解除"
+
+msgid "You can also insert a new record anywhere by pressing Shift-Enter"
+msgstr "あなたもShift-Enterを押すことでどこにも新しいレコードが挿入せる"
+
+msgid "Drag to adjust the number of frozen columns"
+msgstr "固定カラムの数を調整しにドラッグします"
+
+#, python-format
+msgid "Ensure this value is less than or equal to %s."
+msgstr "この値は %s 以下でなければなりません。"
+
+#, python-format
+msgid "Ensure this value is greater than or equal to %s."
+msgstr "この値は %s 以上でなければなりません。"
+
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)s characters (it has "
+"%(show_value)s)."
+msgstr ""
+"この値が少なくとも %(limit_value)s 文字以上であることを確認してください"
+"( %(show_value)s 文字になっています)。"
+
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)s characters (it has "
+"%(show_value)s)."
+msgstr ""
+"この値は %(limit_value)s 文字以下でなければなりません( %(show_value)s 文字に"
+"なっています)。"
+
+msgid "Only numbers are allowed."
+msgstr "数字でなければなりません。"
+
+msgid "Please select"
+msgstr "選んでください"
+
+msgid "UPDATE"
+msgstr "更新"
+
+msgid "VIEW"
+msgstr "見る"
+
+msgid "HIDDEN"
+msgstr "非表示"
+
+msgid "Authority Name"
+msgstr "権限名"
+
+msgid "Authority Group"
+msgstr "権限グループ"
+
+msgid "Authority User"
+msgstr "ユーザー権限"
+
+msgid "Item name"
+msgstr "項目名"
+
+msgid "The %s field is required."
+msgstr "%sフィールドは必須です。"
+
+msgid "Please set the event for the \"%s\" button."
+msgstr "「%s」ボタンのイベントを設定してください。"
+
+msgid "Button"
+msgstr "ボタン"
+
+msgid "Text color"
+msgstr "テキストの色"
+
+msgid "Background color"
+msgstr "背景色"
+
+msgid "Attribute"
+msgstr "属性"
+
+msgid "Trying to reconnect... please check your internet connection"
+msgstr "再接続してみています。インターネットの接続を確認してください。"
+
+msgid "Reconnected"
+msgstr "再接続しました。"
+
+msgid "Please set table link for this item."
+msgstr "この項目はテーブルリンクを設定してください。"
+
+msgid "Preview"
+msgstr "プレビュー"
+
+msgid "Auto number"
+msgstr "自動番号"
+
+msgid "Application name"
+msgstr "アプリケーション名"
+
+msgid "List Table name"
+msgstr "一覧テーブル名"
+
+msgid "Please set table link for %s."
+msgstr "%sのテーブルリンクを設定してください。"
+
+msgid "There is no data to show."
+msgstr "表示するデータがありません。"
+
+msgid "Application"
+msgstr "アプリケーション"
+
+msgid "List Table"
+msgstr "一覧テーブル"
+
+msgid "Group"
+msgstr "グループ"
+
+msgid "User"
+msgstr "ユーザー"
+
+msgid "Please set up at least a authority for the %s."
+msgstr "少なくとも%sの権限を設定してください。"
+
+msgid "Please set up at least a %s or a %s for authority."
+msgstr "権限のため、少なくとも%sまたは%sを設定してください。"
+
+msgid "Please set up items for %s to set up authority."
+msgstr "権限を設定するため、%sの条項を設定してください。"
+
+msgid "Are you sure you want to delete the \"%s\" table from this application?"
+msgstr "このアプリケーションから「%s」テーブルを削除してもよろしいですか？"
+
+msgid "List Object"
+msgstr "一覧オブジェクト"
+
+msgid "Initial Event"
+msgstr "初期イベント"
+
+msgid "Update Event"
+msgstr "アップデートイベント"
+
+msgid "Target object"
+msgstr "目標オブジェクト"
+
+msgid "Action event"
+msgstr "アクションイベント"
+
+msgid "Condition"
+msgstr "条件"
+
+msgid "Field Code"
+msgstr "フィールドコード"
+
+msgid "Each field in a Wysebone app has a Field Code, that is unique within the App. These field codes are necessary when creating, retrieving, and updating data via API."
+msgstr "Wyseboneアプリの各フィールドには、アプリ内で一意のフィールドコードがあります。 これらのフィールドコードは、APIを介してデータを作成、取得、更新するときに必要です。"
+
+msgid "Lookup"
+msgstr "ルックアップ"
+
+msgid "Display"
+msgstr "表示"
+
+msgid "Value"
+msgstr "値"
+
+msgid "Saving"
+msgstr "節約"
+
+msgid "All changes saved"
+msgstr "すべての変更が保存されました"
+
+msgid "Click Event"
+msgstr "クリックイベント"
+
+msgid "Iframe"
+msgstr ""

@@ -1,0 +1,24 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{% trans "Permission denied" %}{% endblock %}
+
+<!-- Add content -->
+{% block content %}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h3>{% trans "Permission denied" %}</h3>
+       
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-8">
+                <p>{% trans "You don't have permission to view or edit anything." %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

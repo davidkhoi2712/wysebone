@@ -1,0 +1,1327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-01 08:57+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\api\department.py:53
+#, python-format
+msgid "Department with id: %d does not exist."
+msgstr "Bộ phận với mã: %d không tồn tại."
+
+#: .\api\group.py:44
+#, fuzzy, python-format
+#| msgid "Department with id: %d does not exist."
+msgid "Group with id: %d does not exist."
+msgstr "Bộ phận với mã: %d không tồn tại."
+
+#: .\wysebone\admins\companies.py:13
+msgid "Administrator information"
+msgstr "Thông tin quản trị viên"
+
+#: .\wysebone\admins\companies.py:24
+msgid "Company information"
+msgstr "Thông tin công ty"
+
+msgid "Company code"
+msgstr "Mã công ty"
+
+msgid "Company address"
+msgstr "Địa chỉ công ty"
+
+msgid "Rep. phone number"
+msgstr "Số điện thoại đại diện"
+
+msgid "Contract period"
+msgstr "Thời hạn hợp đồng"
+
+msgid "Please select"
+msgstr "Xin hãy chọn"
+
+msgid "Updated successfully."
+msgstr "Cập nhật thành công."
+
+msgid "An error occurred while processing. Please try again later."
+msgstr "Đã xảy ra lỗi trong khi xử lý. Vui lòng thử lại sau."
+
+msgid "Country"
+msgstr "Quốc gia"
+
+msgid "Postal code"
+msgstr "Mã bưu điện"
+
+msgid "City"
+msgstr "Tỉnh/Thành phố"
+
+msgid "State"
+msgstr "Quận"
+
+msgid "This email address is already registered."
+msgstr "Email này đã được đăng kí"
+
+msgid "Number of users"
+msgstr "Số lượng người dùng"
+
+msgid "Number of tables"
+msgstr "Số lượng bảng"
+
+msgid "Number of applications"
+msgstr "Số lượng ứng dụng"
+
+#: .\wysebone\admins\users.py:10 .\wysebone\forms\users.py:86
+#: .\wysebone\forms\users.py:90 .\wysebone\templates\wysebone\sidebar.html:10
+msgid "groups"
+msgstr ""
+
+#: .\wysebone\admins\users.py:33
+msgid "Personal information"
+msgstr "Thông tin cá nhân"
+
+#: .\wysebone\admins\users.py:34
+#: .\wysebone\templates\wysebone\groups\add.html:34
+#: .\wysebone\templates\wysebone\user\add.html:155
+#: .\wysebone\views\groups\add.py:121 .\wysebone\views\groups\add.py:122
+#: .\wysebone\views\user.py:136 .\wysebone\views\user.py:137
+msgid "Permissions"
+msgstr "Các quyền"
+
+msgid "permission"
+msgstr "Quyền"
+
+msgid "Permission Name"
+msgstr "Tên quyền"
+
+msgid "Process"
+msgstr "Quá trình xử lý"
+
+msgid "Form submission event"
+msgstr "Form submission event"
+
+msgid "Screen transition"
+msgstr "Chuyển màn hình"
+
+msgid "Return to the previous screen"
+msgstr "Quay trở lại màn hình trước"
+
+msgid "Deleted permission successfully."
+msgstr "Xóa quyền thành công"
+
+msgid "Permission has been created in the system. Please choose another name."
+msgstr "Quyền đã được tạo trong hệ thống. Vui lòng tạo một tên quyền khác"
+
+msgid "There is no data to show."
+msgstr "Không có dữ liệu để hiển thị"
+
+msgid "Permission denied"
+msgstr "Quyền truy cập bị từ chối"
+
+#: .\wysebone\admins\users.py:37
+msgid "Important dates"
+msgstr ""
+
+#: .\wysebone\auths.py:26 .\wysebone\auths.py:34 .\wysebone\auths.py:42
+#, python-format
+msgid "%(name)s management"
+msgstr "Quản lý %(name)s"
+
+#: .\wysebone\auths.py:26 .\wysebone\auths.py:27 .\wysebone\auths.py:28
+#: .\wysebone\auths.py:29 .\wysebone\auths.py:30
+#: .\wysebone\views\groups\list.py:32 .\wysebone\views\user.py:156
+msgid "user"
+msgstr ""
+
+#: .\wysebone\auths.py:27 .\wysebone\auths.py:35 .\wysebone\auths.py:43
+#, python-format
+msgid "View %s"
+msgstr "Xem %s"
+
+#: .\wysebone\auths.py:29 .\wysebone\auths.py:37 .\wysebone\auths.py:45
+#, fuzzy, python-format
+#| msgid "Change Password"
+msgid "Change %s"
+msgstr "Đổi mật khẩu"
+
+#: .\wysebone\auths.py:30 .\wysebone\auths.py:38 .\wysebone\auths.py:46
+#, python-format
+msgid "Delete %s"
+msgstr "Xóa %s"
+
+# wysebone/templates/wysebone/department/create.html
+#: .\wysebone\auths.py:34 .\wysebone\auths.py:35 .\wysebone\auths.py:36
+#: .\wysebone\auths.py:37 .\wysebone\auths.py:38
+#: .\wysebone\templates\wysebone\user\add.html:90
+msgid "Department"
+msgstr "Bộ phận"
+
+#: .\wysebone\auths.py:42 .\wysebone\auths.py:43 .\wysebone\auths.py:44
+#: .\wysebone\auths.py:45 .\wysebone\auths.py:46
+#: .\wysebone\views\groups\add.py:93 .\wysebone\views\groups\add.py:120
+#: .\wysebone\views\groups\change.py:34 .\wysebone\views\groups\delete.py:34
+#: .\wysebone\views\groups\list.py:31 .\wysebone\views\groups\members.py:34
+msgid "group"
+msgstr ""
+
+#: .\wysebone\forms\account.py:27 .\wysebone\forms\account.py:62
+#: .\wysebone\forms\companies.py:43 .\wysebone\models\users.py:79
+#: .\wysebone\templates\wysebone\user\add.html:55
+#, fuzzy
+#| msgid "Email Address"
+msgid "Email address"
+msgstr "Địa chỉ email"
+
+#: .\wysebone\forms\account.py:35 .\wysebone\forms\account.py:71
+#: .\wysebone\forms\companies.py:19 .\wysebone\forms\users.py:22
+#: .\wysebone\forms\users.py:84 .\wysebone\templates\wysebone\user\add.html:62
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: .\wysebone\forms\account.py:56 .\wysebone\forms\companies.py:15
+#: .\wysebone\forms\users.py:16
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: .\wysebone\forms\account.py:67 .\wysebone\forms\companies.py:53
+#: .\wysebone\forms\users.py:161
+#: .\wysebone\templates\wysebone\user\profile.html:94
+msgid "Enter a valid email address"
+msgstr "Nhập một email hợp lệ"
+
+#: .\wysebone\forms\account.py:80 .\wysebone\forms\companies.py:31
+#: .\wysebone\forms\users.py:34 .\wysebone\templates\wysebone\user\add.html:69
+#, fuzzy
+#| msgid "Personal information"
+msgid "Password confirmation"
+msgstr "Thông tin cá nhân"
+
+#: .\wysebone\forms\account.py:95 .\wysebone\forms\groups.py:39
+#, fuzzy
+#| msgid "Permissions"
+msgid "permissions"
+msgstr "Các quyền"
+
+#: .\wysebone\forms\companies.py:40 .\wysebone\forms\users.py:43
+msgid "Enter the same password as before, for verification."
+msgstr "Nhập mật khẩu để xác thực giống mật khẩu đã nhập"
+
+#: .\wysebone\forms\department.py:10 .\wysebone\forms\department.py:16
+msgid "Department name"
+msgstr "Tên bộ phận"
+
+#: .\wysebone\forms\groups.py:26 .\wysebone\models\contenttypes.py:6
+#: .\wysebone\models\department.py:13 .\wysebone\models\language.py:7
+#: .\wysebone\templates\wysebone\department\add.html:33
+msgid "Name"
+msgstr "Tên"
+
+#: .\wysebone\forms\users.py:115 .\wysebone\forms\users.py:120
+#: .\wysebone\templates\wysebone\user\add.html:80
+msgid "First name"
+msgstr "Tên"
+
+#: .\wysebone\forms\users.py:128 .\wysebone\forms\users.py:133
+#: .\wysebone\templates\wysebone\user\add.html:83
+msgid "Last name"
+msgstr "Họ"
+
+#: .\wysebone\models\__init__.py:13 .\wysebone\models\users.py:67
+#: .\wysebone\templates\wysebone\user\profile.html:145
+#: .\wysebone\templates\wysebone\user\view.html:66
+msgid "Employee ID"
+msgstr "Mã số nhân viên"
+
+#: .\wysebone\models\__init__.py:17 .\wysebone\models\companies.py:24
+#: .\wysebone\models\plans.py:10
+msgid "Creation date"
+msgstr "Ngày tạo"
+
+#: .\wysebone\models\__init__.py:19 .\wysebone\models\companies.py:26
+#: .\wysebone\models\plans.py:12
+msgid "Last modified"
+msgstr "Lần cuối cập nhật"
+
+#: .\wysebone\models\companies.py:16
+msgid "Company name"
+msgstr "Tên công ty"
+
+#: .\wysebone\models\companies.py:17
+msgid "Address"
+msgstr "Địa chỉ"
+
+#: .\wysebone\models\companies.py:18 .\wysebone\models\users.py:84
+msgid "Phone number"
+msgstr "Số điện thoại"
+
+#: .\wysebone\models\companies.py:19
+msgid "Number of employees"
+msgstr "Số lượng nhân viên"
+
+#: .\wysebone\models\companies.py:20
+msgid "Domain name"
+msgstr "Tên miền"
+
+#: .\wysebone\models\companies.py:20
+msgid "This domain name already exists"
+msgstr "Tên miền đăng kí của công ty đã tồn tại."
+
+#: .\wysebone\models\companies.py:21
+msgid "Contract start date"
+msgstr "Ngày bắt đầu hợp đồng"
+
+#: .\wysebone\models\companies.py:22
+msgid "Contract end date"
+msgstr "Ngày kết thúc hợp đồng"
+
+#: .\wysebone\models\companies.py:23 .\wysebone\models\plans.py:17
+#: .\wysebone\models\plans.py:18
+msgid "Contract plan"
+msgstr "Kế hoạch hợp đồng"
+
+#: .\wysebone\models\companies.py:32
+msgid "End time must be greater than start time"
+msgstr "Thời gian kết thúc phải lớn hơn thời gian bắt đầu."
+
+#: .\wysebone\models\companies.py:35
+msgid "Company"
+msgstr "Công ty"
+
+#: .\wysebone\models\companies.py:36
+msgid "Companies"
+msgstr "Công ty"
+
+#: .\wysebone\models\contenttypes.py:7
+#, fuzzy
+#| msgid "Name"
+msgid "Code Name"
+msgstr "Tên"
+
+#: .\wysebone\models\contenttypes.py:8
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#: .\wysebone\models\contenttypes.py:9 .\wysebone\models\department.py:14
+#: .\wysebone\templates\wysebone\department\add.html:78
+msgid "Description"
+msgstr "Mô tả"
+
+#: .\wysebone\models\contenttypes.py:12
+msgid "content type"
+msgstr ""
+
+#: .\wysebone\models\contenttypes.py:13
+msgid "content types"
+msgstr ""
+
+#: .\wysebone\models\department.py:12
+msgid "UUID"
+msgstr ""
+
+#: .\wysebone\models\language.py:6 .\wysebone\models\locale.py:8
+#, fuzzy
+#| msgid "Choose"
+msgid "Code"
+msgstr "Chọn"
+
+#: .\wysebone\models\locale.py:9
+msgid "Field"
+msgstr ""
+
+#: .\wysebone\models\locale.py:10
+msgid "Translate"
+msgstr ""
+
+#: .\wysebone\models\plans.py:7
+msgid "Plan name"
+msgstr "Kế hoạch"
+
+#: .\wysebone\models\plans.py:8
+msgid "Limit the number of accounts"
+msgstr "Giới hạn số lượng tài khoản"
+
+msgid "The number of accounts over the limit allow."
+msgstr "Số lượng tài khoản vượt quá số lượng cho phép"
+
+#: .\wysebone\models\plans.py:9
+msgid "Limit the number of applications"
+msgstr "Giới hạn số lượng ứng dụng"
+
+msgid "The number of apps over the limit allow."
+msgstr "Số lượng ứng dụng vượt quá số lượng cho phép"
+
+#: .\wysebone\models\users.py:18
+#, fuzzy
+#| msgid "Enter a valid email address"
+msgid "Users must have an email address."
+msgstr "Nhập một email hợp lệ"
+
+#: .\wysebone\models\users.py:92
+#: .\wysebone\templates\wysebone\user\add.html:118
+#: .\wysebone\templates\wysebone\user\add.html:122
+#: .\wysebone\templates\wysebone\user\profile.html:107
+#: .\wysebone\templates\wysebone\user\view.html:41
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#: .\wysebone\models\users.py:97
+msgid "Hire date"
+msgstr "Ngày tham gia"
+
+#: .\wysebone\models\users.py:102
+msgid "Time zone"
+msgstr "Múi giờ"
+
+#: .\wysebone\models\users.py:109
+#: .\wysebone\templates\wysebone\user\add.html:128
+#: .\wysebone\templates\wysebone\user\profile.html:123
+#: .\wysebone\templates\wysebone\user\view.html:53
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: .\wysebone\models\users.py:137
+#: .\wysebone\templates\wysebone\user\add.html:76
+msgid "Full name"
+msgstr "Họ và tên"
+
+#: .\wysebone\templates\admin\base.html:35
+msgid "Welcome,"
+msgstr ""
+
+#: .\wysebone\templates\admin\base.html:43
+#, fuzzy
+#| msgid "View %s"
+msgid "View site"
+msgstr "Xem %s"
+
+#: .\wysebone\templates\admin\base.html:48
+#: .\wysebone\templates\wysebone\password-change-done.html:3
+msgid "Documentation"
+msgstr ""
+
+#: .\wysebone\templates\admin\base.html:52
+#: .\wysebone\templates\wysebone\password-change-done.html:3
+#, fuzzy
+#| msgid "Change Password"
+msgid "Change password"
+msgstr "Đổi mật khẩu"
+
+#: .\wysebone\templates\admin\base.html:54
+#: .\wysebone\templates\wysebone\password-change-done.html:3
+#, fuzzy
+#| msgid "Logout"
+msgid "Log out"
+msgstr "Đăng xuất"
+
+#: .\wysebone\templates\admin\base.html:64
+#: .\wysebone\templates\wysebone\password-change-done.html:6
+msgid "Home"
+msgstr ""
+
+#: .\wysebone\templates\admin\index.html:21
+#: .\wysebone\templates\admin\index.html:25
+#, fuzzy, python-format
+#| msgid "Limit the number of applications"
+msgid "Models in the %(name)s application"
+msgstr "Giới hạn số lượng ứng dụng"
+
+#: .\wysebone\templates\admin\index.html:37
+msgid "Add"
+msgstr "Thêm"
+
+#: .\wysebone\templates\admin\index.html:44
+#, fuzzy
+#| msgid "View %s"
+msgid "View"
+msgstr "Xem"
+
+msgid "Can %s"
+msgstr "Có thể %s"
+
+#: .\wysebone\templates\admin\index.html:46
+#: .\wysebone\templates\wysebone\department\tree_department.html:18
+msgid "Change"
+msgstr "Thay đổi"
+
+msgid "Update"
+msgstr "Cập nhật"
+
+msgid "Hidden"
+msgstr "Ẩn"
+
+#: .\wysebone\templates\admin\index.html:57
+msgid "You don't have permission to view or edit anything."
+msgstr "Bạn không có quyền xem hoặc chỉnh sửa bất cứ điều gì."
+
+#: .\wysebone\templates\admin\index.html:65
+msgid "Recent actions"
+msgstr ""
+
+#: .\wysebone\templates\admin\index.html:66
+msgid "My actions"
+msgstr ""
+
+#: .\wysebone\templates\admin\index.html:70
+#, fuzzy
+#| msgid "Available %s"
+msgid "None available"
+msgstr "%s có sẵn"
+
+#: .\wysebone\templates\admin\index.html:84
+msgid "Unknown content"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\base.html:39
+#: .\wysebone\templates\wysebone\user\view.html:4
+#: .\wysebone\templates\wysebone\user\view.html:10
+msgid "Profile"
+msgstr "Hồ sơ"
+
+#: .\wysebone\templates\wysebone\base.html:40
+#: .\wysebone\templates\wysebone\change-password.html:11
+msgid "Change Password"
+msgstr "Đổi mật khẩu"
+
+#: .\wysebone\templates\wysebone\base.html:42
+msgid "Logout"
+msgstr "Đăng xuất"
+
+#: .\wysebone\templates\wysebone\change-password.html:15
+#, fuzzy
+#| msgid "Password"
+msgid "Old password"
+msgstr "Mật khẩu"
+
+#: .\wysebone\templates\wysebone\change-password.html:22
+#, fuzzy
+#| msgid "Password"
+msgid "New password"
+msgstr "Mật khẩu"
+
+#: .\wysebone\templates\wysebone\change-password.html:30
+msgid "New password confirmation"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\change-password.html:40
+#, fuzzy
+#| msgid "Change Password"
+msgid "Change my password"
+msgstr "Đổi mật khẩu"
+
+msgid "Your password can't be too similar to your other personal information."
+msgstr "Mật khẩu của bạn không thể quá giống với thông tin cá nhân của bạn"
+
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] "Mật khẩu của bạn phải bao gồm ít nhất 8 kí tự"
+
+msgid "Your password can't be a commonly used password."
+msgstr "Mật khẩu của bạn thông thể là mật khẩu thường được sử dụng"
+
+msgid "Your password can't be entirely numeric."
+msgstr "Mật khẩu của bạn không thể hoàn toàn là số"
+
+msgid ""
+"This password is too short. It must contain at least %(min_length)d "
+"character."
+msgid_plural ""
+"This password is too short. It must contain at least %(min_length)d "
+"characters."
+msgstr[0] "Mật khẩu này quá ngắn, nó phải chứa ít nhất 8 kí tự"
+
+msgid "This password is too common."
+msgstr "Mật khẩu này quá phổ biến"
+
+msgid "This password is entirely numeric."
+msgstr "Mật khẩu này chỉ toàn là chữ số"
+
+#: .\wysebone\templates\wysebone\department\add.html:6
+#: .\wysebone\templates\wysebone\department\add.html:26
+#: .\wysebone\templates\wysebone\department\index.html:33
+msgid "New Department"
+msgstr "Bộ phận mới"
+
+#: .\wysebone\templates\wysebone\department\add.html:35
+#: .\wysebone\templates\wysebone\department\index.html:77
+#: .\wysebone\templates\wysebone\department\index.html:88
+#: .\wysebone\templates\wysebone\groups\index.html:59
+#: .\wysebone\templates\wysebone\user\profile.html:60
+#: .\wysebone\templates\wysebone\user\view.html:22
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#: .\wysebone\templates\wysebone\department\add.html:42
+msgid "Localized Name"
+msgstr "Tên địa phương"
+
+#: .\wysebone\templates\wysebone\department\add.html:55
+msgid "Enter a department name to be displayed in the specified language."
+msgstr "Nhập tên bộ phận sẽ được hiển thị bằng ngôn ngữ được chỉ định."
+
+#: .\wysebone\templates\wysebone\department\add.html:65
+msgid "Parent Department"
+msgstr "Thuộc bộ phận"
+
+#: .\wysebone\templates\wysebone\department\add.html:68
+msgid "Root"
+msgstr "Gốc"
+
+#: .\wysebone\templates\wysebone\department\add.html:85
+#: .\wysebone\templates\wysebone\department\change_member.html:80
+#: .\wysebone\templates\wysebone\groups\add.html:83
+#: .\wysebone\templates\wysebone\user\add.html:208
+msgid "Save"
+msgstr "Lưu"
+
+#: .\wysebone\templates\wysebone\department\add.html:86
+#: .\wysebone\templates\wysebone\department\change_member.html:81
+#: .\wysebone\templates\wysebone\groups\add.html:84
+#: .\wysebone\templates\wysebone\user\add.html:209
+msgid "Cancel"
+msgstr "Hủy"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:35
+#: .\wysebone\templates\wysebone\department\index.html:50
+msgid "All Users"
+msgstr "Tất cả người dùng"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:48
+#: .\wysebone\templates\wysebone\groups\add.html:55
+#: .\wysebone\templates\wysebone\user\add.html:176
+msgid "Choose all"
+msgstr "Chọn tất cả"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:53
+#: .\wysebone\templates\wysebone\groups\add.html:60
+#: .\wysebone\templates\wysebone\user\add.html:181
+msgid "Choose"
+msgstr "Chọn"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:54
+#: .\wysebone\templates\wysebone\groups\add.html:61
+#: .\wysebone\templates\wysebone\user\add.html:182
+#, fuzzy
+#| msgid "Remove all"
+msgid "Remove"
+msgstr "Xoá tất cả"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:73
+#: .\wysebone\templates\wysebone\groups\add.html:74
+#: .\wysebone\templates\wysebone\user\add.html:195
+msgid "Remove all"
+msgstr "Xoá tất cả"
+
+#: .\wysebone\templates\wysebone\department\index.html:6
+#: .\wysebone\templates\wysebone\department\index.html:24
+#: .\wysebone\templates\wysebone\sidebar.html:9
+msgid "Departments & Users"
+msgstr "Bộ phận & nhân sự"
+
+# wysebone/templates/wysebone/department/add.html
+#: .\wysebone\templates\wysebone\department\index.html:31
+msgid "Departments"
+msgstr "Bộ phận"
+
+# wysebone/templates/wysebone/department/index.html
+#: .\wysebone\templates\wysebone\department\index.html:65
+msgid "Users"
+msgstr "Người dùng"
+
+# wysebone/templates/wysebone/user/add.html
+#: .\wysebone\templates\wysebone\department\index.html:67
+#: .\wysebone\templates\wysebone\user\add.html:6
+#: .\wysebone\templates\wysebone\user\add.html:28
+msgid "New User"
+msgstr "Người dùng mới"
+
+#: .\wysebone\templates\wysebone\department\index.html:72
+msgid "There are no users to display."
+msgstr "Không có người dùng để hiển thị."
+
+#: .\wysebone\templates\wysebone\department\index.html:78
+#: .\wysebone\templates\wysebone\department\index.html:89
+#: .\wysebone\templates\wysebone\groups\index.html:60
+msgid "Email"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\department\index.html:79
+#: .\wysebone\templates\wysebone\department\index.html:90
+#: .\wysebone\templates\wysebone\groups\index.html:61
+#: .\wysebone\templates\wysebone\user\add.html:102
+#: .\wysebone\templates\wysebone\user\add.html:104
+#: .\wysebone\templates\wysebone\user\profile.html:100
+#: .\wysebone\templates\wysebone\user\view.html:34
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#: .\wysebone\templates\wysebone\department\index.html:80
+#: .\wysebone\templates\wysebone\department\index.html:91
+#: .\wysebone\templates\wysebone\groups\index.html:62
+msgid "Status"
+msgstr "Trạng thái"
+
+#: .\wysebone\templates\wysebone\department\index.html:81
+#: .\wysebone\templates\wysebone\department\index.html:97
+#: .\wysebone\templates\wysebone\groups\index.html:63
+#, fuzzy
+#| msgid "Active"
+msgid "Action"
+msgstr "Hoạt động"
+
+#: .\wysebone\templates\wysebone\department\index.html:93
+msgid "Active"
+msgstr "Hoạt động"
+
+#: .\wysebone\templates\wysebone\department\index.html:95
+msgid "Inactive"
+msgstr "Không hoạt động"
+
+#: .\wysebone\templates\wysebone\department\index.html:98
+msgid "Change user"
+msgstr "Thay đổi người dùng"
+
+#: .\wysebone\templates\wysebone\department\index.html:99
+msgid "Delete user"
+msgstr "Xóa người dùng"
+
+#: .\wysebone\templates\wysebone\department\tree_department.html:19
+msgid "Add Child Department"
+msgstr "Thêm bộ phận trực thuộc"
+
+#: .\wysebone\templates\wysebone\department\tree_department.html:20
+msgid "Change Members"
+msgstr "Thay đổi thành viên"
+
+#: .\wysebone\templates\wysebone\external\login.html:4
+#: .\wysebone\templates\wysebone\external\login.html:17
+#: .\wysebone\templates\wysebone\external\login.html:63
+msgid "Login"
+msgstr "Đăng nhập"
+
+#: .\wysebone\templates\wysebone\external\login.html:20
+#: .\wysebone\views\account.py:66
+msgid "The email address or password incorrect. Please try again."
+msgstr "Địa chỉ email hoặc mật khẩu không chính xác. Vui lòng thử lại."
+
+#: .\wysebone\templates\wysebone\external\login.html:24
+msgid ""
+"Your account doesn't have access to this page. To proceed, please login with "
+"an account that has access."
+msgstr ""
+"Tài khoản của bạn không có quyền truy cập vào trang này. Để tiếp tục, vui "
+"lòng đăng nhập bằng tài khoản có quyền truy cập."
+
+#: .\wysebone\templates\wysebone\external\login.html:53
+msgid "Remember me"
+msgstr "Ghi nhớ đăng nhập"
+
+#: .\wysebone\templates\wysebone\groups\index.html:27
+msgid "Groups"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\groups\index.html:52
+#, fuzzy
+#| msgid "Change Members"
+msgid "Members"
+msgstr "Thay đổi thành viên"
+
+#: .\wysebone\templates\wysebone\password-change-done.html:7
+#, fuzzy
+#| msgid "Password"
+msgid "Password change"
+msgstr "Mật khẩu"
+
+#: .\wysebone\templates\wysebone\password-change-done.html:15
+msgid "Your password was changed."
+msgstr ""
+
+# Password Reset
+msgid "We've emailed you instructions for setting your password, if an account exists with the email you entered. You should receive them shortly."
+msgstr "Chúng tôi đã gửi email cho bạn các hướng dẫn để đặt mật khẩu, nếu tài khoản tồn tại với email bạn đã nhập. Bạn sẽ nhận được chúng trong thời gian ngắn."
+
+msgid "If you don't receive an email, please make sure you've entered the address you registered with, and check your spam folder."
+msgstr "Nếu bạn không nhận được email, vui lòng chắc chắn bạn đã nhập địa chỉ mà bạn đã đăng ký và kiểm tra hòm thư rác."
+
+msgid "If clicking the link above doesn't work, please copy and paste the URL in a new browser window instead."
+msgstr "Nếu nhấp vào liên kết ở trên không hoạt động, vui lòng sao chép và dán URL vào cửa sổ trình duyệt mới."
+
+msgid "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
+msgstr "Liên kết đặt lại mật khẩu không hợp lệ,vì có thể nó đã được sử dụng. Vui lòng gửi yêu cầu đặt lại mật khẩu mới."
+
+msgid "Forgot Password ?"
+msgstr "Quên mật khẩu ?"
+
+msgid "Already have login and password?"
+msgstr "Đã có thông tin đăng nhập và mật khẩu?"
+
+msgid "Reset password"
+msgstr "Đặt lại mật khẩu"
+
+msgid "Password reset success"
+msgstr "Đặt lại mật khẩu thành công"
+
+msgid "Return to login page"
+msgstr "Trở về trang đăng nhập"
+
+msgid "Sincerely,"
+msgstr "Trân trọng,"
+
+# Applications
+#: .\wysebone\templates\wysebone\sidebar.html:11
+msgid "Applications"
+msgstr "Ứng dụng"
+
+msgid "Application"
+msgstr "Ứng dụng"
+
+msgid "Application name"
+msgstr "Tên ứng dụng"
+
+msgid "Last edited %(time_ago)s ago."
+msgstr "Chỉnh sửa lần cuối %(time_ago)s trước."
+
+msgid "Choose an icon"
+msgstr "Chọn một biểu tượng"
+
+msgid "Choose color"
+msgstr "Chọn màu"
+
+msgid "Continue"
+msgstr "Tiếp tục"
+
+msgid "Processing"
+msgstr "Đang xử lí"
+
+msgid "Completed"
+msgstr "Hoàn thành"
+
+msgid "Testing"
+msgstr "Đang kiểm tra"
+
+msgid "Test completed"
+msgstr "Kiểm tra hoàn thành"
+
+msgid "Released"
+msgstr "Đã phát hành"
+
+msgid "Per page"
+msgstr "Số dòng mỗi trang"
+
+msgid "Showing %(start)s to %(end)s of %(total)s entries"
+msgstr "Hiển thị %(start)s đến %(end)s trên tổng số %(total)s mục"
+
+# Localization
+#: .\wysebone\templates\wysebone\sidebar.html:12
+msgid "Localization"
+msgstr "Bản địa hóa"
+
+#: .\wysebone\templates\wysebone\user\add.html:36
+msgid "Avatar"
+msgstr "Hình đại diện"
+
+#: .\wysebone\templates\wysebone\user\add.html:42
+msgid "Upload new avatar"
+msgstr "Tải lên hình đại diện mới"
+
+#: .\wysebone\templates\wysebone\user\add.html:44
+msgid "Choose file"
+msgstr "Chọn tập tin"
+
+#: .\wysebone\templates\wysebone\user\add.html:46
+msgid "The maximum file size allowed is 3MB."
+msgstr "Kích thước tệp tối đa được phép là 3MB."
+
+#: .\wysebone\templates\wysebone\user\add.html:50
+#: .\wysebone\templates\wysebone\user\profile.html:51
+msgid "Avatar will be removed."
+msgstr "Hình đại diện sẽ bị xóa."
+
+#: .\wysebone\templates\wysebone\user\add.html:50
+#: .\wysebone\templates\wysebone\user\profile.html:51
+msgid "Are you sure?"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\user\add.html:50
+#: .\wysebone\templates\wysebone\user\profile.html:51
+msgid "Remove avatar"
+msgstr "Xóa hình đại diện"
+
+#: .\wysebone\templates\wysebone\user\add.html:108
+#: .\wysebone\templates\wysebone\user\add.html:112
+#: .\wysebone\templates\wysebone\user\profile.html:117
+#: .\wysebone\templates\wysebone\user\view.html:47
+msgid "Hire Date"
+msgstr "Ngày ký hợp đồng"
+
+#: .\wysebone\templates\wysebone\user\add.html:133
+msgid "Use Web browser settings"
+msgstr "Sử dụng cài đặt trình duyệt Web"
+
+#: .\wysebone\templates\wysebone\user\add.html:143
+#: .\wysebone\templates\wysebone\user\profile.html:137
+#: .\wysebone\templates\wysebone\user\view.html:60
+msgid "Time Zone"
+msgstr "Múi giờ"
+
+#: .\wysebone\templates\wysebone\user\add.html:222
+#: .\wysebone\templates\wysebone\user\profile.html:163
+msgid "Position and size your new avatar"
+msgstr "Vị trí và kích thước hình đại diện mới của bạn"
+
+#: .\wysebone\templates\wysebone\user\add.html:245
+#: .\wysebone\templates\wysebone\user\profile.html:186
+msgid "Set new profile avatar"
+msgstr "Tạo hình đại diện mới"
+
+#: .\wysebone\templates\wysebone\user\profile.html:4
+#: .\wysebone\templates\wysebone\user\profile.html:36
+msgid "My Profile"
+msgstr "Hồ sơ"
+
+#: .\wysebone\templates\wysebone\user\profile.html:48
+msgid "Change avatar"
+msgstr "Thay đổi hình đại diện"
+
+#: .\wysebone\templates\wysebone\user\profile.html:69
+#: .\wysebone\templates\wysebone\user\profile.html:79
+msgid "This field is required."
+msgstr ""
+
+#: .\wysebone\templates\wysebone\user\profile.html:87
+#: .\wysebone\templates\wysebone\user\view.html:28
+msgid "Email Address"
+msgstr "Địa chỉ email"
+
+#: .\wysebone\templates\wysebone\user\profile.html:140
+msgid "Select time zone"
+msgstr "Chọn múi giờ"
+
+#: .\wysebone\templates\wysebone\user\profile.html:152
+msgid "Update profile"
+msgstr "Cập nhật hồ sơ"
+
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+msgid "None"
+msgstr "Không có dữ liệu"
+
+msgid "Change \"%s\" Members"
+msgstr "Thay đổi thành viên của \"%s\""
+
+msgid "Members of the %(name)s \"%(obj)s\" was changed successfully."
+msgstr "Thành viên của %(name)s \"%(obj)s\" đã được thay đổi."
+
+#: .\wysebone\validates.py:10
+msgid "Phone number is at least 10 numbers"
+msgstr "Số điện thoại phải có tối thiểu 10 số"
+
+#: .\wysebone\validates.py:13
+msgid "Phone number is at most 20 numbers"
+msgstr "Số điện thoại nhiều nhất là 20 số."
+
+#: .\wysebone\validates.py:16
+msgid "The phone is at least 10 number and contain only  +()-. and x#"
+msgstr "Số điện thoại có tối thiểu 10 số và chỉ bao gồm các kí tự +()-. và x#"
+
+msgid "Customer Management"
+msgstr "Quản lý khách hàng"
+
+msgid "Development account"
+msgstr "Tài khoản phát triển"
+
+msgid "Role"
+msgstr "Vai trò"
+
+msgid "Administrator"
+msgstr "Người quản lý"
+
+msgid "Developer"
+msgstr "Người phát triển"
+
+msgid "Tester"
+msgstr "Người kiểm tra"
+
+msgid "Operation Manager"
+msgstr "Quản lý hoạt động"
+
+msgid "General User"
+msgstr "Người dùng chung"
+
+msgid "Can not remove the administrator authority."
+msgstr "Không thể loại bỏ quyền quản trị viên."
+
+# Group mamagement
+#: .\wysebone\validates.py:42
+msgid "Group name"
+msgstr "Tên Nhóm"
+
+msgid ""
+"The group name has been created in the system. Please choose another name."
+msgstr "Tên nhóm đã được tạo trong hệ thống. Vui lòng chọn một tên khác."
+
+#: .\wysebone\views\account.py:115
+msgid "Your profile has been updated successfully."
+msgstr "Hồ sơ của bạn đã được cập nhật thành công"
+
+#: .\wysebone\views\account.py:118
+msgid "Profile update failed."
+msgstr "Cập nhật hồ sơ không thành công."
+
+#: .\wysebone\views\department.py:111 .\wysebone\views\department.py:125
+msgid "Create department failed."
+msgstr "Tạo bộ phận thất bại."
+
+#: .\wysebone\views\department.py:129
+msgid "Created department successfully."
+msgstr "Tạo bộ phận thành công."
+
+#: .\wysebone\views\department.py:133 .\wysebone\views\department.py:215
+#: .\wysebone\views\groups\add.py:97
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\wysebone\views\department.py:207
+#, python-format
+msgid "Change '%s' members failed."
+msgstr "Thay đổi thành viên '%s' thất bại."
+
+#: .\wysebone\views\department.py:211
+#, python-format
+msgid "Change '%s' members successfully."
+msgstr "Thay đổi thành viên '%s' thành công."
+
+#: .\wysebone\views\department.py:225
+#, python-format
+msgid "'%s' members"
+msgstr "Thành viên '%s'"
+
+#: .\wysebone\views\groups\add.py:93
+#, python-brace-format
+msgid "The {name} \"{obj}\" was added successfully."
+msgstr "{name} \"{obj}\" đã được thêm thành công. "
+
+#: .\wysebone\views\groups\add.py:121 .\wysebone\views\user.py:136
+#, python-format
+msgid "Available %s"
+msgstr "%s có sẵn"
+
+#: .\wysebone\views\groups\add.py:122 .\wysebone\views\user.py:137
+#, python-format
+msgid "Chosen %s"
+msgstr "%s đã chọn"
+
+#: .\wysebone\views\groups\list.py:30
+msgid "Groups & Members"
+msgstr ""
+
+#: .\wysebone\views\user.py:128
+msgid "Created user successfully."
+msgstr "Tạo người dùng thành công."
+
+#: .\wysebone\views\user.py:156
+#, python-format
+msgid "%(name)s with ID \"%(key)s\" doesn't exist. Perhaps it was deleted?"
+msgstr "%(name)s với ID \"%(key)s\" không tồn tại. Có lẽ nó đã bị xóa?"
+
+#: .\wysebone\templates\wysebone\table\index.html:25
+msgid "Change Settings"
+msgstr "Thay đổi cài đặt"
+
+#: .\wysebone\templates\wysebone\table\index.html:26
+msgid "Records"
+msgstr "Bản ghi"
+
+#: .\wysebone\templates\wysebone\table\index.html:27
+msgid "Fields"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\table\index.html:28
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#: .\wysebone\templates\wysebone\table\index.html:29
+msgid "Updated by"
+msgstr "Cập nhật bởi"
+
+msgid "No, take me back"
+msgstr "Không, đưa tôi trở lại"
+
+#: .\wysebone\templates\wysebone\delete_comfirmation.html:13
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(name)s \"%(obj)s\"?"
+msgstr ""
+"Bạn có chắc là muốn xóa %(name)s \"%(obj)s\"?"
+
+
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr "%(name)s \"%(obj)s\" đã được thay đổi thành công. "
+
+
+#: .\wysebone\templates\wysebone\app\layouts.html
+msgid "Text"
+msgstr "Văn bản"
+
+msgid "Basic"
+msgstr "Cơ bản"
+
+msgid "Input"
+msgstr "Đầu vào"
+
+msgid "Event"
+msgstr "Sự kiện"
+
+msgid "Table link"
+msgstr "Liên kết dữ liệu"
+
+msgid "Enter application name"
+msgstr "Nhập tên ứng dụng"
+
+msgid "Enter list table name"
+msgstr "Nhập tên danh sách bảng"
+
+msgid "Create App"
+msgstr "Tạo ứng dụng"
+
+msgid "Entry form"
+msgstr "Mẫu nhập liệu"
+
+msgid "View screen"
+msgstr "Màn hình hiển thị"
+
+msgid "Field Code"
+msgstr "Mã trường"
+
+msgid "Each field in a Wysebone app has a Field Code, that is unique within the App. These field codes are necessary when creating, retrieving, and updating data via API."
+msgstr "Mỗi trường trong ứng dụng Wysebone có mã trường duy nhất trong ứng dụng. Các mã trường này là bắt buộc khi tạo, truy xuất và cập nhật dữ liệu qua API."
+
+msgid "Each field in a Wysebone app is linked to the input data."
+msgstr "Mỗi trường trong ứng dụng Wysebone được liên kết với dữ liệu đầu vào."
+
+msgid "Authority"
+msgstr "Quyền"
+
+msgid "App settings"
+msgstr "Cài đặt ứng dụng"
+
+msgid "Settings"
+msgstr "Cài đặt"
+
+msgid "Drag and drop fields here."
+msgstr "Kéo và thả các trường ở đây."
+
+msgid "Label"
+msgstr "Nhãn"
+
+msgid "Checkbox"
+msgstr "Checkbox"
+
+msgid "Selection"
+msgstr "Thả xuống"
+
+msgid "Button"
+msgstr "Nút"
+
+# table section
+msgid "table"
+msgstr "bảng"
+
+msgid "Table name"
+msgstr "Tên bảng"
+
+msgid "Table Items"
+msgstr "Các mục"
+
+msgid "Item name"
+msgstr "Tên mục"
+
+msgid "Required"
+msgstr "Được yêu cầu"
+
+msgid "Default value"
+msgstr "Giá trị mặc định"
+
+msgid "Type"
+msgstr "Loại"
+
+msgid "Field size"
+msgstr "Số dòng"
+
+msgid "Number of digits"
+msgstr "Số lượng phần nguyên"
+
+msgid "Decimal digits"
+msgstr "Số lượng phần thập phân"
+
+msgid "Auto number"
+msgstr "Số tự động"
+
+msgid "View less"
+msgstr "Thu gọn"
+
+msgid "View more"
+msgstr "Xem thêm"
+
+msgid "New item"
+msgstr "Thêm mục"
+
+msgid "Numeric"
+msgstr "Số"
+
+msgid "Date"
+msgstr "Ngày"
+
+msgid "Yes/No"
+msgstr "Có/Không"
+
+msgid "The length of characters over the limit allow"
+msgstr "Độ dài của kí tự vượt quá giới hạn cho phép"
+
+msgid "Please input date from 01/01/1900 to 12/31/2100"
+msgstr "Vui lòng nhập ngày từ 01/01/1900 đến 31/12/2100"
+
+msgid "Duplicate item name"
+msgstr "Trùng tên mục"
+
+msgid "The table name has been created in the system. Please choose another name."
+msgstr "Tên bảng đã được tạo trong hệ thống. Vui lòng chọn tên khác."
+
+msgid "This table is being using. Please try again later."
+msgstr "Bảng đang được sử dụng. Vui lòng thử lại sau"
+
+msgid "Please select a table."
+msgstr "Vui lòng chọn bảng."
+
+msgid "Items is being using. Please try again later."
+msgstr "Những item này đang được sử dụng. Vui lòng thử lại sau"
+# end table section
+
+# view app
+
+msgid "Drag and drop columns here."
+msgstr "Kéo và thả các cột ở đây."
+
+msgid "Visible Fields and Column Order"
+msgstr "Trường hiển thị và thứ tự cột"
+
+msgid "Saving"
+msgstr "Đang lưu"
+
+msgid "All changes saved"
+msgstr "Đã lưu tất cả thay đổi"
+
+msgid "Generate"
+msgstr "Tạo tự động"
+
+msgid "Select Authority"
+msgstr "Chọn quyền"
+
+msgid "Authority settings"
+msgstr "Cài đặt quyền"
+
+msgid "Authority Name"
+msgstr "Tên quyền"
+
+msgid "Authority Group"
+msgstr "Nhóm quyền"
+
+msgid "Authority User"
+msgstr "Quyền người dùng"
+
+msgid "Item settings"
+msgstr "Cài đặt mục"
+
+msgid "Attribute"
+msgstr "Thuộc tính"
+
+msgid "404 Page Not Found"
+msgstr "Lỗi 404 không tìm thấy trang"
+
+msgid "Your requested page, Not Found."
+msgstr "Trang yêu cầu của bạn, Không tìm thấy."
+
+msgid "Back to Wysebone"
+msgstr "Quay lại Wysebone"
+
+msgid "List Table"
+msgstr "Danh sách bảng"
+
+msgid "The %s name has been created in the system. Please choose another name."
+msgstr "Tên %s đã được tạo trong hệ thống. Vui lòng chọn tên khác."
+
+msgid "Cannot delete because of the already associated plan %s."
+msgstr "Không thể xóa vì kế hoạch %s đã được liên kết."
+
+msgid "Failed to delete because the \"%s\" permission is being associated with an application."
+msgstr "Không thể xóa vì quyền \"%s\" đang được liên kết với một ứng dụng."
+
+msgid "List Table name"
+msgstr "Tên danh sách bảng"
+
+msgid ""
+"Please <a href=\"%(link)s\">click here</a> to add permission for authority."
+msgstr ""
+"Vui lòng <a href=\"%(link)s\">bấm vào đây</a> để thêm quyền."
+
+msgid "OK"
+msgstr "Đồng ý"
+
+msgid "Output"
+msgstr "Đầu ra"
+
+msgid "Record search"
+msgstr "Kết quả tìm kiếm"
+
+msgid "Display record"
+msgstr "Hiển thị dữ liệu"
+
+msgid "Action on other objects"
+msgstr "Hành động trên các đối tượng khác"
+
+msgid "Set output"
+msgstr "Cài đặt đầu ra"
+
+msgid "Sum"
+msgstr "Tổng"
+
+msgid "Record register"
+msgstr "Đăng ký dữ liệu"
+
+msgid "Delete record"
+msgstr "Xóa dữ liệu"
+
+msgid "List Object"
+msgstr "Danh sách đối tượng"
+
+msgid "Multiplication"
+msgstr "Phép nhân"
+
+msgid "Reset"
+msgstr "Cài lại"
+
+msgid "User name or Email"
+msgstr "Tên hoặc Email"
+
+msgid "Menu"
+msgstr  ""
+
+msgid "Lookup"
+msgstr "Tra cứu"
+
+msgid "Iframe"
+msgstr ""
+
+msgid "Screen Display"
+msgstr "Màn hình hiện thị"

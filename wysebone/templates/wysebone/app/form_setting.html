@@ -1,0 +1,117 @@
+{% extends 'wysebone/app/layouts.html' %}
+{% load i18n static common utils %}
+
+{% block css %}
+<link href="{% static 'vendor/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet" />
+<link href="{% static 'vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'vendor/sweetalert2/borderless.css' %}">
+<link rel="stylesheet" href="{% static 'vendor/summernote/summernote-bs4.css' %}">
+<link rel="stylesheet" href="{% static 'vendor/spectrum/spectrum.css' %}">
+<link href="{% static 'styles/apps/form.css' %}" rel="stylesheet" />
+{% endblock css %}
+
+{% block form_a %}active{% endblock %}
+
+{% block tab_content %}
+<div class="view-property">
+    <a href="javascript:void(0)" class="text-secondary" id="view-property">
+        <i class="fa fa-cog"></i>
+    </a>
+</div>
+<div class="app-settings-form">
+    <div class="col-left w-left">
+        <a href="javascript:void(0)" class="btn btn-link w-100 text-dart text-decoration-none add-table-btn"><i class="fa fa-plus" aria-hidden="true"></i> {% blocktrans with name=_('table') %}Add {{ name }}{% endblocktrans %}</a>
+        <div class="tables-list border-top">
+            <div class="accordion" id="tables-info">
+                <div class="card">
+                    <div class="card-header border-bottom mb-0" id="headingObjects">
+                        <a href="javascript:void(0)" class="text-decoration-none d-block" data-toggle="collapse" data-target="#collapseObjects" aria-expanded="true" aria-controls="collapseObjects">
+                            {% trans "Objects" %}
+                        </a>
+                    </div>
+                    <div id="collapseObjects" class="collapse border-bottom show" aria-labelledby="headingObjects" data-parent="#tables-info">
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.LABEL }}"><img src="{% static "images/icon/label.png" %}"><span class="ml-2">{% trans "Label" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.TEXT }}"><img src="{% static "images/icon/single_text.png" %}"><span class="ml-2">{% trans "Text" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.CHECKBOX }}"><img src="{% static "images/icon/checkbox.png" %}"><span class="ml-2">{% trans "Checkbox" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.NUMBER }}"><img src="{% static "images/icon/number.png" %}"><span class="ml-2">{% trans "Numeric" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.SELECTION }}"><img src="{% static "images/icon/single_select.png" %}"><span class="ml-2">{% trans "Selection" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.DATE }}"><img src="{% static "images/icon/date.png" %}"><span class="ml-2">{% trans "Date" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.LIST_OBJECT }}"><img src="{% static "images/icon/list_object.png" %}"><span class="ml-2">{% trans "List Object" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.LOOKUP }}"><img src="{% static "images/icon/lookup.png" %}"><span class="ml-2">{% trans "Lookup" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.IFRAME }}"><img src="{% static "images/icon/iframe.png" %}"><span class="ml-2">{% trans "Iframe" %}</span></li>
+                                <li class="list-group-item wb-drag-item" data-itemtype="{{ item_types.BUTTON }}"><i class="fa fa-bold" aria-hidden="true"></i><span class="ml-2">{% trans "Button" %}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-right">
+        <div class="canvas-container border">
+            <div class="canvas"></div>
+        </div>
+    </div>
+</div>
+<div id="wb-dragging"></div>
+<input type="hidden" id="item_types_text" value="{{ item_types.TEXT }}">
+<input type="hidden" id="item_types_label" value="{{ item_types.LABEL }}">
+<input type="hidden" id="item_types_button" value="{{ item_types.BUTTON }}">
+<input type="hidden" id="item_types_number" value="{{ item_types.NUMBER }}">
+<input type="hidden" id="item_types_selection" value="{{ item_types.SELECTION }}">
+<input type="hidden" id="item_types_date" value="{{ item_types.DATE }}">
+<input type="hidden" id="item_types_checkbox" value="{{ item_types.CHECKBOX }}">
+<input type="hidden" id="item_types_list_object" value="{{ item_types.LIST_OBJECT }}">
+<input type="hidden" id="item_types_lookup" value="{{ item_types.LOOKUP }}">
+<input type="hidden" id="item_types_iframe" value="{{ 'IFRAME'|constants }}">
+<input type="hidden" id="event_record_seach" value="{{ events.RECORD_SEARCH }}">
+<input type="hidden" id="event_display_content" value="{{ events.DISPLAY_CONTENT }}">
+<input type="hidden" id="event_action_on_other_objects" value="{{ events.ACTION_ON_OTHER_OBJECTS }}">
+<input type="hidden" id="event_record_register" value="{{ events.RECORD_REGISTER }}">
+<input type="hidden" id="event_delete_record" value="{{ events.DELETE_RECORD }}">
+<input type="hidden" id="event_screen_transition" value="{{ events.SCREEN_TRANSITION }}">
+<input type="hidden" id="event_set_output" value="{{ events.SET_OUTPUT }}">
+<input type="hidden" id="event_sum" value="{{ events.SUM }}">
+<input type="hidden" id="event_multiplication" value="{{ events.MULTIPLICATION }}">
+<input type="hidden" id="event_reset" value="{{ 'RESET'|constants }}">
+<input type="hidden" id="event_screen_display" value="{{ 'SCREEN_DISPLAY'|constants }}">
+{% include "wysebone/app/attribute_modal.html" %}
+{% include "wysebone/app/add_table_modal.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'vendor/jquery-ui/jquery-ui.min.js' %}"></script>
+<script src="{% static 'vendor/lodash/lodash.min.js' %}"></script>
+<script src="{% static 'vendor/summernote/summernote-bs4.min.js' %}"></script>
+{% if LANGUAGE_CODE != 'en' %}
+<script src="{% static 'vendor/summernote/lang/summernote-' %}{{ LANGUAGE_CODE }}.js"></script>
+{% endif %}
+<script type="text/javascript" src="{% static 'vendor/sweetalert2/sweetalert2.min.js' %}" ></script>
+<script type="text/javascript" src="{% static 'vendor/moment/moment.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor/moment/moment-with-locales.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor/moment/moment-timezone-with-data.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendor/spectrum/spectrum.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/itemtype.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/input.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/event.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/text.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/label.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/option.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/checkbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/numeric.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/selection.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/date.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/button.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/list_object.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/lookup.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/iframe.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/object_management.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/table_management.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/input_property.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/event_property.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form/property.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/form_settings.js' %}"></script>
+{% endblock script %}

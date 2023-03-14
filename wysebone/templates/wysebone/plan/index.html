@@ -1,0 +1,55 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{% trans "Contract plan" %}{% endblock %}
+
+<!-- Add content -->
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h1 class="float-left">{% trans "Contract plan" %}</h1>
+                <a href="{% url 'add.contract_plan' %}" class="btn btn-primary btn-sm text-uppercase float-right">{{ Add_Plan }}</a>
+            </div>
+            <div class="card-body">
+                <div class="table-container">
+                    {% if plans|length > 0 %}
+                    <table class="table table-striped" id="listTable-contract-plan">
+                        <thead>
+                            <tr>
+                                <th title="{% trans "Plan name" %}">{% trans "Plan name" %}</th>
+                                <th title="{% trans "Limit the number of accounts" %}">{% trans "Limit the number of accounts" %}</th>
+                                <th title="{% trans "Limit the number of applications" %}">{% trans "Limit the number of applications" %}</th>
+                                <th title="{% trans "Action" %}" class="text-right">{% trans "Action" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if plans %}
+                                {% for plan in plans %}
+                                    <tr>
+                                        <td label="{% trans "Plan name" %}">{{ plan.name }}</td>
+                                        <td label="{% trans "Limit the number of accounts" %}">{{ plan.account_limit }}</td>
+                                        <td label="{% trans "Limit the number of applications" %}">{{ plan.app_limit }}</td>
+                                        <td label="{% trans "Action" %}" class="text-right">
+                                            <a title="{{ Edit_title }}" href="{% url 'edit.contract_plan' plan.id %}"><i class="fa fa-edit"></i> {% trans "Change" %}</a>
+                                            <a class="text-danger ml-1" title="{{ Delete_title }}" href="{% url 'delete.contract_plan' plan.id %}"><i class="fa fa-trash"></i> {% trans "Delete" %}</a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                        <div class="alert alert-secondary mt-3" role="alert" id="alert_empty_permissions">
+                            {% trans "There is no data to show." %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

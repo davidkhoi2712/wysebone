@@ -1,0 +1,71 @@
+{% load i18n %}
+<div class="modal fade" id="attributeModal" tabindex="-1" role="dialog" aria-labelledby="attributeModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="attributeModalTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body background-color-form">
+                <div class="no-nav d-none"></div>
+                <div class="is-nav">
+                    <nav>
+                        <div class="nav nav-tabs" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-basic-tab" data-toggle="tab" href="#nav-basic" role="tab" aria-controls="nav-basic" aria-selected="true">{% trans "Basic" %}</a>
+                            <a class="nav-item nav-link" id="nav-input-tab" data-toggle="tab" href="#nav-input" role="tab" aria-controls="nav-input" aria-selected="false">{% trans "Input" %}</a>
+                            <a class="nav-item nav-link" id="nav-output-tab" data-toggle="tab" href="#nav-output" role="tab" aria-controls="nav-output" aria-selected="false">{% trans "Output" %}</a>
+                            <a class="nav-item nav-link" id="nav-event-tab" data-toggle="tab" href="#nav-event" role="tab" aria-controls="nav-event" aria-selected="false">{% trans "Event" %}</a>
+                            <a class="nav-item nav-link" id="nav-table-link-tab" data-toggle="tab" href="#nav-table-link" role="tab" aria-controls="nav-table-link" aria-selected="false">{% trans "Table link" %}</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content border-left border-bottom border-right p-3 background-color-form" style="background-color: #ffffff; min-height: 300px;">
+                        <div class="tab-pane fade show active" id="nav-basic" role="tabpanel" aria-labelledby="nav-basic-tab"></div>
+                        <div class="tab-pane fade" id="nav-input" role="tabpanel" aria-labelledby="nav-input-tab"></div>
+                        <div class="tab-pane fade" id="nav-output" role="tabpanel" aria-labelledby="nav-output-tab"></div>
+                        <div class="tab-pane fade" id="nav-event" role="tabpanel" aria-labelledby="nav-event-tab">
+                            
+                        </div>
+                        <div class="tab-pane fade" id="nav-event1" role="tabpanel" aria-labelledby="nav-event-tab">
+                            <div class="form-group">
+                                <label for="item_process"><b>{% trans "Process" %}</b> <b class="text-danger">*</b></label>
+                                <select id="item_process" class="form-control" required>
+                                    <option value="">{% trans "Please select" %}</option>
+                                    <option value="submit">{% trans "Form submission event" %}</option>
+                                    <option value="screen-transition">{% trans "Screen transition" %}</option>
+                                    <option value="return-previous-screen">{% trans "Return to the previous screen" %}</option>
+                                </select>
+                                <div class="invalid-feedback">{% trans "This field is required." %}</div>
+                            </div>
+                            <div class="form-group d-none" id="screen-transition-url-block">
+                                <label for="item_process"><b>{% trans "URL" %}</b> <b class="text-danger">*</b></label>
+                                <input type="text" class="form-control" id="screen-transition-url" placeholder="https://">
+                                <div class="invalid-feedback">{% trans "This field is required." %}</div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-table-link" role="tabpanel" aria-labelledby="nav-table-link-tab">
+                            <div class="form-group">
+                                <label for="table_items_field"><b>{% trans "Table Items" %}</b></label>
+                                <select id="table_items_field" class="form-control">
+                                    <option value="">{% trans "Please select" %}</option>
+                                    {% for table in tables %}
+                                    <optgroup label="{{ table.data_name }}" data-id="{{ table.pk }}">
+                                        {% for item in table.fields.all %}
+                                            <option value="{{ item.pk }}">{{ item.item_name }}</option>
+                                        {% endfor %}
+                                    </optgroup> 
+                                    {% endfor %}
+                                </select>
+                                <div class="invalid-feedback">{% trans "This field is required." %}</div>
+                                <small class="form-text text-muted">{% trans "Each field in a Wysebone app is linked to the input data." %}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer background-color-form border-top-0">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">{% trans "Cancel" %}</button>
+                <button type="button" class="btn btn-primary" id="save-btn">{% trans "Save" %}</button>
+            </div>
+        </div>
+    </div>
+</div>

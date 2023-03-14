@@ -1,0 +1,162 @@
+[
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 1,
+      "name": "Text",
+      "codename": "TEXT",
+      "icon": "single_text.png",
+      "description": "A single line text field accepts a single line of text for each cell. You can put any text value you want into each cell."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 2,
+      "name": "Yes/No",
+      "codename": "CHECKBOX",
+      "icon": "checkbox.png",
+      "description": "A checkbox field is useful for true/false values within a record. For example, a task tracking base might have a checkbox field called \"Done\" that you can check off when a task is complete."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 3,
+      "name": "Selection",
+      "codename": "SELECTION",
+      "icon": "single_select.png",
+      "description": "A single select field is ideal when you want to be able to select a single option from a preset list of options."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 4,
+      "name": "Date",
+      "codename": "DATE",
+      "icon": "date.png",
+      "description": "A date field allows you to easily enter a date and optionally a time into a cell."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 5,
+      "name": "Time",
+      "codename": "TIME",
+      "icon": "time.png",
+      "description": "The duration field is a field type intended for use with time durations measured in minutes, seconds, or milliseconds."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 6,
+      "name": "Numeric",
+      "codename": "NUMBER",
+      "icon": "number.png",
+      "description": "A number field will only accept a number value. You can customize the formatting of your number field to display integers or decimals."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 7,
+      "name": "Radio",
+      "codename": "RADIO",
+      "icon": "radio.png",
+      "description": "A radio field is useful for true/false values within a record. For example, a task tracking base might have a radio field called \"Done\" that you can check off when a task is complete."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 8,
+      "name": "Url",
+      "codename": "URL",
+      "icon": "url.png",
+      "description": "A URL field is intended to store a single URL in each cell. Clicking on a URL will bring you to that URL."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 9,
+      "name": "Attachment",
+      "codename": "ATTACHMENT",
+      "icon": "attachment.png",
+      "description": "An attachment field allows you to attach multiple files directly to your records. If the file is an image, the cell will show thumbnails of the files you've attached."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 10,
+      "name": "Lookup",
+      "codename": "LOOKUP",
+      "icon": "lookup.png",
+      "description": "A lookup field allows you to look up a specific field in a linked record."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 11,
+      "name": "Creation date",
+      "codename": "CREATED_TIME",
+      "icon": "created_time.png",
+      "description": "The created time field type will automatically show the date (and optionally, time) that a record was created."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 12,
+      "name": "Last modified",
+      "codename": "LAST_MODIFIED_TIME",
+      "icon": "last_modified.png",
+      "description": "The last modified time field type will automatically return the most recent date (and optionally, time) that a record was modified by a user in a non-computed field."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 13,
+      "name": "Label",
+      "codename": "LABEL",
+      "icon": "label.png",
+      "description": "The label type allows you to create labels wherever you want."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 14,
+      "name": "Button",
+      "codename": "BUTTON",
+      "icon": "button.png",
+      "description": "Button type allows you to create buttons as you like."
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 15,
+      "name": "List Object",
+      "codename": "LIST_OBJECT",
+      "icon": "list_object.png",
+      "description": ""
+    }
+  },
+  {
+    "model": "wysebone.itemtype",
+    "fields": {
+      "id": 16,
+      "name": "Iframe",
+      "codename": "IFRAME",
+      "icon": "iframe.png",
+      "description": ""
+    }
+  }
+]

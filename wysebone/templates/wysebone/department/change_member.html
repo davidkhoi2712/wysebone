@@ -1,0 +1,95 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{{ department_member|capfirst }}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<!-- select2 Theme bootstrap4-->
+<link href="{% static 'vendor/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css' %}" rel="stylesheet" />
+<link href="{% static 'styles/admin.css' %}" rel="stylesheet">
+<link href="{% static 'styles/form.css' %}" rel="stylesheet">
+<link href="{% static 'styles/table.css' %}" rel="stylesheet"> {% endblock %}
+
+<!-- Add content -->
+{% block content %}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h3>{{ department_member|capfirst }}</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xl-8">
+                <form role="form" action="" id="change_member" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-sm-5 mb-3">
+                            <div class="card shadow-none border">
+                                <div class="card-header bg-light">
+                                    <b>{% trans "All Users" %}</b>
+                                </div>
+                                <div class="card-body p-0">
+                                    <select name="department" id="department" class="form-control border-0 user-selection" size="8" multiple="multiple">
+                                        {% if users %}
+                                            {% for user in users %}
+                                                <option value="{{ user.pk }}">{{ user.get_full_name }}</option>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button id="department_rightAll" class="btn btn-link btn-sm text-decoration-none">{% trans "Choose all" %} <i class="fa fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-2 px-sm-1 mb-3 user-selection-center">
+                            <button type="button" id="department_rightSelected" class="btn btn-outline-primary btn-sm btn-block">{% trans "Choose" %} <i class="fa fa-chevron-right"></i></button>
+                            <button type="button" id="department_leftSelected" class="btn btn-outline-danger btn-sm btn-block"><i class="fa fa-chevron-left"></i> {% trans "Remove" %}</button>
+                        </div>
+                        
+                        <div class="col-sm-5">
+                            <div class="card shadow-none border">
+                                <div class="card-header bg-primary text-white">
+                                    <b>{{ department_member|capfirst }}</b>
+                                </div>
+                                <div class="card-body p-0">
+                                    <select name="department_to" id="department_to" class="form-control border-0 user-selection" size="8" multiple="multiple">
+                                        {% if department_user %}
+                                            {% for user in department_user %}
+                                                <option value="{{ user.pk }}">{{ user.get_full_name }}</option>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button id="department_leftAll" class="btn btn-link btn-sm text-danger text-decoration-none"><i class="fa fa-angle-left"></i> {% trans "Remove all" %}</button>
+                            </div>
+                            <div class="text-danger">{{ form.department_to.errors }}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <button type="submit" class="btn btn-primary text-uppercase">{% trans "Save" %}</button>
+                            <a href="{% url 'index.department' %}" class="btn btn-secondary text-uppercase">{% trans "Cancel" %}</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- Add js -->
+{% block js %}
+<!-- Multiselect -->
+<script src="{% static 'vendor/multiselect-master/multiselect.min.js' %}"></script>
+<!-- select2 -->
+<script src="{% static 'vendor/select2/js/select2.min.js' %}"></script>
+<script src="{% static 'js/department.js' %}"></script>
+{% endblock %}

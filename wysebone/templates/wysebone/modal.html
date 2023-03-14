@@ -1,0 +1,31 @@
+<!Doctype html>
+{% load static i18n tz common %}
+{% get_current_timezone as TIME_ZONE %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{% static 'vendor/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'styles/style.css' %}" rel="stylesheet">
+    {% block style %}{% endblock  %}
+</head>
+<body>
+{% block content %}{% endblock %}
+<script type="text/javascript">
+        var base_url = "{{ BASE_URL }}";
+        var lang_code = "{{ LANGUAGE_CODE }}";
+        var timezone = "{{ TIME_ZONE }}";
+    </script>
+    <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/jquery/jquery-1.12.4.min.js' %}"></script>
+
+    <!-- Setting js -->
+    {% block js %}{% endblock  %}
+</body>
+
+</html>

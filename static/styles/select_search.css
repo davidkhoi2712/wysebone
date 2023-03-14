@@ -1,0 +1,18 @@
+.card-body .icon { 
+    position: absolute; 
+} 
+
+.p-0 {
+    width: 100%; 
+}
+
+.icon { 
+    padding: 10px; 
+    min-width: 40px; 
+} 
+
+.input-field { 
+    width: 100%; 
+    padding: 10px; 
+    padding-left: 30px;
+}  

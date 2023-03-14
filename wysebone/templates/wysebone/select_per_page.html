@@ -1,0 +1,6 @@
+{% load i18n %}
+<select class="form-control mr-sm-2" name="per_page" id="inlineFormCustomSelect">
+    <option value="20" {% if 'per_page' in request.GET %}  {% if object_per_page  == 20 %}selected="selected"{% endif %} {% endif %}>20</option>
+    <option value="40" {% if object_per_page  == 40 %}selected="selected"{% endif %}>40</option>
+    <option value="60" {% if object_per_page  == 60 %}selected="selected"{% endif %}>60</option>
+</select>

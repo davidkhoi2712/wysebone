@@ -1,0 +1,58 @@
+<!--Load language-->
+{% load i18n %}
+
+<div class="item-container">
+    <div class="">
+        <div class="item-edit">
+            <a href="#" class="del"><i class="fa fa-times"></i></a>
+            <div class="item-body">
+                <div class="form-group">
+                    <label>{% trans "Item name" %} <b class="text-danger">*</b></label>
+                    <div>{{data.item_name}}</div>
+                    <div class="error text-danger">{{data.item_name.errors}}</div>
+                </div>
+            </div>
+            <div class="item-detail collapse {% if data.required.errors or data.default_value.errors or data.item_type.errors or data.number_of_digits.errors or data.decimal_digits.errors or data.auto_number.errors %} show {% endif %}">
+                <div class="form-group">
+                    <label>{% trans "Required" %}</label>
+                    <div>{{data.required}}</div>
+                    <div class="error text-danger">{{data.required.errors}}</div>
+                </div>
+                <div class="form-group">
+                    <label>{% trans "Default value" %}</label>
+                    {{data.default_value}}
+                    <div class="error text-danger">{{data.default_value.errors}}</div>
+                </div>
+                <div class="form-group">
+                    <label>{% trans "Type" %}</label>
+                    {{data.item_type}}
+                    <div class="error text-danger">{{data.item_type.errors}}</div>
+                </div>
+                <div class="form-group">
+                    <label>{% trans "Number of digits" %} <b class="text-danger">*</b></label>
+                    {{data.number_of_digits}}
+                    <div class="error text-danger">{{data.number_of_digits.errors}}</div>
+                </div>
+                <div class="form-group">
+                    <label>{% trans "Decimal digits" %} <b class="text-danger">*</b></label>
+                    {{data.decimal_digits}}
+                    <div class="error text-danger">{{data.decimal_digits.errors}}</div>
+                </div>
+                <div class="form-group">
+                    <label>{% trans "Auto number" %}</label>
+                    <div>{{data.auto_number}}</div>
+                    <div class="error text-danger">{{data.auto_number.errors}}</div>
+                </div>
+            </div>
+            <div class="item-footer">
+                {% if data.required.errors or data.default_value.errors or data.item_type.errors or data.number_of_digits.errors or data.decimal_digits.errors or data.auto_number.errors %} 
+                    <a href="#" class="button-collapse">{% trans "View less" %} <i class="fa fa-angle-up"></i></a>
+                    <a href="#" class="button-expanse" style="display: none;">{% trans "View more" %} <i class="fa fa-angle-down"></i></a>
+                {% else %}
+                    <a href="#" class="button-collapse" style="display: none;">{% trans "View less" %} <i class="fa fa-angle-up"></i></a>
+                    <a href="#" class="button-expanse">{% trans "View more" %} <i class="fa fa-angle-down"></i></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

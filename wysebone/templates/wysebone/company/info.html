@@ -1,0 +1,128 @@
+{% extends 'wysebone/base.html' %}
+{% load common %}
+{% load i18n static %}
+<!-- Add title -->
+{% block title %}{% trans "Company information" %}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<link href="{% static 'vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+{% set class_col 8 %}
+{% set class_col_1 2 %}
+<div class="card mb-3">
+	<div class="card-header">
+		<h3>{% trans "Company information" %} </h3>
+	</div>
+	<div class="card-body">
+		<div class="row">
+            <div class="col-xl-8">
+				<form method="POST" class="needs-validation" novalidate>
+					{% csrf_token %}
+					<div class="form-group row">
+						<label class="col-md-3 col-form-label">{% trans "Company code" %}</label>
+						<div class="col-md-9">
+							<input type="text" readonly class="form-control-plaintext" name="code" id="code" value="{{ company.code }}">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="id_name" class="col-md-3 col-form-label">{% trans "Company name" %}</label>
+                        <div class="col-md-9">
+                            <input type="text" readonly class="form-control-plaintext" name="name" id="name" value="{{ company.name }}">
+                        </div>
+					</div>
+					<div class="row">
+						<label for="id_country" class="col-md-3 col-form-label">{% trans "Company address" %} <b class="text-danger">*</b></label>
+                        <div class="col-md-9">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.country }}
+                            			<div class="text-danger">{{ form.country.errors }}</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.postal_code }}
+                            			<div class="text-danger">{{ form.postal_code.errors }}</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								{{ form.street }}
+								<div class="text-danger">{{ form.street.errors }}</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.city }}
+                            			<div class="text-danger">{{ form.city.errors }}</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.state }}
+                            			<div class="text-danger">{{ form.state.errors }}</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+					</div>
+					<div class="form-group row">
+						<label for="id_phone" class="col-md-3 col-form-label">{{ form.phone.label_tag }}</label>
+                        <div class="col-md-3">
+                            {{ form.phone }}
+                            <div class="text-danger">{{ form.phone.errors }}</div>
+                        </div>
+					</div>
+					<div class="form-group row">
+						<label for="id_size" class="col-md-3 col-form-label">{{ form.size.label }}</label>
+                        <div class="col-md-3">
+                            {{ form.size }}
+                            <div class="text-danger">{{ form.size.errors }}</div>
+                        </div>
+					</div>
+					<div class="form-group row">
+						<label for="id_domain_name" class="col-md-3 col-form-label">{{ form.domain_name.label }}</label>
+						<div class="col-md-9">
+                            <input type="text" readonly class="form-control-plaintext" name="domain_name" id="domain_name" value="{{ company.domain_name }}">
+                        </div>
+					</div>
+					<div class="row">
+						<label for="contract_start_date" class="col-md-3 col-form-label">{% trans 'Contract period' %}</label>
+                        <div class="col-md-9">
+							<input type="text" readonly class="form-control-plaintext" value="{{ company.contract_start_date }} ~ {{ company.contract_end_date }}">
+                        </div>
+					</div>
+					<div class="form-group row">
+						<label for="id_total_users" class="col-md-3 col-form-label">{% trans "Number of users" %}</label>
+                        <div class="col-md-9">
+                            <input type="text" readonly class="form-control-plaintext" value="{{ company.total_users }}">
+                        </div>
+					</div>
+					<div class="form-group row">
+						<label for="id_total_tables" class="col-md-3 col-form-label">{% trans "Number of tables" %}</label>
+                        <div class="col-md-9">
+                            <input type="text" readonly class="form-control-plaintext" value="{{ company.total_tables }}">
+                        </div>
+					</div>
+					<div class="form-group row">
+						<label for="id_total_applications" class="col-md-3 col-form-label">{% trans "Number of applications" %}</label>
+                        <div class="col-md-9">
+                            <input type="text" readonly class="form-control-plaintext" value="{{ company.total_apps }}">
+                        </div>
+					</div>
+					<div class="form-group row">
+                        <div class="offset-md-3 col-md-9">
+                            <button type="submit" class="btn btn-primary">{% trans "Save" %}</button>
+                        </div>
+                    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock  %}

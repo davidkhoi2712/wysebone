@@ -1,0 +1,95 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{% trans "Users" %}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<link href="{% static 'styles/table.css' %}" rel="stylesheet">
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+<div class="card mb-5">
+    <div class="card-header">
+        <h1 class="text-capitalize float-left">{{ the_title }}</h1>
+        <a href="{% url 'add.user' %}?next=/user/" class="btn btn-primary btn-sm float-right"><i class="fa fa-plus" aria-hidden="true"></i> {{ add_user_title }}</a>
+    </div>
+    <form role="form" method="GET" class="card-body form-row form-inline">
+        <div class="col-auto my-1">
+            <input type="text" name="name" class="form-control" id="inlineFormInputName" placeholder="{% trans "User name or Email" %}" value="{{user_name_or_email}}">
+        </div>
+        <div class="col-auto my-1">
+            <button type="submit" id="inlineFormSubmit" class="btn btn-primary">{% trans "Search" %}</button>
+        </div>
+        <div class="input-group col-auto ml-auto">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">{% trans "Per page" %}</span>
+            </div>
+            {% include "wysebone/select_per_page.html" %}
+        </div>
+    </form>
+    <input type="hidden" name="object_target" id="object_target" value="{{object_target}}">
+    <div class="card-body index-group">
+        <div class="table-container">
+            {% if objects|length > 0 %}
+            <table class="table table-striped" id="user-list">
+                <thead>
+                    <tr>
+                        <th title="{% trans "Display Name" %}">{% trans "Display Name" %}</th>
+                        <th title="{% trans "Email" %}">{% trans "Email" %}</th>
+                        <th title="{% trans "Role" %}">{% trans "Role" %}</th>
+                        <th title="{% trans "Status" %}" class="text-center">{% trans "Status" %}</th>
+                        <th title="{% trans "Action" %}" class="text-right">{% trans "Action" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in objects %}
+                    <tr>
+                        <td label="{% trans "Display Name" %}">
+                        {% if perms.wysebone.view_user %}
+                            <a title="{% trans "Change" %}" href="{% url 'view.user' user.user_id %}">{{ user.get_full_name }}</a>
+                        {% else %}
+                            {{ user.get_full_name }}
+                        {% endif %}
+                        </td>
+                        <td label="{% trans "Email" %}">{{ user.email }}</td>
+                        <td label="{% trans "Role" %}">
+                            {% for role in roles %}
+                                {% if user.roles.all != None and role in user.roles.all %}{% trans role.name %}<br>{% endif %}
+                            {% endfor %}
+                        </td>
+                        <td label="{% trans "Status" %}" class="text-center">
+                            {% if user.is_active %}
+                            <span class="badge badge-primary badge-pill">{% trans "Active" %}</span>
+                            {% else %}
+                            <span class="badge badge-danger badge-pill">{% trans "Inactive" %}</span>
+                            {% endif %}
+                        </td>
+                        <td label="{% trans "Action" %}" class="text-right">
+                            {% if perms.wysebone.change_user %}
+                            <a title="{% trans "Change" %}" href="{% url 'change.user' user.user_id %}?next={{next}}"><i class="fa fa-edit"></i> {% trans "Change" %}</a>
+                            {% endif %}
+                            {% if perms.wysebone.delete_user and user != request.user %}
+                            <a class="text-danger ml-1" title="{% trans "Delete" %}" href="{% url 'delete.user' user.user_id %}?next={{next}}"><i class="fa fa-trash"></i> {% trans "Delete" %}</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="alert alert-secondary mt-3" role="alert" id="alert_empty_users">
+                {% trans "There is no data to show." %}
+            </div>
+            {% endif %}
+        </div>
+        {% include "wysebone/pagination.html" %}
+    </div>
+</div>
+{% endblock  %}
+{% block js %}
+<script src="{% static 'js/list.js' %}"></script>   
+{% endblock  %}

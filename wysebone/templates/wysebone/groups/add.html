@@ -1,0 +1,146 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{{ the_title }}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+    <link href="{% static 'styles/groups.css' %}" rel="stylesheet">
+    <link href="{% static 'styles/select_search.css' %}" rel="stylesheet">
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+<div class="card mb-3">
+    <div class="card-header">
+        <h1>{{ the_title }}</h1>
+    </div>
+    <div class="card-body add-group-form">
+        <div class="row">
+            <div class="col-xl-8">
+                <form role="form" action="" id="add_group_form" method="post">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label for="id_name" class="col-md-2 col-form-label">{{ form.name.label_tag }}</label>
+                        <div class="col-md-10">
+                            {{ form.name }}
+                            <div class="text-danger">{{ form.name.errors }}</div>
+                        </div>
+                    </div>
+                    <!-- User Add -->
+                       <div class="form-group row">
+                        <label for="id_users" class="col-md-2 col-form-label">{% trans "Users" %}</label>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-sm-5 mb-3">
+                                    <div class="card shadow-none border">
+                                        <div class="card-header bg-light">
+                                            <b>{{ available_users|capfirst }}</b>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <select name="users" id="users" class="form-control border-0 select-2-slider" size="8" multiple="multiple">
+                                                {% for user in users %}
+                                                <option value="{{ user.id }}">{{ user.get_full_name|title }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button id="users_rightAll" class="btn btn-link btn-sm text-decoration-none">{% trans "Choose all" %} <i class="fa fa-angle-right"></i></button>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-2 px-sm-1 mb-3 user-selection-center">
+                                    <button type="button" id="users_rightSelected" class="btn btn-outline-primary btn-sm btn-block">{% trans "Choose" %} <i class="fa fa-chevron-right"></i></button>
+                                    <button type="button" id="users_leftSelected" class="btn btn-outline-danger btn-sm btn-block"><i class="fa fa-chevron-left"></i> {% trans "Remove" %}</button>
+                                </div>
+                                
+                                <div class="col-sm-5">
+                                    <div class="card shadow-none border">
+                                        <div class="card-header bg-primary text-white">
+                                            <b>{{ chosen_users|capfirst }}</b>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <select name="users_to" id="users_to" class="form-control border-0 select-2-slider" size="8" multiple="multiple">
+                                                {% for user in selected_users %}
+                                                <option value="{{ user.pk }}">{{ user.get_full_name|title }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button id="users_leftAll" class="btn btn-link btn-sm text-danger text-decoration-none"><i class="fa fa-angle-left"></i> {% trans "Remove all" %}</button>
+                                    </div>
+                                    <div class="text-danger">{{ form.users_to.errors }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End User Add -->
+
+                    <!-- Permission Add -->
+                    <div class="form-group row">
+                        <label for="id_permissions" class="col-md-2 col-form-label">{% trans "Permissions" %}</label>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-sm-5 mb-3">
+                                    <div class="card shadow-none border">
+                                        <div class="card-header bg-light">
+                                            <b>{{ available_permissions|capfirst }}</b>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <select name="permissions" id="permissions" class="form-control border-0 select-2-slider" size="8" multiple="multiple">
+                                                {% for permission in permissions %}
+                                                <option value="{{ permission.0 }}">{{ permission.1 }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button id="permissions_rightAll" class="btn btn-link btn-sm text-decoration-none">{% trans "Choose all" %} <i class="fa fa-angle-right"></i></button>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-2 px-sm-1 mb-3 user-selection-center">
+                                    <button type="button" id="permissions_rightSelected" class="btn btn-outline-primary btn-sm btn-block">{% trans "Choose" %} <i class="fa fa-chevron-right"></i></button>
+                                    <button type="button" id="permissions_leftSelected" class="btn btn-outline-danger btn-sm btn-block"><i class="fa fa-chevron-left"></i> {% trans "Remove" %}</button>
+                                </div>
+                                
+                                <div class="col-sm-5">
+                                    <div class="card shadow-none border">
+                                        <div class="card-header bg-primary text-white">
+                                            <b>{{ chosen_permissions|capfirst }}</b>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <select name="permissions_to" id="permissions_to" class="form-control border-0 select-2-slider" size="8" multiple="multiple"></select>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button id="permissions_leftAll" class="btn btn-link btn-sm text-danger text-decoration-none"><i class="fa fa-angle-left"></i> {% trans "Remove all" %}</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-danger">{{ form.permissions_to.errors }}</div>
+                        </div>
+                    </div>
+                    <!-- End Permission Add -->
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" id="group_submit" class="btn btn-primary text-uppercase">{% trans "Save" %}</button>
+                            <a href="{% url 'index.group' %}" type="button" class="btn btn-outline-secondary text-uppercase">{% trans "Cancel" %}</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}
+
+<!-- Add js -->
+{% block js %}
+<script src="{% static 'vendor/multiselect-master/multiselect.min.js' %}"></script>
+<script src="{% static 'js/groups/add.js' %}"></script>
+{% endblock  %}

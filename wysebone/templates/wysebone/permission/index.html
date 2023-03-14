@@ -1,0 +1,79 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{% trans "Permissions" %}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<link href="{% static 'styles/table.css' %}" rel="stylesheet">
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h1 class="float-left">{% trans "Permissions" %}</h1>
+                <a href="{% url 'add.authority' %}" class="btn btn-primary btn-sm float-right" title="{% blocktrans with name=_('permission') %}Add {{ name }}{% endblocktrans %}">{% blocktrans with name=_('permission') %}Add {{ name }}{% endblocktrans %}</a>
+            </div>
+            <form role="form" method="GET" class="card-body form-row form-inline">
+                <div class="col-auto my-1">
+                    <input type="text" name="name" class="form-control" id="inlineFormInputName" placeholder="{% trans "Permission Name" %}" value="{{authority_name}}">
+                </div>
+                <div class="col-auto my-1">
+                    <button type="submit" id="inlineFormSubmit" class="btn btn-primary">{% trans "Search" %}</button>
+                </div>
+                <div class="input-group col-auto ml-auto">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">{% trans "Per page" %}</span>
+                    </div>
+                    {% include "wysebone/select_per_page.html" %}
+                </div>
+            </form>
+            <input type="hidden" name="object_target" id="object_target" value="{{object_target}}">
+            <div class="card-body">
+                <div class="block-content">
+                    <div class="authority-managemnet-content">
+                        <div class="authority-container">
+                            {% if objects|length > 0 %}
+                                <table class="table table-striped" id="listTable-permission">
+                                    <thead>
+                                        <tr>
+                                            <th title="{% trans "Permission Name" %}">{% trans "Name" %}</th>
+                                            <th title="{% trans "Action" %}" class="text-right">{% trans "Action" %}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% if objects %}
+                                            {% for permission in objects %}
+                                                <tr>
+                                                    <td label="{% trans "Name" %}">{{ permission.name }}</td>
+                                                    <td width="160" label="{% trans "Action" %}" class="text-right">
+                                                        <a title="{% trans "Change" %}" href="{% url 'edit.authority' permission.code %}"><i class="fa fa-edit"></i> {% trans "Change" %}</a>
+                                                        <a class="text-danger ml-1" title="{% trans "Delete" %}" href="{% url 'delete.authority' permission.code %}"><i class="fa fa-trash"></i> {% trans "Delete" %}</a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </tbody>
+                                </table>
+                            {% else %}
+                                <div class="alert alert-secondary mt-3" role="alert" id="alert_empty_permissions">
+                                    {% trans "There is no data to show." %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% include "wysebone/pagination.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/list.js' %}"></script>   
+{% endblock  %}

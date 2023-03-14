@@ -1,0 +1,127 @@
+{% extends 'wysebone/app/layouts.html' %}
+{% load i18n static common utils %}
+
+{% block css %}
+<link href="{% static 'vendor/sweetalert2/borderless.css' %}" rel="stylesheet">
+<!-- select2 -->
+<link href="{% static 'vendor/select2/css/select2.min.css' %}" rel="stylesheet" />
+<!-- select2 Theme bootstrap4-->
+<link href="{% static 'vendor/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css' %}" rel="stylesheet" />
+<!-- Load css here -->
+<link href="{% static 'styles/table.css' %}" rel="stylesheet">
+{% endblock css %}
+
+{% block authority_a %}active{% endblock %}
+
+{% block tab_content %}
+<!-- Load html -->
+<div class="card mb-3">
+    <input type="hidden" name="app_code" id="app_code" value="{{ app.code }}">
+    <input type="hidden" id="app_type" value="{{ app.type }}">
+    <div class="card-header">
+        <h6 class="d-inline-block">{% trans "Authority settings" %}</h6>
+        <div class="d-inline-block float-right">
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm text-uppercase" data-toggle="modal" data-target="#add-authority">{{ add_authority }}</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="table table-striped table-bordered" id="authority-settings">
+                    <thead>
+                        <tr>
+                            <th scope="col">{% trans "Authority Name" %}</th>
+                            <th scope="col">{% trans "Authority Group" %}</th>
+                            <th scope="col">{% trans "Authority User" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">{% trans "There is no data to show." %}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mb-3">
+    <div class="card-header">
+        <h6>{% trans "Item settings" %}</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <table class="table table-striped table-bordered" id="item-settings">
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="col" class="text-center align-middle">{% trans "Item name" %}</th>
+                            <th rowspan="2" scope="col" class="text-center align-middle">{% trans "Attribute" %}</th>
+                            <th colspan="2" scope="col" id="authority-header" class="text-center d-none">{% trans "Authority" %}</th>
+                        </tr>
+                        <tr id="authority-sub-header"></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">{% trans "There is no data to show." %}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="add-authority" tabindex="-1" role="dialog" aria-labelledby="add-authority-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-block">
+                <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title text-center" id="add-authority-label">{% trans "Select Authority" %}</h5>
+            </div>
+            <div class="modal-body">
+                <div id="list-authority" class="authority_settings">
+                    <h6>{% trans "Authority Name" %}</h6>
+                    {% if permissions|length > 0 %}
+                        {% if permissions %}
+                            {% for permission in permissions %}
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" data-text="{{ permission.name }}" id="{{ permission.code }}">
+                                    <label class="custom-control-label" for="{{ permission.code }}">{{ permission.name }}</label>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% else %}
+                        <div class="alert alert-secondary mt-3" role="alert" id="alert_empty_users">
+                            {% trans "There is no data to show." %}
+                        </div>
+                        <small class="form-text text-muted">
+                            <span class="text-danger">*</span> {% blocktrans with link="/permission/add" %}Please <a href="{{ link }}">click here</a> to add permission for authority.{% endblocktrans %}
+                        </small>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans "OK" %}</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'vendor/sweetalert2/sweetalert2.min.js' %}" ></script>
+<!-- Multiselect -->
+<script defer src="{% static 'vendor/multiselect-master/multiselect.min.js' %}"></script>
+<!-- select2 -->
+<script defer src="{% static 'vendor/select2/js/select2.min.js' %}"></script>
+<!-- Load css script -->
+<script type="text/javascript" src="{% static 'js/apps/authority/group.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/authority/user.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/authority/item_management.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/authority/table_management.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/apps/authority_settings.js' %}"></script>
+{% endblock script %}

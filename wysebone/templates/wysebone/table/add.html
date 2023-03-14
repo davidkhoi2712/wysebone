@@ -1,0 +1,75 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{{ the_title }}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<link href="{% static 'vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+<link href="{% static 'styles/table_info.css' %}" rel="stylesheet">
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+<div class="card mb-3">
+    <div class="card-header">
+        <h3>{{ the_title }}</h3>
+    </div>
+    <div class="card-body">
+        <div class="col-lg-8">
+            <form role="form" id="add_group_form" method="post">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="id_name" class="col-md-2 col-form-label">{% trans "Table name" %}  <b class="text-danger">*</b> </label> 
+                    <div class="col-md-10">
+                        {{ form.data_name }}
+                        <div class="text-danger">{{ form.data_name.errors }}</div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="id_permissions" class="col-md-2 col-form-label">{% trans "Table Items" %} <b class="text-danger">*</b></label>
+                    <div class="col-md-10">
+                        <div class="item-list">
+                            {% for item in items %}
+                                {{item.as_item}}
+                            {% endfor %}
+                        </div>
+                        <div>
+                            <button id="add-item" type="button" class="btn btn-outline-success btn-sm float-right">
+                                <i class="fa fa-plus"></i> {% trans "New item" %}
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-md-2 col-md-10">
+                        <button type="submit" id="table_submit" class="btn btn-primary text-uppercase">{% trans "Save" %}</button>
+                        <a href="{{ next_uri }}" class="btn btn-secondary text-uppercase">{% trans "Cancel" %}</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- js template to add or change item -->
+<div style="display: none;">
+    <div id="js_item_text">{{js_item_text.as_item}}</div>
+    <div id="js_item_numeric">{{js_item_numeric.as_item}}</div>
+    <div id="js_item_date">{{js_item_date.as_item}}</div>
+    <div id="js_item_yes_no">{{js_item_yes_no.as_item}}</div>
+</div>
+
+{% endblock  %}
+
+<!-- Add js -->
+{% block js %}
+<script defer src="{% static 'vendor/moment/moment.min.js' %}"></script>
+<script defer src="{% static 'vendor/moment/moment-with-locales.min.js' %}"></script>
+<script defer src="{% static 'vendor/moment/moment-timezone-with-data.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'js/table.js' %}"></script>
+{% endblock  %}

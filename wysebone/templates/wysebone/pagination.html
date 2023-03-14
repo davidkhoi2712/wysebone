@@ -1,0 +1,70 @@
+{% load i18n %}
+<div class="pagination" style="text-align: center;">
+	{% if objects %}
+		<span style="display: table; margin: auto 0;">
+			{% blocktrans with start=objects.start_index end=objects.end_index total=objects.paginator.count %}Showing {{ start }} to {{ end }} of {{ total }} entries{% endblocktrans %}
+		</span>
+	{% endif %}
+	{% if objects.has_other_pages %}
+		<ul class="pagination center-align justify-content-end ml-auto">
+			<!-- Previous/First button - only visible if previous page available -->
+			{% if objects.has_previous %}
+				<li class="page-item">
+					<a class="page-link" href="{{object_path}}per_page={{object_per_page}}">
+						<i class="fa fa-angle-double-left"></i>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="{{object_path}}page={{objects.previous_page_number}}&per_page={{object_per_page}}">
+						<i class="fa fa-angle-left"></i>
+					</a>
+				</li>
+			{% endif %}
+			
+			<!-- Show three dots if has page before -->
+			{% if objects.number|add:'-2' > 1 %}
+				<li class="page-item">
+					<a class="page-link" href="{{object_path}}page={{objects.number|add:'-3'}}&per_page={{object_per_page}}">&hellip;</a>
+				</li>
+			{% endif %}
+
+			<!-- Show link to current page and only few other surrounding pages, not all -->
+			{% for num in objects.paginator.page_range %}
+				{% if objects.number == num %}
+					<li class="page-item disabled">
+						<a class="page-link">
+							{{ num }}
+						</a>
+					</li>
+				{% elif num > objects.number|add:'-3' and num < objects.number|add:'3' %}
+					<li class="page-item">
+						<a class="page-link" href="{{object_path}}page={{num}}&per_page={{object_per_page}}">
+							{{ num }}
+						</a class="page-link">
+					</li>
+				{% endif %}
+			{% endfor %}
+			
+			<!-- Show three dots if has page after -->
+			{% if objects.paginator.num_pages > objects.number|add:'2' %}
+				<li class="page-item">
+					<a class="page-link" href="{{object_path}}page={{objects.number|add:'3'}}&per_page={{object_per_page}}">&hellip;</a>
+				</li>
+			{% endif %}
+
+			<!-- Next/Last button - only visible if previous page available -->
+			{% if objects.has_next %}
+				<li class="page-item">
+					<a class="page-link " href="{{object_path}}page={{objects.next_page_number}}&per_page={{object_per_page}}">
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="{{object_path}}page={{objects.paginator.num_pages}}&per_page={{object_per_page}}">
+						<i class="fa fa-angle-double-right"></i>
+					</a>
+				</li>
+			{% endif %}
+		</ul>
+	{% endif %}
+</div>

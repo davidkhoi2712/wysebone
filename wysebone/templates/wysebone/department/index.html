@@ -1,0 +1,124 @@
+{% extends 'wysebone/base.html' %}
+{% load static i18n common %}
+
+<!-- Add title -->
+{% block title %}{% trans "Departments & Users" %}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+<!-- select2 Theme bootstrap4-->
+<link href="{% static 'vendor/select2-bootstrap4-theme/dist/select2-bootstrap4.min.css' %}" rel="stylesheet" />
+<link href="{% static 'styles/admin.css' %}" rel="stylesheet">
+<link href="{% static 'styles/form.css' %}" rel="stylesheet">
+<link href="{% static 'styles/table.css' %}" rel="stylesheet"> {% endblock %}
+
+<!-- Add content -->
+{% block content %}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h3>{% trans "Departments & Users" %}</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="block-content">
+                    <div class="d-inline-block">
+                        <h4 class="d-inline-block mr-4 align-middle">{% trans "Departments" %}</h4>
+                        <div class="d-inline-block m-1 align-middle">
+                            <a href="{% url 'add.department' %}" class="btn btn-primary btn-sm text-uppercase">{{ add_department_title }}</a>
+                        </div>
+                    </div>
+                    <div class="block-content-inner">
+                        <div class="treeview-outer">
+                            <div class="treeview-inner">
+                                <div class="treeview">
+                                    {% for department in departments %}
+                                        {% if not department.parent %}
+                                            {% include "wysebone/department/tree_department.html" %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="treenode tree-footer">
+                                    <div class="treenode-contents active" data-id="0">
+                                        <div class="treenode-empty"><i class="fa fa-users"></i></div>
+                                        <div class="treenode-label">
+                                            <span>{% trans "All Users" %}</span>
+                                        </div>
+                                        <div class="treenode-action">
+                                        </div>
+                                    </div>
+                                    <div class="treenode-children"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="block-content">
+                    <div class="block-content-box pb-1">
+                        <h4 class="d-inline-block mr-3 align-middle">{% trans "Users" %}</h4>
+                        <div class="d-inline-block align-middle">
+                            <a href="{% url 'add.user' %}" class="btn btn-primary btn-sm text-uppercase">
+                            {{ add_user_title }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <div class="alert alert-secondary mt-3 {% if users %} d-none {% endif %}" role="alert" id="alert_empty_users">
+                            {% trans "There is no data to show." %}
+                        </div>
+                        <table class="table table-striped listTable-member {% if users == None %} d-none {% endif %}" id="listTable-member">
+                            <thead>
+                                <tr>
+                                    <th title="{% trans "Display Name" %}">{% trans "Display Name" %}</th>
+                                    <th title="{% trans "Email" %}">{% trans "Email" %}</th>
+                                    <th title="{% trans "Role" %}">{% trans "Role" %}</th>
+                                    <th title="{% trans "Status" %}" class="text-center">{% trans "Status" %}</th>
+                                    <th title="{% trans "Action" %}" class="text-right">{% trans "Action" %}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if users %}
+                                    {% for user in users %}
+                                        <tr>
+                                            <td label="{% trans "Display Name" %}">{{ user.get_full_name }}</td>
+                                            <td width="300" label="{% trans "Email" %}">{{ user.email }}</td>
+                                            <td label="{% trans "Role" %}">{{ user.role_name }}</td> 
+                                            <td label="{% trans "Status" %}" class="text-center">
+                                            {% if user.is_active %}
+                                                <span class="status-active" title="{% trans "Active" %}">{% trans "Active" %}</span>
+                                            {% else %}
+                                                <span class="status-inactive" title="{% trans "Inactive" %}">{% trans "Inactive" %}</span>
+                                            {% endif %}</td>
+                                            <td label="{% trans "Action" %}" class="text-right">
+                                                <a  title="{% trans "Change user" %}" href="{% url 'change.user' user.user_id %}"><i class="fa fa-edit"></i></a>
+                                                <a class="text-danger" title="{% trans "Delete user" %}" href="{% url 'delete.user' user.user_id %}"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-4 col-lg-8" id="sub-pagination">
+                {% block pagination %}{% pagination users "index.department" %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- Add js -->
+{% block js %}
+<!-- Multiselect -->
+<script src="{% static 'vendor/multiselect-master/multiselect.min.js' %}"></script>
+<!-- select2 -->
+<script src="{% static 'vendor/select2/js/select2.min.js' %}"></script>
+<script src="{% static 'js/department.js' %}"></script>
+{% endblock %}

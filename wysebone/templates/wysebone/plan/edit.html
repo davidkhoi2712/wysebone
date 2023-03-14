@@ -1,0 +1,54 @@
+{% extends 'wysebone/base.html' %}
+<!--Load language-->
+{% load i18n static %}
+
+<!-- Add title -->
+{% block title %}{{ the_title }}{% endblock %}
+
+<!-- Add content -->
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h1>{{ the_title }}</h1>
+            </div>
+            <div class="card-body">
+                <form role="form" action="" id="permission_form" method="post">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label for="form_name" class="col-sm-3 col-form-label">{% trans "Plan name" %}<b class="text-danger">*</b></label>
+                        <div class="col-sm-9">
+                            {{ form.name }}
+                            <div class="text-danger">{{ form.name.errors}}</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="form_name" class="col-sm-3 col-form-label">{{ form.account_limit.label }}</label>
+                        <div class="col-sm-9">
+                            {{ form.account_limit }}
+                            <div class="text-danger">{{ form.account_limit.errors}}</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="form_name" class="col-sm-3 col-form-label">{{ form.app_limit.label }}</label>
+                        <div class="col-sm-9">
+                            {{ form.app_limit }}
+                            <div class="text-danger">{{ form.app_limit.errors}}</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="offset-sm-3 col-sm-9">
+                            <button type="submit" id="department_submit" class="btn btn-primary">{% trans "Save" %}</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='{% url 'index.contract_plan' %}'">{% trans "Cancel" %}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}

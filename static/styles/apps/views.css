@@ -1,0 +1,179 @@
+.tab-content>.active {
+    position: relative;
+}
+
+.accordion>.card {
+    overflow: visible;
+}
+
+.list-group .wb-drag-item {
+    z-index: 1000;
+}
+
+.list-group .wb-drag-item.disabled {
+    opacity: 0.5;
+}
+
+.draggable-hover {
+    border: 1px dashed #43bcfd !important;
+}
+
+.views-canvas {
+    position: relative;
+    background-color: #f7f9fa;
+    border: 1px solid #d4d7d7;
+    box-sizing: border-box;
+    font-size: 14px;
+    min-height: 20rem;
+    width: auto;
+    padding: 30px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.views-canvas .views-content-canvas {
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.views-canvas .views-content-canvas.grid {
+    overflow: hidden;
+    width: 100%;
+    min-height: 200px;
+}
+
+.views-canvas .views-content-canvas li {
+    list-style: none;
+    display: inline-block;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    height: 35px;
+}
+
+.views-canvas .views-content-canvas.grid li {
+    float: left;
+    width: 185px;
+    height: 207px;
+    text-align: center;
+    cursor: move;
+    padding: 0;
+    margin: 0;
+}
+
+.views-canvas .views-canvas-items {
+    background-color: #fff;
+    margin: 0;
+}
+
+.views-canvas .views-canvas-items .thead-items {
+    color: #fff;
+    background-color: #f5f5f5;
+}
+
+.views-canvas .views-canvas-items .thead-items .label-preName {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #666666;
+    color: transparent;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    text-align: center;
+}
+
+.views-canvas .views-canvas-text {
+    position: absolute;
+    top: 15px;
+    font-weight: bolder;
+    color: #999;
+}
+
+.views-canvas .views-content-canvas li {
+    border: 1px solid transparent;
+}
+
+.views-canvas-items .label-header {
+    position: relative;
+}
+
+.views-canvas-items .label-header .label-name {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 115px;
+}
+
+.views-canvas-items .label-header .dropdown {
+    cursor: pointer;
+}
+
+.views-canvas .views-content-canvas li:hover {
+    border: 1px dashed #43bcfd;
+}
+
+.views-canvas .views-content-canvas li:hover>.views-canvas-items .label-action {
+    visibility: visible;
+}
+
+.views-canvas-items .dropdown {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.views-canvas-items .dropdown-toggle {
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.views-canvas-items .dropdown-toggle i {
+    font-size: 18px;
+}
+
+.views-canvas-items .dropdown-toggle::after {
+    display: none;
+}
+
+.views-canvas-items .dropdown .dropdown-menu .dropdown-item {
+    font-size: 14px;
+}
+
+.views-canvas-items .dropdown .dropdown-menu a i {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.views-canvas-items .dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.views-canvas-items .dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+}
+
+.views-canvas-items .label-header:hover .dropdown {
+    visibility: visible;
+}
+
+.views-canvas-items.is_invalid {
+    border: 1px solid #dc3545 !important;
+}
+
+.view-property {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    margin-right: 5px;
+    font-size: 20px;
+}

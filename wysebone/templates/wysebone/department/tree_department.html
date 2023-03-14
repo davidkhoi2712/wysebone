@@ -1,0 +1,34 @@
+<!--Load language-->
+{% load i18n %}
+<div class="treenode {%if department.pk in list_parent %} treenode-expand {% endif %}" >
+    <div class="treenode-contents" data-id="{{ department.pk }}">
+       {% if department.pk in list_parent %}
+            <div class="treenode-icon"><i class="fa fa-caret-right"></i></div> 
+       {% else %}
+            <div class="treenode-empty"><i class="fa fa-users"></i></div>
+       {% endif %}
+        <div class="treenode-label">
+            <span>{{ department.name }}</span>
+        </div>
+        <div class="treenode-action">
+            <div class="treenode-action-icon">
+                <i class="fa fa-cog"></i>
+            </div>
+            <div class="treenode-action-menu">
+                <a href="{% url 'change.department' department.uuid %}" class="treenode-action-menu-item">{% trans "Change" %}</a>
+                <a href="{% url 'add.department' %}?node={{ department.uuid }}" class="treenode-action-menu-item">{% trans "Add Child Department" %}</a>
+                <a href="{% url 'change_member.department' department.uuid %}" class="treenode-action-menu-item">{% trans "Change Members" %}</a>
+                <a href="{% url 'delete.department' department.uuid %}" class="treenode-action-menu-item" >{% trans "Delete" %}</a>
+            </div>
+        </div>
+    </div>
+    <div class="treenode-children" style="display: none;">
+        {% if department.children %}
+        {% for depart in department.children.get_queryset %}
+            {% with department=depart template_name="wysebone/department/tree_department.html" %}
+                {% include template_name %}
+            {% endwith %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>

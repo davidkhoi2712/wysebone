@@ -1,0 +1,1316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-01 08:57+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\api\department.py:53
+#, python-format
+msgid "Department with id: %d does not exist."
+msgstr "IDが%dの組織は存在しません。"
+
+#: .\api\group.py:44
+#, fuzzy, python-format
+#| msgid "Department with id: %d does not exist."
+msgid "Group with id: %d does not exist."
+msgstr "IDが%dの組織は存在しません。"
+
+#: .\wysebone\admins\companies.py:13
+msgid "Administrator information"
+msgstr "管理者情報"
+
+#: .\wysebone\admins\companies.py:24
+msgid "Company information"
+msgstr "企業情報"
+
+msgid "Company code"
+msgstr "会社コード"
+
+msgid "Company address"
+msgstr "会社の住所"
+
+msgid "Rep. phone number"
+msgstr "代表者の電話番号"
+
+msgid "Contract period"
+msgstr "契約期間"
+
+msgid "Please select"
+msgstr "選んでください"
+
+msgid "Updated successfully."
+msgstr "更新成功。"
+
+msgid "An error occurred while processing. Please try again later."
+msgstr "処理中にエラーが発生しました。 後でもう一度やり直してください。"
+
+msgid "Country"
+msgstr "国"
+
+msgid "Postal code"
+msgstr "郵便番号"
+
+msgid "City"
+msgstr "シティ"
+
+msgid "State"
+msgstr "群"
+
+msgid "This email address is already registered."
+msgstr "このメールはすでに登録されています。"
+
+msgid "Number of users"
+msgstr "ユーザ数"
+
+msgid "Number of tables"
+msgstr "テーブル数"
+
+msgid "Number of applications"
+msgstr "アプリケーション数"
+
+#: .\wysebone\admins\users.py:10 .\wysebone\forms\users.py:86
+#: .\wysebone\forms\users.py:90 .\wysebone\templates\wysebone\sidebar.html:10
+msgid "groups"
+msgstr ""
+
+#: .\wysebone\admins\users.py:33
+msgid "Personal information"
+msgstr "個人情報"
+
+#: .\wysebone\admins\users.py:34
+#: .\wysebone\templates\wysebone\groups\add.html:34
+#: .\wysebone\templates\wysebone\user\add.html:155
+#: .\wysebone\views\groups\add.py:121 .\wysebone\views\groups\add.py:122
+#: .\wysebone\views\user.py:136 .\wysebone\views\user.py:137
+msgid "Permissions"
+msgstr ""
+
+msgid "permission"
+msgstr ""
+
+msgid "Permission Name"
+msgstr "許可名"
+
+msgid "Process"
+msgstr "プロセス"
+
+msgid "Form submission event"
+msgstr "フォーム送信イベント"
+
+msgid "Screen transition"
+msgstr "画面遷移"
+
+msgid "Return to the previous screen"
+msgstr "前の画面に戻る"
+
+msgid "Deleted permission successfully."
+msgstr "許可の削除が完成されました。"
+
+msgid "Permission has been created in the system. Please choose another name."
+msgstr "システムには許可が作成されました。 別の名前を選択してください。"
+
+msgid "There is no data to show."
+msgstr "表示するデータがありません。"
+
+msgid "Permission denied"
+msgstr "アクセス許可が拒否されました。"
+
+#: .\wysebone\admins\users.py:37
+msgid "Important dates"
+msgstr ""
+
+#: .\wysebone\auths.py:26 .\wysebone\auths.py:34 .\wysebone\auths.py:42
+#, python-format
+msgid "%(name)s management"
+msgstr "%(name)s管理"
+
+#: .\wysebone\auths.py:26 .\wysebone\auths.py:27 .\wysebone\auths.py:28
+#: .\wysebone\auths.py:29 .\wysebone\auths.py:30
+#: .\wysebone\views\groups\list.py:32 .\wysebone\views\user.py:156
+msgid "user"
+msgstr ""
+
+#: .\wysebone\auths.py:27 .\wysebone\auths.py:35 .\wysebone\auths.py:43
+#, python-format
+msgid "View %s"
+msgstr ""
+
+#: .\wysebone\auths.py:29 .\wysebone\auths.py:37 .\wysebone\auths.py:45
+#, fuzzy, python-format
+#| msgid "Change Password"
+msgid "Change %s"
+msgstr "パスワードを変更する"
+
+#: .\wysebone\auths.py:30 .\wysebone\auths.py:38 .\wysebone\auths.py:46
+#, python-format
+msgid "Delete %s"
+msgstr "%sを削除します"
+
+# wysebone/templates/wysebone/department/create.html
+#: .\wysebone\auths.py:34 .\wysebone\auths.py:35 .\wysebone\auths.py:36
+#: .\wysebone\auths.py:37 .\wysebone\auths.py:38
+#: .\wysebone\templates\wysebone\user\add.html:90
+msgid "Department"
+msgstr "組織"
+
+#: .\wysebone\auths.py:42 .\wysebone\auths.py:43 .\wysebone\auths.py:44
+#: .\wysebone\auths.py:45 .\wysebone\auths.py:46
+#: .\wysebone\views\groups\add.py:93 .\wysebone\views\groups\add.py:120
+#: .\wysebone\views\groups\change.py:34 .\wysebone\views\groups\delete.py:34
+#: .\wysebone\views\groups\list.py:31 .\wysebone\views\groups\members.py:34
+msgid "group"
+msgstr ""
+
+#: .\wysebone\forms\account.py:27 .\wysebone\forms\account.py:62
+#: .\wysebone\forms\companies.py:43 .\wysebone\models\users.py:79
+#: .\wysebone\templates\wysebone\user\add.html:55
+#, fuzzy
+#| msgid "Email Address"
+msgid "Email address"
+msgstr "メールアドレス"
+
+#: .\wysebone\forms\account.py:35 .\wysebone\forms\account.py:71
+#: .\wysebone\forms\companies.py:19 .\wysebone\forms\users.py:22
+#: .\wysebone\forms\users.py:84 .\wysebone\templates\wysebone\user\add.html:62
+msgid "Password"
+msgstr "パスワード"
+
+#: .\wysebone\forms\account.py:56 .\wysebone\forms\companies.py:15
+#: .\wysebone\forms\users.py:16
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: .\wysebone\forms\account.py:67 .\wysebone\forms\companies.py:53
+#: .\wysebone\forms\users.py:161
+#: .\wysebone\templates\wysebone\user\profile.html:94
+msgid "Enter a valid email address"
+msgstr "有効なメールアドレスを入力してください。"
+
+#: .\wysebone\forms\account.py:80 .\wysebone\forms\companies.py:31
+#: .\wysebone\forms\users.py:34 .\wysebone\templates\wysebone\user\add.html:69
+#, fuzzy
+#| msgid "Personal information"
+msgid "Password confirmation"
+msgstr "個人情報"
+
+#: .\wysebone\forms\account.py:95 .\wysebone\forms\groups.py:39
+msgid "permissions"
+msgstr ""
+
+#: .\wysebone\forms\companies.py:40 .\wysebone\forms\users.py:43
+msgid "Enter the same password as before, for verification."
+msgstr ""
+
+#: .\wysebone\forms\department.py:10 .\wysebone\forms\department.py:16
+msgid "Department name"
+msgstr "組織名"
+
+#: .\wysebone\forms\groups.py:26 .\wysebone\models\contenttypes.py:6
+#: .\wysebone\models\department.py:13 .\wysebone\models\language.py:7
+#: .\wysebone\templates\wysebone\department\add.html:33
+msgid "Name"
+msgstr "名前"
+
+#: .\wysebone\forms\users.py:115 .\wysebone\forms\users.py:120
+#: .\wysebone\templates\wysebone\user\add.html:80
+msgid "First name"
+msgstr "名"
+
+#: .\wysebone\forms\users.py:128 .\wysebone\forms\users.py:133
+#: .\wysebone\templates\wysebone\user\add.html:83
+msgid "Last name"
+msgstr "苗字"
+
+#: .\wysebone\models\__init__.py:13 .\wysebone\models\users.py:67
+#: .\wysebone\templates\wysebone\user\profile.html:145
+#: .\wysebone\templates\wysebone\user\view.html:66
+msgid "Employee ID"
+msgstr "従業員ID"
+
+#: .\wysebone\models\__init__.py:17 .\wysebone\models\companies.py:24
+#: .\wysebone\models\plans.py:10
+msgid "Creation date"
+msgstr "作成日"
+
+#: .\wysebone\models\__init__.py:19 .\wysebone\models\companies.py:26
+#: .\wysebone\models\plans.py:12
+msgid "Last modified"
+msgstr "最終更新日"
+
+#: .\wysebone\models\companies.py:16
+msgid "Company name"
+msgstr "会社名"
+
+#: .\wysebone\models\companies.py:17
+msgid "Address"
+msgstr "住所"
+
+#: .\wysebone\models\companies.py:18 .\wysebone\models\users.py:84
+msgid "Phone number"
+msgstr "電話番号"
+
+#: .\wysebone\models\companies.py:19
+msgid "Number of employees"
+msgstr "就業者数"
+
+#: .\wysebone\models\companies.py:20
+msgid "Domain name"
+msgstr "ドメイン名"
+
+#: .\wysebone\models\companies.py:20
+msgid "This domain name already exists"
+msgstr "この ドメイン名 を持った 会社 が既に存在します。"
+
+#: .\wysebone\models\companies.py:21
+msgid "Contract start date"
+msgstr "契約開始日"
+
+#: .\wysebone\models\companies.py:22
+msgid "Contract end date"
+msgstr "契約終了日"
+
+#: .\wysebone\models\companies.py:23 .\wysebone\models\plans.py:17
+#: .\wysebone\models\plans.py:18
+msgid "Contract plan"
+msgstr "契約計画"
+
+#: .\wysebone\models\companies.py:32
+msgid "End time must be greater than start time"
+msgstr "終了時間は開始時間よりも大きくする必要があります。"
+
+#: .\wysebone\models\companies.py:35
+msgid "Company"
+msgstr "会社"
+
+#: .\wysebone\models\companies.py:36
+msgid "Companies"
+msgstr "会社"
+
+#: .\wysebone\models\contenttypes.py:7
+#, fuzzy
+#| msgid "Name"
+msgid "Code Name"
+msgstr "名前"
+
+#: .\wysebone\models\contenttypes.py:8
+msgid "Icon"
+msgstr "アイコン"
+
+#: .\wysebone\models\contenttypes.py:9 .\wysebone\models\department.py:14
+#: .\wysebone\templates\wysebone\department\add.html:78
+msgid "Description"
+msgstr "説明"
+
+#: .\wysebone\models\contenttypes.py:12
+msgid "content type"
+msgstr ""
+
+#: .\wysebone\models\contenttypes.py:13
+msgid "content types"
+msgstr ""
+
+#: .\wysebone\models\department.py:12
+msgid "UUID"
+msgstr ""
+
+#: .\wysebone\models\language.py:6 .\wysebone\models\locale.py:8
+#, fuzzy
+#| msgid "Choose"
+msgid "Code"
+msgstr "選択"
+
+#: .\wysebone\models\locale.py:9
+msgid "Field"
+msgstr ""
+
+#: .\wysebone\models\locale.py:10
+msgid "Translate"
+msgstr ""
+
+#: .\wysebone\models\plans.py:7
+msgid "Plan name"
+msgstr "計画名"
+
+#: .\wysebone\models\plans.py:8
+msgid "Limit the number of accounts"
+msgstr "アカウントの数を制限する"
+
+msgid "The number of accounts over the limit allow."
+msgstr "アカウントの数が数量限定を超えています。"
+
+#: .\wysebone\models\plans.py:9
+msgid "Limit the number of applications"
+msgstr "アプリケーション数量制限"
+
+msgid "The number of apps over the limit allow."
+msgstr "アプリの数が数量限定を超えています。"
+
+#: .\wysebone\models\users.py:18
+#, fuzzy
+#| msgid "Enter a valid email address"
+msgid "Users must have an email address."
+msgstr "有効なメールアドレスを入力してください。"
+
+#: .\wysebone\models\users.py:92
+#: .\wysebone\templates\wysebone\user\add.html:118
+#: .\wysebone\templates\wysebone\user\add.html:122
+#: .\wysebone\templates\wysebone\user\profile.html:107
+#: .\wysebone\templates\wysebone\user\view.html:41
+msgid "Birthday"
+msgstr "誕生日"
+
+#: .\wysebone\models\users.py:97
+msgid "Hire date"
+msgstr "入社日"
+
+#: .\wysebone\models\users.py:102
+msgid "Time zone"
+msgstr "タイムゾーン"
+
+#: .\wysebone\models\users.py:109
+#: .\wysebone\templates\wysebone\user\add.html:128
+#: .\wysebone\templates\wysebone\user\profile.html:123
+#: .\wysebone\templates\wysebone\user\view.html:53
+msgid "Language"
+msgstr "言語"
+
+#: .\wysebone\models\users.py:137
+#: .\wysebone\templates\wysebone\user\add.html:76
+msgid "Full name"
+msgstr "氏名"
+
+#: .\wysebone\templates\admin\base.html:35
+msgid "Welcome,"
+msgstr ""
+
+#: .\wysebone\templates\admin\base.html:43
+msgid "View site"
+msgstr ""
+
+#: .\wysebone\templates\admin\base.html:48
+#: .\wysebone\templates\wysebone\password-change-done.html:3
+msgid "Documentation"
+msgstr ""
+
+#: .\wysebone\templates\admin\base.html:52
+#: .\wysebone\templates\wysebone\password-change-done.html:3
+#, fuzzy
+#| msgid "Change Password"
+msgid "Change password"
+msgstr "パスワードを変更する"
+
+#: .\wysebone\templates\admin\base.html:54
+#: .\wysebone\templates\wysebone\password-change-done.html:3
+#, fuzzy
+#| msgid "Logout"
+msgid "Log out"
+msgstr "ログアウト"
+
+#: .\wysebone\templates\admin\base.html:64
+#: .\wysebone\templates\wysebone\password-change-done.html:6
+msgid "Home"
+msgstr ""
+
+#: .\wysebone\templates\admin\index.html:21
+#: .\wysebone\templates\admin\index.html:25
+#, fuzzy, python-format
+#| msgid "Limit the number of applications"
+msgid "Models in the %(name)s application"
+msgstr "アプリケーション数量制限"
+
+#: .\wysebone\templates\admin\index.html:37
+msgid "Add"
+msgstr ""
+
+#: .\wysebone\templates\admin\index.html:44
+msgid "View"
+msgstr ""
+
+msgid "Can %s"
+msgstr "%sできます"
+
+#: .\wysebone\templates\admin\index.html:46
+#: .\wysebone\templates\wysebone\department\tree_department.html:18
+msgid "Change"
+msgstr ""
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Hidden"
+msgstr "非表示"
+
+#: .\wysebone\templates\admin\index.html:57
+msgid "You don't have permission to view or edit anything."
+msgstr ""
+
+#: .\wysebone\templates\admin\index.html:65
+msgid "Recent actions"
+msgstr ""
+
+#: .\wysebone\templates\admin\index.html:66
+msgid "My actions"
+msgstr ""
+
+#: .\wysebone\templates\admin\index.html:70
+#, fuzzy
+#| msgid "Available %s"
+msgid "None available"
+msgstr "利用可能 %s"
+
+#: .\wysebone\templates\admin\index.html:84
+msgid "Unknown content"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\base.html:39
+#: .\wysebone\templates\wysebone\user\view.html:4
+#: .\wysebone\templates\wysebone\user\view.html:10
+msgid "Profile"
+msgstr "プロフィール"
+
+#: .\wysebone\templates\wysebone\base.html:40
+#: .\wysebone\templates\wysebone\change-password.html:11
+msgid "Change Password"
+msgstr "パスワードを変更する"
+
+#: .\wysebone\templates\wysebone\base.html:42
+msgid "Logout"
+msgstr "ログアウト"
+
+#: .\wysebone\templates\wysebone\change-password.html:15
+#, fuzzy
+#| msgid "Password"
+msgid "Old password"
+msgstr "パスワード"
+
+#: .\wysebone\templates\wysebone\change-password.html:22
+#, fuzzy
+#| msgid "Password"
+msgid "New password"
+msgstr "パスワード"
+
+#: .\wysebone\templates\wysebone\change-password.html:30
+msgid "New password confirmation"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\change-password.html:40
+#, fuzzy
+#| msgid "Change Password"
+msgid "Change my password"
+msgstr "パスワードを変更する"
+
+msgid "Your password can't be too similar to your other personal information."
+msgstr ""
+
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] ""
+
+msgid "Your password can't be a commonly used password."
+msgstr ""
+
+msgid "Your password can't be entirely numeric."
+msgstr ""
+
+msgid ""
+"This password is too short. It must contain at least %(min_length)d "
+"character."
+msgid_plural ""
+"This password is too short. It must contain at least %(min_length)d "
+"characters."
+msgstr[0] ""
+
+msgid "This password is too common."
+msgstr ""
+
+msgid "This password is entirely numeric."
+msgstr ""
+
+#: .\wysebone\templates\wysebone\department\add.html:6
+#: .\wysebone\templates\wysebone\department\add.html:26
+#: .\wysebone\templates\wysebone\department\index.html:33
+msgid "New Department"
+msgstr "組織の追加"
+
+#: .\wysebone\templates\wysebone\department\add.html:35
+#: .\wysebone\templates\wysebone\department\index.html:77
+#: .\wysebone\templates\wysebone\department\index.html:88
+#: .\wysebone\templates\wysebone\groups\index.html:59
+#: .\wysebone\templates\wysebone\user\profile.html:60
+#: .\wysebone\templates\wysebone\user\view.html:22
+msgid "Display Name"
+msgstr "表示名"
+
+#: .\wysebone\templates\wysebone\department\add.html:42
+msgid "Localized Name"
+msgstr "別言語での表示名"
+
+#: .\wysebone\templates\wysebone\department\add.html:55
+msgid "Enter a department name to be displayed in the specified language."
+msgstr "指定した言語のユーザーに表示される組織名を入力します。"
+
+#: .\wysebone\templates\wysebone\department\add.html:65
+msgid "Parent Department"
+msgstr "親組織"
+
+#: .\wysebone\templates\wysebone\department\add.html:68
+msgid "Root"
+msgstr "ルート"
+
+#: .\wysebone\templates\wysebone\department\add.html:85
+#: .\wysebone\templates\wysebone\department\change_member.html:80
+#: .\wysebone\templates\wysebone\groups\add.html:83
+#: .\wysebone\templates\wysebone\user\add.html:208
+msgid "Save"
+msgstr "保存"
+
+#: .\wysebone\templates\wysebone\department\add.html:86
+#: .\wysebone\templates\wysebone\department\change_member.html:81
+#: .\wysebone\templates\wysebone\groups\add.html:84
+#: .\wysebone\templates\wysebone\user\add.html:209
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:35
+#: .\wysebone\templates\wysebone\department\index.html:50
+msgid "All Users"
+msgstr "すべてのユーザー"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:48
+#: .\wysebone\templates\wysebone\groups\add.html:55
+#: .\wysebone\templates\wysebone\user\add.html:176
+msgid "Choose all"
+msgstr "全て選択"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:53
+#: .\wysebone\templates\wysebone\groups\add.html:60
+#: .\wysebone\templates\wysebone\user\add.html:181
+msgid "Choose"
+msgstr "選択"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:54
+#: .\wysebone\templates\wysebone\groups\add.html:61
+#: .\wysebone\templates\wysebone\user\add.html:182
+#, fuzzy
+#| msgid "Remove all"
+msgid "Remove"
+msgstr "すべて削除"
+
+#: .\wysebone\templates\wysebone\department\change_member.html:73
+#: .\wysebone\templates\wysebone\groups\add.html:74
+#: .\wysebone\templates\wysebone\user\add.html:195
+msgid "Remove all"
+msgstr "すべて削除"
+
+#: .\wysebone\templates\wysebone\department\index.html:6
+#: .\wysebone\templates\wysebone\department\index.html:24
+#: .\wysebone\templates\wysebone\sidebar.html:9
+msgid "Departments & Users"
+msgstr "組織/ユーザー"
+
+# wysebone/templates/wysebone/department/add.html
+#: .\wysebone\templates\wysebone\department\index.html:31
+msgid "Departments"
+msgstr "組織"
+
+# wysebone/templates/wysebone/department/index.html
+#: .\wysebone\templates\wysebone\department\index.html:65
+msgid "Users"
+msgstr "ユーザー"
+
+# wysebone/templates/wysebone/user/add.html
+#: .\wysebone\templates\wysebone\department\index.html:67
+#: .\wysebone\templates\wysebone\user\add.html:6
+#: .\wysebone\templates\wysebone\user\add.html:28
+msgid "New User"
+msgstr "新しいユーザー"
+
+#: .\wysebone\templates\wysebone\department\index.html:72
+msgid "There are no users to display."
+msgstr "表示するユーザーがいません。"
+
+#: .\wysebone\templates\wysebone\department\index.html:78
+#: .\wysebone\templates\wysebone\department\index.html:89
+#: .\wysebone\templates\wysebone\groups\index.html:60
+msgid "Email"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\department\index.html:79
+#: .\wysebone\templates\wysebone\department\index.html:90
+#: .\wysebone\templates\wysebone\groups\index.html:61
+#: .\wysebone\templates\wysebone\user\add.html:102
+#: .\wysebone\templates\wysebone\user\add.html:104
+#: .\wysebone\templates\wysebone\user\profile.html:100
+#: .\wysebone\templates\wysebone\user\view.html:34
+msgid "Phone"
+msgstr "電話番号"
+
+#: .\wysebone\templates\wysebone\department\index.html:80
+#: .\wysebone\templates\wysebone\department\index.html:91
+#: .\wysebone\templates\wysebone\groups\index.html:62
+msgid "Status"
+msgstr "使用状態"
+
+#: .\wysebone\templates\wysebone\department\index.html:81
+#: .\wysebone\templates\wysebone\department\index.html:97
+#: .\wysebone\templates\wysebone\groups\index.html:63
+#, fuzzy
+#| msgid "Active"
+msgid "Action"
+msgstr "使用中"
+
+#: .\wysebone\templates\wysebone\department\index.html:93
+msgid "Active"
+msgstr "使用中"
+
+#: .\wysebone\templates\wysebone\department\index.html:95
+msgid "Inactive"
+msgstr "停止中"
+
+#: .\wysebone\templates\wysebone\department\index.html:98
+msgid "Change user"
+msgstr "ユーザーを変更"
+
+#: .\wysebone\templates\wysebone\department\index.html:99
+msgid "Delete user"
+msgstr "ユーザーの削除"
+
+#: .\wysebone\templates\wysebone\department\tree_department.html:19
+msgid "Add Child Department"
+msgstr "子組織の追加"
+
+#: .\wysebone\templates\wysebone\department\tree_department.html:20
+msgid "Change Members"
+msgstr "所属ユーザーの変更"
+
+#: .\wysebone\templates\wysebone\external\login.html:4
+#: .\wysebone\templates\wysebone\external\login.html:17
+#: .\wysebone\templates\wysebone\external\login.html:63
+msgid "Login"
+msgstr "ログイン"
+
+#: .\wysebone\templates\wysebone\external\login.html:20
+#: .\wysebone\views\account.py:66
+msgid "The email address or password incorrect. Please try again."
+msgstr ""
+"メールアドレスまたはパスワードが間違っています。 もう一度試してください。"
+
+#: .\wysebone\templates\wysebone\external\login.html:24
+msgid ""
+"Your account doesn't have access to this page. To proceed, please login with "
+"an account that has access."
+msgstr ""
+"アカウントはこのページへにアクセスする権限がありません。 続きには、アクセスで"
+"きるアカウントでログインしてください。"
+
+#: .\wysebone\templates\wysebone\external\login.html:53
+msgid "Remember me"
+msgstr "ログインを保存しますか。"
+
+#: .\wysebone\templates\wysebone\groups\index.html:27
+msgid "Groups"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\groups\index.html:52
+#, fuzzy
+#| msgid "Change Members"
+msgid "Members"
+msgstr "所属ユーザーの変更"
+
+#: .\wysebone\templates\wysebone\password-change-done.html:7
+#, fuzzy
+#| msgid "Password"
+msgid "Password change"
+msgstr "パスワード"
+
+#: .\wysebone\templates\wysebone\password-change-done.html:15
+msgid "Your password was changed."
+msgstr ""
+
+# Password Reset
+msgid "We've emailed you instructions for setting your password, if an account exists with the email you entered. You should receive them shortly."
+msgstr "入力したメールにアカウントが存在する場合、パスワードの設定手順をメールで送信しました。 すぐに届くはずです。"
+
+msgid "If you don't receive an email, please make sure you've entered the address you registered with, and check your spam folder."
+msgstr "メールが届かない場合は、登録したアドレスを入力したことを確認し、スパムフォルダーを確認してください。"
+
+msgid "If clicking the link above doesn't work, please copy and paste the URL in a new browser window instead."
+msgstr "上記のリンクをクリックしても機能しない場合は、代わりに新しいブラウザウィンドウにURLをコピーして貼り付けてください。"
+
+msgid "The password reset link was invalid, possibly because it has already been used. Please request a new password reset."
+msgstr "パスワードリセットリンクは無効でした。おそらく既に使用されているためです。 新しいパスワードのリセットをリクエストしてください。"
+
+msgid "Forgot Password ?"
+msgstr "パスワードをお忘れですか ？"
+
+msgid "Already have login and password?"
+msgstr "すでにログイン名とパスワードをお持ちですか？"
+
+msgid "Reset password"
+msgstr "パスワードを再設定する"
+
+msgid "Password reset success"
+msgstr "パスワードが正常にリセットされました"
+
+msgid "Return to login page"
+msgstr "ログインページに戻ります。"
+
+msgid "Sincerely,"
+msgstr "心から。"
+
+# Applications
+#: .\wysebone\templates\wysebone\sidebar.html:11
+msgid "Applications"
+msgstr "応用"
+
+msgid "Application"
+msgstr "応用"
+
+msgid "Application name"
+msgstr "アプリ名"
+
+msgid "Last edited %(time_ago)s ago."
+msgstr "最終編集は%(time_ago)s前です。"
+
+msgid "Choose an icon"
+msgstr "アイコンを選択してください"
+
+msgid "Choose color"
+msgstr "色を選ぶ"
+
+msgid "Continue"
+msgstr "持続する"
+
+msgid "Processing"
+msgstr "開発中"
+
+msgid "Completed"
+msgstr "開発完了"
+
+msgid "Testing"
+msgstr "テスト中"
+
+msgid "Test completed"
+msgstr "テスト完了"
+
+msgid "Released"
+msgstr "本番リリース済み"
+
+msgid "Per page"
+msgstr "表示件数"
+
+msgid "Showing %(start)s to %(end)s of %(total)s entries"
+msgstr "%(total)s件中：%(start)s ～ %(end)s までを表示"
+
+# Localization
+#: .\wysebone\templates\wysebone\sidebar.html:12
+msgid "Localization"
+msgstr "ローカライズ"
+
+#: .\wysebone\templates\wysebone\user\add.html:36
+msgid "Avatar"
+msgstr "アバター"
+
+#: .\wysebone\templates\wysebone\user\add.html:42
+msgid "Upload new avatar"
+msgstr "新しいアバター アップロード"
+
+#: .\wysebone\templates\wysebone\user\add.html:44
+msgid "Choose file"
+msgstr "ファイル選択"
+
+#: .\wysebone\templates\wysebone\user\add.html:46
+msgid "The maximum file size allowed is 3MB."
+msgstr "許可される最大ファイルサイズは3MBです"
+
+#: .\wysebone\templates\wysebone\user\add.html:50
+#: .\wysebone\templates\wysebone\user\profile.html:51
+msgid "Avatar will be removed."
+msgstr "アバターが削除られます。"
+
+#: .\wysebone\templates\wysebone\user\add.html:50
+#: .\wysebone\templates\wysebone\user\profile.html:51
+msgid "Are you sure?"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\user\add.html:50
+#: .\wysebone\templates\wysebone\user\profile.html:51
+msgid "Remove avatar"
+msgstr "アバターを削除"
+
+#: .\wysebone\templates\wysebone\user\add.html:108
+#: .\wysebone\templates\wysebone\user\add.html:112
+#: .\wysebone\templates\wysebone\user\profile.html:117
+#: .\wysebone\templates\wysebone\user\view.html:47
+msgid "Hire Date"
+msgstr "入社日"
+
+#: .\wysebone\templates\wysebone\user\add.html:133
+msgid "Use Web browser settings"
+msgstr "Webブラウザーの設定に従う"
+
+#: .\wysebone\templates\wysebone\user\add.html:143
+#: .\wysebone\templates\wysebone\user\profile.html:137
+#: .\wysebone\templates\wysebone\user\view.html:60
+msgid "Time Zone"
+msgstr "タイムゾーン"
+
+#: .\wysebone\templates\wysebone\user\add.html:222
+#: .\wysebone\templates\wysebone\user\profile.html:163
+msgid "Position and size your new avatar"
+msgstr "あなたの新しいアバターの位置とサイズ"
+
+#: .\wysebone\templates\wysebone\user\add.html:245
+#: .\wysebone\templates\wysebone\user\profile.html:186
+msgid "Set new profile avatar"
+msgstr "新しいプロフィールアバターを設定する"
+
+#: .\wysebone\templates\wysebone\user\profile.html:4
+#: .\wysebone\templates\wysebone\user\profile.html:36
+msgid "My Profile"
+msgstr "プロフィール"
+
+#: .\wysebone\templates\wysebone\user\profile.html:48
+msgid "Change avatar"
+msgstr "写真の変更"
+
+#: .\wysebone\templates\wysebone\user\profile.html:69
+#: .\wysebone\templates\wysebone\user\profile.html:79
+msgid "This field is required."
+msgstr ""
+
+#: .\wysebone\templates\wysebone\user\profile.html:87
+#: .\wysebone\templates\wysebone\user\view.html:28
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: .\wysebone\templates\wysebone\user\profile.html:140
+msgid "Select time zone"
+msgstr "タイムゾーンを選択"
+
+#: .\wysebone\templates\wysebone\user\profile.html:152
+msgid "Update profile"
+msgstr "プロファイルの更新"
+
+msgid "Edit"
+msgstr "編集"
+
+msgid "None"
+msgstr "無し"
+
+msgid "Change \"%s\" Members"
+msgstr "「%s」の所属ユーザーの変更"
+
+msgid "Members of the %(name)s \"%(obj)s\" was changed successfully."
+msgstr "%(name)s「%(obj)s」のメンバーは正常に変更されました。"
+
+#: .\wysebone\validates.py:10
+msgid "Phone number is at least 10 numbers"
+msgstr "電話番号は少なくとも10番号で"
+
+#: .\wysebone\validates.py:13
+msgid "Phone number is at most 20 numbers"
+msgstr "最大の電話番号は20番号です"
+
+#: .\wysebone\validates.py:16
+msgid "The phone is at least 10 number and contain only  +()-. and x#"
+msgstr "電話番号は少なくとも10番号で、 「+()-.」及び「x#」のみ含みます。"
+
+msgid "Customer Management"
+msgstr "顧客管理"
+
+msgid "Development account"
+msgstr "開発アカウント"
+
+msgid "Role"
+msgstr "役割"
+
+msgid "Administrator"
+msgstr "管理者"
+
+msgid "Developer"
+msgstr "開発者"
+
+msgid "Tester"
+msgstr "テスター"
+
+msgid "Operation Manager"
+msgstr "運用管理者"
+
+msgid "General User"
+msgstr "一般ユーザー"
+
+msgid "Can not remove the administrator authority."
+msgstr "管理者権限を削除できません。"
+
+# Group mamagement
+#: .\wysebone\validates.py:42
+msgid "Group name"
+msgstr "グループ名"
+
+msgid ""
+"The group name has been created in the system. Please choose another name."
+msgstr "システムにグループ名が作成されました。 別の名前を選択してください。"
+
+#: .\wysebone\views\account.py:115
+msgid "Your profile has been updated successfully."
+msgstr "あなたのプロファイルが正常に更新されました。"
+
+#: .\wysebone\views\account.py:118
+msgid "Profile update failed."
+msgstr "プロファイルの更新に失敗しました。"
+
+#: .\wysebone\views\department.py:111 .\wysebone\views\department.py:125
+msgid "Create department failed."
+msgstr "組織作成に失敗しました。"
+
+#: .\wysebone\views\department.py:129
+msgid "Created department successfully."
+msgstr "組織作成が完了されました。"
+
+#: .\wysebone\views\department.py:133 .\wysebone\views\department.py:215
+#: .\wysebone\views\groups\add.py:97
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\wysebone\views\department.py:207
+#, python-format
+msgid "Change '%s' members failed."
+msgstr "「%s」の所属ユーザーの変更に失敗しました。"
+
+#: .\wysebone\views\department.py:211
+#, python-format
+msgid "Change '%s' members successfully."
+msgstr "「%s」の所属ユーザーを変更しました。"
+
+#: .\wysebone\views\department.py:225
+#, python-format
+msgid "'%s' members"
+msgstr "「%s」の所属ユーザー"
+
+#: .\wysebone\views\groups\add.py:93
+#, python-brace-format
+msgid "The {name} \"{obj}\" was added successfully."
+msgstr "{name} \"{obj}\" を追加しました。"
+
+#: .\wysebone\views\groups\add.py:121 .\wysebone\views\user.py:136
+#, python-format
+msgid "Available %s"
+msgstr "利用可能 %s"
+
+#: .\wysebone\views\groups\add.py:122 .\wysebone\views\user.py:137
+#, python-format
+msgid "Chosen %s"
+msgstr "選択された %s"
+
+#: .\wysebone\views\groups\list.py:30
+msgid "Groups & Members"
+msgstr ""
+
+#: .\wysebone\views\user.py:128
+msgid "Created user successfully."
+msgstr "ユーザーを作成しました。"
+
+#: .\wysebone\views\user.py:156
+#, python-format
+msgid "%(name)s with ID \"%(key)s\" doesn't exist. Perhaps it was deleted?"
+msgstr ""
+
+#: .\wysebone\templates\wysebone\table\index.html:25
+msgid "Change Settings"
+msgstr "設定の変更"
+
+#: .\wysebone\templates\wysebone\table\index.html:26
+msgid "Records"
+msgstr "レコード"
+
+#: .\wysebone\templates\wysebone\table\index.html:27
+msgid "Fields"
+msgstr "フィールド"
+
+#: .\wysebone\templates\wysebone\table\index.html:28
+msgid "Created by"
+msgstr "作成者"
+
+#: .\wysebone\templates\wysebone\table\index.html:29
+msgid "Updated by"
+msgstr "更新者"
+
+#: .\wysebone\templates\wysebone\delete_comfirmation.html:13
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(name)s \"%(obj)s\"?"
+msgstr ""
+"%(name)s \"%(obj)s\"を削除しますか？"
+
+#: .\wysebone\templates\wysebone\app\layouts.html
+msgid "Text"
+msgstr ""
+
+msgid "Basic"
+msgstr "ベーシック"
+
+msgid "Input"
+msgstr "入力"
+
+msgid "Event"
+msgstr "イベント"
+
+msgid "Table link"
+msgstr "データリンク"
+
+msgid "Enter application name"
+msgstr "アプリケーション名を入力"
+
+msgid "Enter list table name"
+msgstr "リストテーブル名を入力"
+
+msgid "Create App"
+msgstr "アプリを作成"
+
+msgid "Entry form"
+msgstr "エントリーフォーム"
+
+msgid "View screen"
+msgstr "ビュー画面"
+
+msgid "Field Code"
+msgstr "フィールドコード"
+
+msgid "Each field in a Wysebone app has a Field Code, that is unique within the App. These field codes are necessary when creating, retrieving, and updating data via API."
+msgstr "Wyseboneアプリの各フィールドには、アプリ内で一意のフィールドコードがあります。 これらのフィールドコードは、APIを介してデータを作成、取得、更新するときに必要です。"
+
+msgid "Each field in a Wysebone app is linked to the input data."
+msgstr "Wyseboneアプリの各フィールドは、入力データにリンクされています。"
+
+msgid "Authority"
+msgstr "権限"
+
+msgid "App settings"
+msgstr "アプリの設定"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Drag and drop fields here."
+msgstr "ここにフィールドをドラッグアンドドロップします。"
+
+msgid "Label"
+msgstr "ラベル"
+
+msgid "Checkbox"
+msgstr "チェックボックス"
+
+msgid "Selection"
+msgstr "ドロップダウン"
+
+msgid "Button"
+msgstr "ボタン"
+
+# table section
+msgid "table"
+msgstr "テーブル"
+
+msgid "Table name"
+msgstr "テーブル名"
+
+msgid "Table Items"
+msgstr "テーブルの項目"
+
+msgid "Item name"
+msgstr "項目名"
+
+msgid "Required"
+msgstr "必須"
+
+msgid "Default value"
+msgstr "既定"
+
+msgid "Type"
+msgstr "タイプ"
+
+msgid "Field size"
+msgstr "フィールドサイズ"
+
+msgid "Number of digits"
+msgstr "桁数"
+
+msgid "Decimal digits"
+msgstr "10進数"
+
+msgid "Auto number"
+msgstr "自動番号"
+
+msgid "View less"
+msgstr "少なく見る"
+
+msgid "View more"
+msgstr "もっと見る"
+
+msgid "New item"
+msgstr "新項目"
+
+msgid "Numeric"
+msgstr "数値"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Yes/No"
+msgstr "はい・いいえ"
+
+msgid "The length of characters over the limit allow"
+msgstr "文字の長さにて、制限を超えている。"
+
+msgid "Please input date from 01/01/1900 to 12/31/2100"
+msgstr "日付は1900年01月01日から2100年12月31日まで入力してください。"
+
+msgid "Duplicate item name"
+msgstr "項目名が重複しています"
+
+msgid "The table name has been created in the system. Please choose another name."
+msgstr "システムにテーブル名が作成されました。 別の名前を選択してください。"
+
+msgid "This table is being using. Please try again later."
+msgstr "このテーブルを利用されている。 別の名前を選択してください。"
+
+msgid "Please select a table."
+msgstr "表を選択してください。"
+
+msgid "Items is being using. Please try again later."
+msgstr "項目を利用されている。 別の名前を選択してください。"
+# end table section
+
+# view app
+
+msgid "Drag and drop columns here."
+msgstr "ここにフィールドをドラッグアンドドロップします。"
+
+msgid "Visible Fields and Column Order"
+msgstr "レコード一覧の表示形式"
+
+# end view app
+
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr "%(name)s \"%(obj)s\" を変更しました。"
+
+msgid "Saving"
+msgstr "節約"
+
+msgid "All changes saved"
+msgstr "すべての変更が保存されました"
+
+msgid "Generate"
+msgstr "自動生成する"
+
+msgid "Select Authority"
+msgstr "権限を選択"
+
+msgid "Authority settings"
+msgstr "権限設定"
+
+msgid "Authority Name"
+msgstr "権限名"
+
+msgid "Authority Group"
+msgstr "権限グループ"
+
+msgid "Authority User"
+msgstr "ユーザー権限"
+
+msgid "Item settings"
+msgstr "項目設定"
+
+msgid "Attribute"
+msgstr "属性"
+
+msgid "404 Page Not Found"
+msgstr "404ページが見つかりません"
+
+msgid "Your requested page, Not Found."
+msgstr "リクエストされたページ、見つかりません。"
+
+msgid "Back to Wysebone"
+msgstr "Wyseboneに戻る"
+
+msgid "List Table"
+msgstr "一覧テーブル"
+
+msgid "The %s name has been created in the system. Please choose another name."
+msgstr "システムに%s名が作成されました。 別の名前を選択してください。"
+
+msgid "Cannot delete because of the already associated plan %s."
+msgstr "計画%sが既に関連付けられているため、削除できません。"
+
+msgid "Failed to delete because the \"%s\" permission is being associated with an application."
+msgstr "「%s」権限がアプリケーションに関連付けられているため、削除に失敗しました。"
+
+msgid "List Table name"
+msgstr "一覧テーブル名"
+
+msgid ""
+"Please <a href=\"%(link)s\">click here</a> to add permission for authority."
+msgstr ""
+"<a href=\"%(link)s\">ここをクリックして</a>権限の許可を追加してください。"
+
+msgid "Output"
+msgstr "出力"
+
+msgid "Record search"
+msgstr "レコード検索"
+
+msgid "Display record"
+msgstr "レコード表示"
+
+msgid "Action on other objects"
+msgstr "他のオブジェクトにアクション"
+
+msgid "Set output"
+msgstr "出力設定"
+
+msgid "Sum"
+msgstr "合計"
+
+msgid "Record register"
+msgstr "レコード登録"
+
+msgid "Delete record"
+msgstr "レコード削除"
+
+msgid "List Object"
+msgstr "一覧オブジェクト"
+
+msgid "Multiplication"
+msgstr "乗算"
+
+msgid "Reset"
+msgstr "リセット"
+
+msgid "User name or Email"
+msgstr "ユーザー名または、メール"
+
+msgid "Menu"
+msgstr "メニュー"
+
+msgid "Lookup"
+msgstr "ルックアップ"
+
+msgid "Iframe"
+msgstr ""
+
+msgid "Screen Display"
+msgstr "画面表示"

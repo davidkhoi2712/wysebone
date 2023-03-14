@@ -1,0 +1,57 @@
+{% extends 'wysebone/base.html' %}
+{% load static i18n tz common humanize %}
+<!-- Add title -->
+{% block title %}{{ app.name }}{% endblock %}
+
+<!-- Add css -->
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/datatables/datatables.min.css' %}"/>
+    <link href="{% static 'vendor/jsuites/jsuites.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/jquery-contextmenu/jquery.contextMenu.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'vendor/sweetalert2/borderless.css' %}">
+    <link href="{% static 'vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'vendor/jquery-ui/jquery-ui.min.css' %}" >
+    <link href="{% static 'styles/view_app.css' %}" rel="stylesheet">
+{% endblock  %}
+
+<!-- Add content -->
+{% block content %}
+    <div class="main-header">
+        <div class="app-header-icon-outer float-left">
+            <div class="app-header-icon" style="background-color: {{app.color}}">
+                <i class="{{app.icon}}" aria-hidden="true" ></i>
+            </div>
+        </div>
+        <div class="app-header-name-outer float-left ml-2 p-1">
+            <span class="app-flow-appname-input mb-1">
+                {{app.name}}
+            </span>
+            <small id="appnameHelp" class="form-text text-muted">{% blocktrans with time_ago=app.updated_at|timesince %}Last edited {{ time_ago }} ago.{% endblocktrans %}</small></div>
+            <div class="float-right apps-option">
+                <div class="loadding" style="display: none;"></div>
+            </div>
+    </div>
+    <div id="{{app.code}}" class="wysebone_listTable" data-appcode="{{app.code}}" style="width: 100%; height: calc(100vh - 180px)"></div>
+{% endblock  %}
+
+<!-- Add js -->
+{% block js %}
+<script type="text/javascript">
+    var format_date = ['MM/DD/YYYY', 'YYYY/MM/DD', 'DD/MM/YYYY'];
+</script>
+<script defer type="text/javascript" src="{% static 'vendor/axios/axios.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'vendor/jquery-ui/jquery-ui.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'vendor/jsuites/jsuites.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'vendor/jquery-contextmenu/jquery.contextMenu.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'vendor/moment/moment-with-locales.min.js' %}" ></script>
+<script defer type="text/javascript" src="{% static 'vendor/datatables/datatables.min.js' %}" ></script>
+<script defer type="text/javascript" src="{% static 'js/dataTables.fixedColumns.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'js/dataTables.keyTable.js' %}" ></script>
+<script defer type="text/javascript" src="{% static 'js/dataTables.editor.js' %}" ></script>
+<script defer src="{% static 'vendor/sweetalert2/sweetalert2.min.js' %}" ></script>
+<script defer src="{% static 'vendor/reactjs/react.min.js' %}" ></script>
+<script defer src="{% static 'vendor/reactjs/react-dom.min.js' %}" ></script>
+<script defer src="{% static 'vendor/lodash/lodash.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script defer src="{% static 'js/apps/view_app.js' %}"></script>
+{% endblock  %}

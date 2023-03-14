@@ -1,0 +1,54 @@
+.main-header {
+    position: relative;
+    height: 80px;
+}
+.app-header-icon {
+    user-select: none;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 4px solid #e3e7e8;
+    box-sizing: border-box;
+    font-size: 2.6rem;
+    color:#fff;
+    text-align: center;
+}
+.app-header-icon > i {
+    vertical-align: top;
+    line-height: inherit;
+}
+.app-flow-appname-input {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.app-header-name-outer .text-muted {
+    margin: 0;
+    color: #c5c5c5;
+}
+
+.wb-entry-container {
+    width: 100%;
+}
+.wb-entry-form {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.wb-entry-form .app-item {
+    display: inline-block;
+    vertical-align: top;
+    height: auto !important;
+    position: absolute;
+    min-width: 100px;
+    padding: 0px;
+}
+.app-item .custom-checkbox {
+    padding-top: 1rem;
+}

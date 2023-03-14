@@ -1,0 +1,32 @@
+{% extends 'wysebone/base.html' %}
+{% load i18n static %}
+{% block title %}{% trans 'Are you sure?' %}{% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3>{% trans 'Are you sure?' %} </h3>
+    </div>
+    <div class="card-body">
+        <p>{% blocktrans  %}Are you sure you want to delete the {{ name }} "{{ obj }}"?{% endblocktrans %}</p>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <input type="hidden" name="post" value="yes">
+                <input type="submit" class="btn btn-danger btn-sm" value="{% trans "Yes, I'm sure" %}">
+                <button class="btn btn-secondary btn-sm cancel-link">{% trans "No, take me back" %}</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript">
+        $('.cancel-link').on('click', function(e) {
+            e.preventDefault();
+            window.history.back()
+        });
+
+    </script>
+{% endblock js %}

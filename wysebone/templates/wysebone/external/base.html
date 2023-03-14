@@ -1,0 +1,49 @@
+{% load i18n static compress %}
+<!Doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{% static 'vendor/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">
+    {% compress css %}
+    <link href="{% static 'styles/style.css' %}" rel="stylesheet">
+    {% block style %}{% endblock  %}
+    {% endcompress %}
+</head>
+<body>
+    <nav class="navbar navbar-light bg-info">
+        <a class="navbar-brand text-white" href="{% url 'index' %}">
+            WYSEBONE
+        </a>
+        <div class="float-right">
+            <form action="{% url 'set.language' %}" role="form" method="post" id="language-form" autocomplete="off">
+                {% csrf_token %}
+                <!-- Language -->
+                <select class="form-control form-control-sm" name="language" id="language">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% for lang in LANGUAGES %}
+                        <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                            {{ lang.1 }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <script type="text/javascript" src="{% static 'vendor/jquery/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    {% compress js %}
+    <script type="text/javascript">
+        var base_url = "{{ BASE_URL }}";
+    </script>
+    {% block js %}{% endblock  %}
+    {% endcompress %}
+</body>
+</html>

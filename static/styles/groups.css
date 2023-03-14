@@ -1,0 +1,41 @@
+.add-group-form select {
+    min-height: 350px;
+}
+.groups-slider {
+    background-color: #efefef;
+    width: 100%;
+    clear: both;
+    min-height: 300px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.index-group .list-group-item-secondary {
+    background-color: #efefef;
+}
+.index-group .list-group-item-light {
+    background-color: #ffffff !important;
+}
+.index-group .list-group-item {
+    padding-right: 2.5rem;
+}
+.index-group .list-group-item > a {
+    display: block;
+    width: 100%;
+}
+.index-group .list-group-item > a > i {
+    margin-right: 0.5rem;
+}
+.index-group .list-group-item .dropdown {
+    position: absolute;
+    right: 1.25rem;
+    top: 0.75rem;
+}
+.index-group .list-group-item .dropdown-toggle::after {
+    display: none;
+}
+.index-group .dropdown .dropdown-menu .dropdown-item {
+    font-size: 14px;
+}
+.index-group .dropdown .dropdown-menu a i {
+    width: 20px;
+    margin-right: 5px;
+}

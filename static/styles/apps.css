@@ -1,0 +1,157 @@
+.header-apps {
+    clear: both;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    display: table;
+}
+
+.body-apps {
+    clear: both;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.app-index {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.app-index .app-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 110px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666666;
+}
+
+.app-index .app-item:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.app-index .app-item .app-thumb {
+    margin: 0 auto;
+}
+
+.app-index .app-item .app-thumb img {
+    max-width: 100%;
+}
+
+.app-index .app-item .app-name {
+    text-align: center;
+    line-height: 1.3;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+.table thead th {
+    border-top: none;
+    border-bottom: none;
+}
+
+.table th,
+.table td {
+    font-size: 14px;
+    color: #666666;
+}
+
+.list-choose ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.list-choose ul li {
+    display: inline-block;
+}
+
+.list-choose ul li a {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+}
+
+.list-choose ul li a:hover {
+    border: 1px solid #cccccc;
+}
+
+.list-choose ul li a i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+.list-choose ul li a.active i {
+    visibility: visible;
+}
+
+.icons.list-choose ul li a i {
+    font-size: 24px;
+    visibility: visible;
+    color: #666666;
+}
+
+.icons.list-choose ul li a.active i {
+    color: #ffffff;
+}
+
+.app-header-icon {
+    user-select: none;
+    border-radius: 16px;
+    cursor: pointer;
+    float: left;
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 4px solid #e3e7e8;
+    box-sizing: border-box;
+}
+
+.app-header-icon:focus,
+.app-header-icon:hover {
+    border-color: #3498db;
+}
+
+.app-header-input {
+    width: 350px;
+    height: 42px;
+    font-size: 24px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.app-main {
+    width: auto;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    font-size: 14px;
+}
+
+.app-main .main-inner {
+    background-color: #fff;
+    padding: 0;
+}
+
+@media only screen and (max-width: 749px) {
+    .app-header-input {
+        width: 100%;
+    }
+}
+
+.authority_settings .custom-control-label {
+    word-break: break-all;
+}

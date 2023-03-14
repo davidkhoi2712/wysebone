@@ -1,0 +1,120 @@
+{% extends 'wysebone/base.html' %}
+{% load static i18n common %}
+<!-- Add title -->
+
+{% block title %}{{_("Applications")}}{% endblock %}
+
+{% block style %}
+<link href="{% static 'styles/apps.css' %}" rel="stylesheet" />
+<link href="{% static 'styles/table.css' %}" rel="stylesheet">
+<link href="{% static 'styles/admin.css' %}" rel="stylesheet" />
+{% endblock  %}
+<!-- Add content -->
+{% block content %}
+	<div class="card mb-3">
+		<div class="card-header">
+			<h3 class="float-left">{% trans "Applications" %}</h3>
+            {% if perms.wysebone.add_app %}<a class="btn btn-primary btn-sm float-right mt-1" href="{% url 'add.app' %}" role="button"><i class="fa fa-plus" aria-hidden="true"></i> {% trans "Create App" %}</a>{% endif %}
+        </div>
+        <form role="form" method="GET" class="card-body form-row form-inline">
+            <div class="col-auto my-1">
+                <input type="text" name="name" class="form-control" id="inlineFormInputName" placeholder="{% trans "Application name" %}" value="{{app_name}}">
+            </div>
+            <div class="col-auto my-1">
+                <button type="submit" id="inlineFormSubmit" class="btn btn-primary">{% trans "Search" %}</button>
+            </div>
+            <div class="input-group col-auto ml-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">{% trans "Per page" %}</span>
+                </div>
+                {% include "wysebone/select_per_page.html" %}
+            </div>
+        </form>
+        <input type="hidden" name="object_target" id="object_target" value="{{object_target}}">
+		<div class="card-body">
+            <div class="block-content">
+                <div class="app-managemnet-content">
+                    <div class="table-container">
+                        {% if objects|length > 0 %}
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th title="{% trans "Application name" %}">{% trans "Application name" %}</th>
+                                    <th title="{% trans "Created by" %}">{% trans "Created by" %}</th>
+                                    <th title="{% trans "Updated by" %}">{% trans "Updated by" %}</th>
+                                    <th title="{% trans "Status" %}">{% trans "Status" %}</th>
+                                    <th title="{% trans "Last modified" %}">{% trans "Last modified" %}</th>
+                                    {% if perms.wysebone.change_app or perms.wysebone.delete_app %}<th title="{% trans "Action" %}" class="text-right">{% trans "Action" %}</th>{% endif %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in objects %}
+                                    <tr>
+                                        <td label="{% trans "Application name" %}">
+                                            {% if perms.wysebone.use_app %}
+                                                <a href="{% url 'view.app' item.code %}?next={{ request.get_full_path }}"><div class="rounded app-icon-sm d-inline-block align-middle" style="background-color: {{ item.color }}"><i class="{{ item.icon }}" aria-hidden="true"></i></div><span class="d-inline-block align-middle pl-2">{{ item.name }}</span></a>
+                                            {% else %}
+                                                <div class="rounded app-icon-sm d-inline-block align-middle" style="background-color: {{ item.color }}"><i class="{{ item.icon }}" aria-hidden="true"></i></div><span class="d-inline-block align-middle pl-2">{{ item.name }}</span>
+                                            {% endif %}
+                                        </td>
+                                        <td label="{% trans "Created by" %}">
+                                            {% if item.created_by %}
+                                                {% if perms.wysebone.view_user %}
+                                                    <a href="{% url 'view.user' item.created_by.user_id %}"><img src="{{ item.created_by.get_avatar_url }}" alt="User" width="20px"><span class="align-middle pl-1">{{ item.created_by.get_full_name }}</span></a>
+                                                {% else %}
+                                                    <img src="{{ item.created_by.get_avatar_url }}" alt="User" width="20px"><span class="align-middle pl-1">{{ item.created_by.get_full_name }}</span>
+                                                {% endif %}
+                                            {% else %}
+                                                n/a
+                                            {% endif %}
+                                        </td>
+                                        <td label="{% trans "Updated by" %}">
+                                            {% if item.updated_by %}
+                                                {% if perms.wysebone.view_user %}
+                                                    <a href="{% url 'view.user' item.updated_by.user_id %}"><img src="{{ item.updated_by.get_avatar_url }}" alt="User" width="20px"><span class="align-middle pl-1">{{ item.updated_by.get_full_name }}</span></a>
+                                                {% else %}
+                                                    <img src="{{ item.updated_by.get_avatar_url }}" alt="User" width="20px"><span class="align-middle pl-1">{{ item.updated_by.get_full_name }}</span>
+                                                {% endif %}
+                                            {% else %}
+                                                n/a
+                                            {% endif %}
+                                        </td>
+                                        <td label="{% trans "Status" %}">
+                                            {% if item.stauts == constants.APP_PROCESSING %}
+                                                {% trans "Processing" %}
+                                            {% elif item.stauts == constants.APP_COMPLETED %}
+                                                {% trans "Completed" %}
+                                            {% elif item.stauts == constants.APP_TESTING %}
+                                                {% trans "Testing" %}
+                                            {% elif item.stauts == constants.APP_TEST_COMPLETED %}
+                                                {% trans "Test completed" %}
+                                            {% else  %}
+                                                {% trans "Released" %}
+                                            {% endif %}
+                                        </td>
+                                        <td label="{% trans "Last modified" %}">{{ item.updated_at|date:"SHORT_DATETIME_FORMAT" }}</td>
+                                        {% if perms.wysebone.change_app or perms.wysebone.delete_app %}
+                                            <td label="{% trans "Action" %}" class="text-right">
+                                                {% if perms.wysebone.change_app %}<a href="{% url 'change.form.app' item.code %}" title="{% trans 'Settings' %}"><i class="fa fa-cog mr-1"></i>{% trans "Settings" %}</a>{% endif %}
+                                                {% if perms.wysebone.delete_app %}<a href="{% url 'delete.app' item.code %}" class="text-danger ml-2" title="{% trans 'Delete' %}"><i class="fa fa-trash mr-1"></i>{% trans "Delete" %}</a>{% endif %}
+                                            </td>
+                                        {% endif %}    
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        {% else %}
+                            <div class="alert alert-secondary mt-3" role="alert" id="alert_empty_users">
+                                {% trans "There is no data to show." %}
+                            </div>
+                        {% endif %}
+                    </div>   
+                </div>
+                {% include "wysebone/pagination.html" %}
+            </div>
+		</div>
+	</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/list.js' %}"></script>   
+{% endblock  %}
